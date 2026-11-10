@@ -110,7 +110,7 @@ nations	86	Hong Kong	Hong Kong	Гонконг
 nations	87	Hungary	Hungary	Венгрия	Венг.
 nations	88	Iceland	Iceland	Исландия	Исл.
 nations	89	India	India	Индия	Инд.
-nations	90	Indonesia	Indonesia	Индон.	Индон.
+nations	90	Indonesia	Indonesia	Индон.	Инд.
 nations	91	Iran	Iran	Иран	Иран
 nations	92	Iraq	Iraq	Ирак	Ирак
 nations	93	Republic of Ireland	Ireland	Ирландия	Ирл.
@@ -140,10 +140,10 @@ nations	121	Mauritius	Mauritius	Маврикий
 nations	122	Mexico	Mexico	Мексика	Мекс.
 nations	123	Moldova	Moldova	Молдова	Молд.
 nations	124	Mongolia	Mongolia	Монголия	
-nations	126	Morocco	Morocco	Марокко	Марок.
+nations	126	Morocco	Morocco	Марокко	Мар.
 nations	127	Mozambique	Mozambique	Мозамбик	
 nations	128	Myanmar	Myanmar	Мьянма	
-nations	129	Northern Ireland	N.Ireland	Сев.Ирл.	Сев.Ирл.
+nations	129	Northern Ireland	N.Ireland	Сев.Ирл.	С.Ир.
 nations	130	Namibia	Namibia	Намибия	
 nations	131	Nepal	Nepal	Непал	
 nations	132	Netherlands Antilles	Netherlands Antilles	Антилы	
@@ -176,7 +176,7 @@ nations	167	Slovenia	Slovenia	Словения	Слов.
 nations	168	Solomon Islands	Solomon Islands	Соломоны	
 nations	169	Somalia	Somalia	Сомали	
 nations	170	South Africa	South Africa	ЮАР	ЮАР
-nations	171	South Korea	South Korea	Ю.Корея	Ю.Корея
+nations	171	South Korea	South Korea	Ю.Корея	Ю.К.
 nations	172	Spain	Spain	Испания	Исп.
 nations	173	Sri Lanka	Sri Lanka	Шри-Ланка	
 nations	174	St Kitts & Nevis	St Kitts & Nevis	Китс	
@@ -185,7 +185,7 @@ nations	177	Sudan	Sudan	Судан
 nations	178	Surinam	Surinam	Суринам	
 nations	179	Swaziland	Swaziland	Эсватини	
 nations	180	Sweden	Sweden	Швеция	Шв.
-nations	181	Switzerland	Switzerland	Швейц.	Швейц.
+nations	181	Switzerland	Switzerland	Швейц.	Шв.
 nations	182	Syria	Syria	Сирия	
 nations	183	Tahiti	Tahiti	Таити	
 nations	185	Tanzania	Tanzania	Танзания	
@@ -207,8 +207,92 @@ nations	201	Uruguay	Uruguay	Уругвай
 nations	203	Vanuatu	Vanuatu	Вануату	
 nations	205	Vietnam	Vietnam	Вьетнам	
 nations	206	West Germany	W Germany	ФРГ	
-nations	207	Wales	Wales	Уэльс	Уэльс
+nations	207	Wales	Wales	Уэльс	Уэл.
 nations	208	Yemen	Yemen	Йемен	
 nations	210	Zaire	Zaire	Заир	
 nations	211	Zambia	Zambia	Замбия	
-nations	212	Zimbabwe	Zimbabwe	Зимбабве	
+nations	212	Zimbabwe	Zimbabwe	Зимбабве
+clubs	867	Arsenal	Arsenal	Арсенал	Арс.
+clubs	933	Aston Villa	Aston Villa	Астон Вил	АВ
+clubs	1340	F.C. Barcelona	Barcelona	Барсел.	Барс
+clubs	1641	Blackburn Rovers	Blackburn	Блэкбёрн	Блэк
+clubs	2090	CSKA Moscow	CSKA	ЦСКА	ЦСКА
+clubs	2330	Glasgow Celtic	Celtic	Селтик	Селт
+clubs	2444	Chelsea	Chelsea	Челси	Чел
+clubs	3234	BV Borussia Dortmund	Dortmund	Боруссия	БД
+clubs	3722	Everton	Everton	Эвертон	Эвер
+clubs	4012	Feyenoord	Feyenoord	Фейено.	Фейн
+clubs	4274	Galatasaray SK	Galatasaray	Галат.	Гал
+clubs	5691	Juventus	Juventus	Ювентус	Юве
+clubs	6411	Lazio	Lazio	Лацио	Лаци
+clubs	6435	Leeds United	Leeds	Лидс Юн	Лидс
+clubs	6635	Liverpool	Liverpool	Ливерп.	Лив
+clubs	6703	Lokomotiv Moscow	Lokomotiv Moscow	Локом.	Локо
+clubs	7022	Manchester City	Man City	Ман Сити	МС
+clubs	7023	Manchester United	Man Utd	Манч Юн	МЮ
+clubs	7369	AC Milan	Milan	Милан	Мил
+clubs	7902	Newcastle United	Newcastle	Ньюкасл	Ньюк
+clubs	8487	PSV	PSV	ПСВ	ПСВ
+clubs	8983	Futebol Clube do Porto	Porto	Порту	Порт
+clubs	9151	Queens Park Rangers	Q.P.R.	КПР	КПР
+clubs	9355	Glasgow Rangers	Rangers	Рейндж.	Рейн
+clubs	9413	Real Madrid C.F.	Real Madrid	Реал М.	Реал
+clubs	9644	AS Roma	Roma	Рома	Рома
+clubs	10250	FC Schalke 04	Schalke 04	Шальке 04	Шал
+clubs	10414	Shakhtar Donetsk	Shakhtar	Шахтёр	Шах
+clubs	10848	Spartak	Spartak	Спартак	Сп.
+clubs	10862	Spartak Moscow	Spartak Moscow	Спартак	Сп.
+clubs	10915	Sporting Clube de Portugal	Sporting	Спортинг	Сп.
+clubs	11726	Tottenham Hotspur	Tottenham	Тоттенх.	Тот
+clubs	12209	Valencia C.F.	Valencia	Валенс.	Вал
+clubs	13122	Zenith St. Petersburg	Zenith Peterburg	Зенит	Зен
+cities	0	Gent		Гент	
+cities	1	Brugge		Брюгге	
+cities	3	Antwerp		Антверп	
+cities	6	Liège		Льеж	
+cities	9	Brussels		Брюссель	
+cities	197	Marseille		Марсель	
+cities	224	Bordeaux		Бордо	
+cities	257	Lyon		Лион	
+cities	259	Paris		Париж	
+cities	328	Madrid		Мадрид	
+cities	356	Barcelona		Барсел.	
+cities	481	Milan		Милан	
+cities	485	Torino		Турин	
+cities	523	Roma		Рим	
+cities	551	Berlin		Берлин	
+cities	559	München		Мюнхен	
+cities	560	Dortmund		Дортмунд	
+cities	574	Hamburg		Гамбург	
+cities	668	Amsterdam		Амстер.	
+cities	679	Eindhoven		Эйндх.	
+cities	691	Rotterdam		Роттерд.	
+cities	759	Porto		Порту	
+cities	760	Lisbon		Лиссабон	
+cities	1008	London		Лондон	
+cities	1009	Birmingham		Бирминг.	
+cities	1029	Liverpool		Ливерп.	
+cities	1038	Leeds		Лидс	
+cities	1043	Manchester		Манч.	
+cities	1046	Newcastle		Ньюкасл	
+cities	1112	Glasgow		Глазго	
+cities	4661	Moscow		Москва	
+cities	4720	Istanbul		Стамбул	
+cities	4737	Kiev		Киев	
+cities	3588	Milano		Милан	
+stadiums	2	Highbury		Хайбери	
+stadiums	27	Stamford Bridge		Стэмфорд	
+stadiums	43	Goodison Park		Гудисон	
+stadiums	63	Elland Road		Элланд	
+stadiums	68	Anfield		Энфилд	
+stadiums	71	Maine Road		Мэйн Роуд	
+stadiums	72	Old Trafford		Олд Тр.	
+stadiums	118	White Hart Lane		Уайт Харт	
+stadiums	424	Nou Camp		Ноу Камп	
+stadiums	580	Delle Alpi		Делле	
+stadiums	680	Olympiastadion		Олимп.	
+stadiums	778	Amsterdam ArenA		Амстер.	
+stadiums	792	De Kuip		Де Кёйп	
+stadiums	1171	Celtic Park		Селтик	
+stadiums	1195	Ibrox Stadium		Айброкс	
+stadiums	4384	Camp Nou		Камп Ноу
