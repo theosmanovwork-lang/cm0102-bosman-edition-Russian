@@ -3,6 +3,8 @@
 
 /* Exact English source string in; Russian T2K-escaped text out while the overlay is active. */
 int localisation_is_russian(void);
+int localisation_russian_names_available(void);
+void localisation_language_changed(void);
 const char *localisation_text(const char *source);
 
 #endif
