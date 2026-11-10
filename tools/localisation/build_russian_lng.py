@@ -18,7 +18,7 @@ SECTIONS = {
     "clubs": (0, 0x4F, 26),
     "continents": (1, 0xBA, 0),
     "nation_competitions": (2, 0x53, 26),
-    "nations": (3, 0x6D, 51),
+    "nations": (3, 0x6D, 26),
     "stadiums": (6, 0x34, 0),
     "cities": (4, 0x34, 0),
     "staff_competitions": (7, 0x4F, 26),
