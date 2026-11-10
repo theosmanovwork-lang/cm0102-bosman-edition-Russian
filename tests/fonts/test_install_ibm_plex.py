@@ -16,8 +16,9 @@ class FontInstallerTests(unittest.TestCase):
     def test_decodes_a_true_type_sfnt(self):
         with tempfile.TemporaryDirectory() as folder:
             source = Path(folder) / "font.ttf.b64"
-            raw = installer.TTF_SIGNATURE + b"\\x00" * 16_000
-            source.write_bytes(base64.b64encode(raw))
+            raw = installer.TTF_SIGNATURE + bytes(16_000)
+            encoded = base64.b64encode(raw).decode("ascii")
+            source.write_text(encoded[:24] + "\\n" + encoded[24:], encoding="ascii")
             self.assertTrue(installer.decode_font(source).startswith(b"\x00\x01\x00\x00"))
 
     def test_rejects_non_font_data(self):
