@@ -1,4 +1,4 @@
-id	source	translation	context
+"id"	"source"	"translation"	"context"
 "menu_start_new_game"	"Start New Game"	"Начать новую игру"	"Start screen menu"
 "menu_quick_start_game"	"Quick Start Game"	"Быстрый старт"	"Start screen menu"
 "menu_restore_saved_game"	"Restore Saved Game"	"Загрузить сохранение"	"Start screen menu"
@@ -97,4 +97,3 @@ cannot be written"	"Не удалось сохранить:
 "setup_select_nationality"	"Select Nationality"	"Выберите гражданство"	"Manager creation screen heading"
 "setup_select_team"	"Select Team"	"Выберите команду"	"Manager creation screen heading"
 "setup_no_memory"	"No Memory"	"Недостаточно памяти"	"New-game setup error screen"
-"setup_insert_cd"	"Insert CD"	"Вставьте CD"	"Legacy startup error; verify whether reachable in Bosman Edition"
