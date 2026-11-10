@@ -203,3 +203,10 @@ Added two source-grounded interface strings from the player-comparison and tacti
 - Added 25 verified dynamic transfer/contract notices and confirmation prompts from the original 3.9.68 data-map string references.
 - Dynamic player and club placeholders remain intact; no player, staff or club names are translated.
 - Current overlay catalogue: 404 contextual entries.
+
+
+## Squad filters and staff profile fields
+
+- Added 2 exact squad-filter menu labels and staff-profile field captions confirmed by the screen inventories.
+- Kept the game data itself unchanged; these are only visible interface labels.
+- Current overlay catalogue: 406 contextual entries.
