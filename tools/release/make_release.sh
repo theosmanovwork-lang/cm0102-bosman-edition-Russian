@@ -116,6 +116,12 @@ python3 -I "$REPO/tools/localisation/build_extended_language_ldb.py" \
     --translations "$REPO/locales/ru-RU-news.tsv" \
     --output "$STAGE/Data/language.ru.ldb"
 mv -f "$STAGE/Data/language.ru.ldb" "$STAGE/Data/language.ldb"
+# The Russian database-name file is built from clean eng.lng using fixed-width-safe #XXXX# escapes.
+# Untranslated proper names stay unchanged; the source file is never overwritten.
+python3 -I "$REPO/tools/localisation/build_russian_lng.py" \
+    --source "$STAGE/Data/eng.lng" \
+    --names "$REPO/locales/ru-RU-database-names.tsv" \
+    --output "$STAGE/Data/rus.lng"
 # The Russian match-event file retains the original event structure and English fallbacks.
 python3 -I "$REPO/tools/localisation/build_russian_events.py" \
     --source "$STAGE/Data/events_eng.cfg" \
@@ -131,6 +137,8 @@ MANIFEST="$OUT/manifest-download.tsv"
         "$(wc -c < "$STAGE/Data/language.ldb" | tr -d ' ')"
     printf '%s\t%s\tData/events_rus.cfg\n' "$(shasum -a 256 "$STAGE/Data/events_rus.cfg" | cut -d ' ' -f 1)" \
         "$(wc -c < "$STAGE/Data/events_rus.cfg" | tr -d ' ')"
+    printf '%s\t%s\tData/rus.lng\n' "$(shasum -a 256 "$STAGE/Data/rus.lng" | cut -d ' ' -f 1)" \
+        "$(wc -c < "$STAGE/Data/rus.lng" | tr -d ' ')"
     grep -v '^#' "$CLEAN/manifest-3960.tsv" | awk -F '\t' -v OFS='\t' '{ $3 = "Data-3.9.60/" $3; print }'
     grep -v '^#' "$CLEAN/manifest-3965.tsv" | awk -F '\t' -v OFS='\t' '{ $3 = "Data-3.9.65/" $3; print }'
     printf '%s\t%s\tData/bosman_logo.rgn\n' "$(shasum -a 256 "$STAGE/Data/bosman_logo.rgn" | cut -d ' ' -f 1)" \
