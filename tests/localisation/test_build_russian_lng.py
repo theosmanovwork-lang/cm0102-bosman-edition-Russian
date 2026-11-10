@@ -35,8 +35,9 @@ class RussianLngTests(unittest.TestCase):
         nation = bytearray(0x6D)
         nation[:51] = self.slot("Afghanistan", 51)
         nation[51] = 0xF0
-        nation[52:103] = self.slot("Afghanistan", 51)
-        nation[103:109] = b"\x0dAFG\0\0"
+        nation[52:78] = self.slot("Afghanistan", 26)
+        nation[78] = 0xA7
+        nation[79:109] = bytes(range(30))
         data = struct.pack("<8i", *counts) + continent + nation
         self.source.write_bytes(data)
         return data
@@ -64,7 +65,9 @@ class RussianLngTests(unittest.TestCase):
         self.assertIn(b"#0410##0444##0433#.", result)
         self.assertEqual(result[32 + 51], 0xBA)
         self.assertEqual(result[32 + 0xBA + 51], 0xF0)
-        self.assertEqual(result[32 + 0xBA + 103:32 + 0xBA + 109], b"\x0dAFG\0\0")
+        nation_at = 32 + 0xBA
+        self.assertEqual(result[nation_at + 78], 0xA7)
+        self.assertEqual(result[nation_at + 79:nation_at + 109], bytes(range(30)))
 
     def test_rejects_source_mismatch_and_slot_overflow(self):
         self.write_source()
