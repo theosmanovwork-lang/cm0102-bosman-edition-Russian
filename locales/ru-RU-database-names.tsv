@@ -8,7 +8,7 @@ continents	5	South America		Юж.Ам.
 nation_competitions	0	'B' International	'B' International	Сборная B	
 nation_competitions	1	Under 21 International	U21 International	U21	
 nation_competitions	2	Oceania Nations Cup	OFC Nations Cup	Кубок ОФК	ОФК
-nation_competitions	3	Confederations Cup	Confederations Cup	Конфед.	
+nation_competitions	3	Confederations Cup	Confederations Cup	Кубок конфедераций	Конфед.
 nation_competitions	4	World Cup Oceania Qualifying Section	World Cup Quals (OCE)	ЧМ Оке.	
 nation_competitions	5	World Cup CONCACAF Qualifying Section	World Cup Quals (CON)	ЧМ КОНК.	
 nation_competitions	6	World Cup Asian Qualifying Section	World Cup Quals (ASI)	ЧМ Азия	
@@ -16,14 +16,14 @@ nation_competitions	7	World Cup South American Qualifying Section	World Cup Qual
 nation_competitions	8	World Cup African Qualifying Section	World Cup Quals (AFR)	ЧМ Афр.	
 nation_competitions	9	World Cup European Qualifying Section	World Cup Quals (EUR)	ЧМ Европа	
 nation_competitions	10	European Championship Qualifying	Euro Ch'ship Quals	Отбор Евро	Отб.Евро
-nation_competitions	11	Asian Cup Qualifying	Asian Cup Quals	Отбор АЧ	
-nation_competitions	12	Asian Games Football Tournament	Asian Games	Азиады	
-nation_competitions	13	Asian Cup	Asian Cup	Азия	
+nation_competitions	11	Asian Cup Qualifying	Asian Cup Quals	Отбор Кубка Азии	Отб.Азии
+nation_competitions	12	Asian Games Football Tournament	Asian Games	Футбол на Азиадах	Азиады
+nation_competitions	13	Asian Cup	Asian Cup	Кубок Азии	Куб.Азии
 nation_competitions	14	FIFA World Cup	World Cup	ЧМ	
-nation_competitions	15	Olympic Games	Olympics	Олимп.	
+nation_competitions	15	Olympic Games	Olympics	Олимпийский турнир	Олимп.
 nation_competitions	16	European Football Championship	European Championship	Евро	
 nation_competitions	17	Copa America	Copa America	Копа	
-nation_competitions	18	African Cup of Nations	African Nations	Кубок	
+nation_competitions	18	African Cup of Nations	African Nations	Кубок африканских наций	КАН
 nations	0	Afghanistan	Afghanistan	Афган.	Афг.
 nations	1	Albania	Albania	Албания	Алб.
 nations	2	Algeria	Algeria	Алжир	Алж.
@@ -241,7 +241,7 @@ clubs	9644	AS Roma	Roma	Рома	Рома
 clubs	10250	FC Schalke 04	Schalke 04	Шальке 04	Шал
 clubs	10414	Shakhtar Donetsk	Shakhtar	Шахтёр	Шах
 clubs	10848	Spartak	Spartak	Спартак	Сп.
-clubs	10862	Spartak Moscow	Spartak Moscow	Спартак	Сп.
+clubs	10862	Spartak Moscow	Spartak Moscow	Спартак Москва	Сп.М.
 clubs	10915	Sporting Clube de Portugal	Sporting	Спортинг	Сп.
 clubs	11726	Tottenham Hotspur	Tottenham	Тоттенх.	Тот
 clubs	12209	Valencia C.F.	Valencia	Валенс.	Вал
