@@ -210,3 +210,10 @@ Added two source-grounded interface strings from the player-comparison and tacti
 - Confirmed the remaining squad-filter and staff-profile captions were already represented in the catalogue; no duplicate entries were retained.
 - Kept the game data itself unchanged; these are only visible interface labels.
 - Current overlay catalogue: 404 contextual entries.
+
+
+## Additional transfer and staff value labels (2026-11-10)
+
+- Added the verified part-exchange fee suffix (`p/x`) used in club transfer lists and the dynamic current-value sentence in the staff transfer-status dialog.
+- Kept the dynamic player and money placeholders intact; no database names or values were changed.
+- Current overlay catalogue: 406 contextual entries.
