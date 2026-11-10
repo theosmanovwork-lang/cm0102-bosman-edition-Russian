@@ -73,3 +73,16 @@ A source build still needs the player's own `CM0102.iso` and official 3.9.68 pat
 
 - Follow-up terminology review: corrected `Holland` to `Нидерланды` and retained the era-appropriate `Свазиленд` for the game's 2001/02 database; disambiguated the Oceania Nations Cup, Euro qualifying, American Samoa and Guinea-Bissau labels so they no longer collide with other Russian names. The 319-row catalogue has no duplicate section/row keys or blank long-name translations.
 - Competition-label review: clarified the Asian Cup and its qualifying stage, the Olympic football tournament, Confederations Cup and Africa Cup of Nations; distinguished Spartak Moscow from the generic Spartak entry. The only repeated Russian name remaining in the 319-row database catalogue is the Milan/Milano city alias pair.
+
+## Scope correction — interface only (2026-11-10)
+
+The project owner clarified the requirement: Russian is to translate the game interface and football-management terminology, not the database. The target is comparable to the Russian interface localisation in current Football Manager releases.
+
+- In scope: all menus, buttons, tabs, settings, screens, dialogs, actions/functions, tactical labels, formations, positions, player roles, attributes and statuses.
+- Out of scope: player/person names, club names, city and stadium names, nation names and competition names. These must remain exactly as provided by the active database, with no translation or transliteration.
+- News prose and match commentary are also outside the current interface-only scope.
+- The release script has been corrected: it now builds the Russian language table from `ru-RU-native.tsv` only. It no longer adds the news batch, creates `rus.lng`, or creates `events_rus.cfg`. Thus the historical database-name and match-event TSVs/builders are not release inputs.
+- The existing `locales/ru-RU-database-names.tsv`, `ru-RU-news.tsv`, and `ru-RU-match-events.tsv` files are retained as historical work-in-progress records for now, but must not be treated as part of the product or included in a release. The generated database-name resource must not be installed.
+- The 88-entry native catalogue is the current interface/football-terminology source batch. It is not yet a complete translation: the next work is to inventory and translate every remaining interface string, with context and consistent terminology. Proper-name source rows must be excluded from the translation catalogue.
+
+The scope correction is reflected in `docs/specs/russian-localisation-foundation.md` and `tools/release/make_release.sh`. A clean build and runtime test are still required to confirm that the release leaves all database identities untouched.
