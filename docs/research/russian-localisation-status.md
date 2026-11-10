@@ -175,3 +175,10 @@ Added two source-grounded interface strings from the player-comparison and tacti
 - Added the verified “Period” and “Venue” filter captions from the club screen inventory, translated as “Период” and “Место проведения”.
 - These are filter labels only; venue, club and competition database names remain unchanged.
 - Current overlay catalogue: 357 contextual entries.
+
+
+## Squad selector labels
+
+- Added the verified generic squad-choice captions “First Team”, “Reserve Team” and “Youth Team”, translated as “Основной состав”, “Резервный состав” and “Молодёжный состав”.
+- These are interface labels, not club or player database names.
+- Current overlay catalogue: 360 contextual entries.
