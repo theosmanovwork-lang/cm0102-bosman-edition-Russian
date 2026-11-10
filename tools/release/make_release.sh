@@ -113,7 +113,6 @@ python3 -I "$REPO/tools/seasons/make_club_records.py" --out "$STAGE/Seasons/club
 python3 -I "$REPO/tools/localisation/build_extended_language_ldb.py" \
     --source "$STAGE/Data/language.ldb" \
     --translations "$REPO/locales/ru-RU-native.tsv" \
-    --translations "$REPO/locales/ru-RU-news.tsv" \
     --output "$STAGE/Data/language.ru.ldb"
 mv -f "$STAGE/Data/language.ru.ldb" "$STAGE/Data/language.ldb"
 # Interface-only Russian scope: do not generate rus.lng or translated match-event
