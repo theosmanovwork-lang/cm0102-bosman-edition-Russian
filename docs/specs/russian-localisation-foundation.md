@@ -7,7 +7,9 @@ Working branch: feature/russian-language-foundation
 ## Goals
 
 - Add Russian as an eleventh selectable language. Preserve all ten existing language choices and their identifiers.
-- Translate player-facing text in natural football Russian: interface, news, tactical terminology, attributes, match commentary, competitions and awards.
+- Translate the game interface and player-facing controls in natural football Russian: menus, buttons, tabs, settings, screens, functions, tactical labels, positions, roles, attributes and statuses.
+- Strictly preserve database identity fields: player/person names, club names, city and stadium names, nation names and competition names remain exactly as supplied by the selected database. Do not transliterate or translate these proper names.
+- News prose and match commentary are outside the current interface-only scope unless the user explicitly expands it.
 - Preserve format placeholders, control tokens, colour codes and game-specific markup exactly.
 - Keep club and player identity stable. Use original Latin spelling by default for proper names unless the relevant data set already supplies a localised name.
 - Introduce a coherent modern sports font family with Cyrillic and extended Latin coverage. Agreed direction: Modern Sports / Balanced Density, IBM Plex Sans preferred (Regular, Medium, SemiBold, Bold); condensed face only for dense tables after layout tests.
@@ -34,7 +36,8 @@ Working branch: feature/russian-language-foundation
 ## Implementation slices
 
 ### A. Language inventory and extraction
-- Inventory text sources by domain: menus, settings, labels, news templates, commentary, tactical terms, attributes, competitions, nations, cities, stadiums and awards.
+- Inventory interface text by domain: menus, settings, buttons, tabs, labels, dialogs, tactical terms, positions, player roles, attributes and statuses.
+- Keep a separate exclusion list for database proper names and non-interface prose (news and match commentary); do not include these in the Russian interface build.
 - Build a repeatable extractor emitting stable string IDs, source text, context, placeholders/tokens and source location.
 - Store translation source in maintainable UTF-8 (for example JSON/TSV) and compile to the runtime format only after that format is documented.
 - Add a glossary and style guide before bulk translation.
@@ -49,7 +52,7 @@ Working branch: feature/russian-language-foundation
 - Use football-native Russian rather than literal translation.
 - Preserve placeholders, tags, colour/control codes and line-break semantics.
 - Handle plural forms, grammatical cases, gender and names through explicit formatting rules where supported; never silently alter placeholder order.
-- Apply a consistent policy for transliteration and localised competition/country/city/stadium names.
+- Preserve all proper names and database identity fields byte-for-byte; no transliteration or localised names.
 - Review in-game context, not just isolated strings.
 
 ### D. Fonts
@@ -60,7 +63,7 @@ Working branch: feature/russian-language-foundation
 
 ### E. Quality assurance
 - Automated checks: untranslated-string report, duplicate IDs, missing glyphs, malformed placeholders/tokens, invalid encoding, line-length and overflow heuristics.
-- Visual checks: main menu, settings, squad, player profile, tactics, inbox/news, match commentary, tables and popups.
+- Visual checks: main menu, settings, squad, player profile, tactics,  tables and popups.
 - Regression checks: all ten existing languages remain selectable and visually unchanged; existing saves still load; Russian selection persists across restart.
 - Simulation checks: language/font changes must not alter match results or save-game state beyond explicitly expected settings fields.
 
@@ -69,7 +72,7 @@ Working branch: feature/russian-language-foundation
 - Use concise, natural Russian sports language.
 - Prefer established football terms (for example: «состав», «тактика», «трансфер», «арендовать», «игра в пас», «работоспособность») and validate each against source context.
 - Avoid overlong literal phrases where a shorter conventional label is clear.
-- Preserve club/player names as supplied unless a specific data source or agreed policy requires transliteration.
+- Preserve all club, player, city, stadium, nation and competition names exactly as supplied by the database. Transliteration is not permitted.
 - Maintain one glossary with one approved translation per concept; document contextual exceptions.
 
 ## Acceptance criteria
@@ -84,3 +87,8 @@ Working branch: feature/russian-language-foundation
 ## Current status / limitations
 
 Implementation progress is tracked in [russian-localisation-status.md](../research/russian-localisation-status.md). The first Russian overlay stage now has a persisted setting, a dedicated Language tab, an 80-entry UTF-8 catalogue, a T2K-escape generator, a Langlib wrapper and automated catalogue/settings tests. This is not yet the native eleventh item in the original language dropdown. The original language.ldb and .lng binary formats still need a verified extension, and the Cyrillic font path must be tested against the clean executable before shipping.
+
+
+## Scope correction (2026-11-10)
+
+The project owner clarified that “Russian translation” means interface localisation only, in the style of the Russian UI in current Football Manager releases. Earlier work that translated database names, news prose or match-event commentary was outside the requested scope. Those resources must not be included in the Russian release build. The release staging script now builds the Russian language table from `ru-RU-native.tsv` only and no longer generates `rus.lng` or `events_rus.cfg`. The original `eng.lng`, club/player/city/stadium/nation/competition identities and English match-event file must remain unchanged. Historical TSVs and builder tests may remain in the repository for traceability, but they are not part of the product scope and must not be shipped or wired into the interface-only release.
