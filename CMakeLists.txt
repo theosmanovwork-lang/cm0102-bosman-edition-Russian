@@ -130,6 +130,7 @@ if(NOT WIN32)
     add_test(NAME options COMMAND options_test)
     # The Russian catalogue: UTF-8 source, preserved printf/game markup, ASCII T2K Unicode escapes.
     add_test(NAME localisation_catalog COMMAND python3 -I "${CMAKE_SOURCE_DIR}/tests/localisation/test_build_catalog.py")
+    add_test(NAME localisation_fonts COMMAND python3 -I "${CMAKE_SOURCE_DIR}/tests/fonts/test_install_ibm_plex.py")
     add_executable(dbfolders_test tests/dbfolders/test_dbfolders.c src/recomp_rt/win/dbfolders.c
         src/recomp_rt/host/posix.c)
     target_include_directories(dbfolders_test PRIVATE src/recomp_rt/win)
