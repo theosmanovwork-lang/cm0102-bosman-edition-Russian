@@ -108,7 +108,8 @@ def main() -> int:
     args = parser.parse_args()
     rows = read_catalog(args.catalog)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(render_header(rows), encoding="ascii", newline="\n")
+    with args.output.open("w", encoding="ascii", newline="\n") as stream:
+        stream.write(render_header(rows))
     print(f"{len(rows)} Russian entries: {args.output}")
     return 0
 
