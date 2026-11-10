@@ -1,0 +1,214 @@
+section	row	source_en	source_short_en	name_ru	short_name_ru
+continents	0	Africa		Африка	
+continents	1	Asia		Азия	
+continents	2	Europe		Европа	
+continents	3	North America		Сев.Ам.	
+continents	4	Oceania		Океания	
+continents	5	South America		Юж.Ам.	
+nation_competitions	0	'B' International	'B' International	Сборная B	
+nation_competitions	1	Under 21 International	U21 International	U21	
+nation_competitions	2	Oceania Nations Cup	OFC Nations Cup	Кубок	
+nation_competitions	3	Confederations Cup	Confederations Cup	Конфед.	
+nation_competitions	4	World Cup Oceania Qualifying Section	World Cup Quals (OCE)	ЧМ Оке.	
+nation_competitions	5	World Cup CONCACAF Qualifying Section	World Cup Quals (CON)	ЧМ КОНК.	
+nation_competitions	6	World Cup Asian Qualifying Section	World Cup Quals (ASI)	ЧМ Азия	
+nation_competitions	7	World Cup South American Qualifying Section	World Cup Quals (SAM)	ЧМ Ю.Амер.	
+nation_competitions	8	World Cup African Qualifying Section	World Cup Quals (AFR)	ЧМ Афр.	
+nation_competitions	9	World Cup European Qualifying Section	World Cup Quals (EUR)	ЧМ Европа	
+nation_competitions	10	European Championship Qualifying	Euro Ch'ship Quals	Евро	
+nation_competitions	11	Asian Cup Qualifying	Asian Cup Quals	Отбор АЧ	
+nation_competitions	12	Asian Games Football Tournament	Asian Games	Азиады	
+nation_competitions	13	Asian Cup	Asian Cup	Азия	
+nation_competitions	14	FIFA World Cup	World Cup	ЧМ	
+nation_competitions	15	Olympic Games	Olympics	Олимп.	
+nation_competitions	16	European Football Championship	European Championship	Евро	
+nation_competitions	17	Copa America	Copa America	Копа	
+nation_competitions	18	African Cup of Nations	African Nations	Кубок	
+nations	0	Afghanistan	Afghanistan	Афган.	Афг.
+nations	1	Albania	Albania	Албания	Алб.
+nations	2	Algeria	Algeria	Алжир	Алж.
+nations	3	American Samoa	American Samoa	Самоа	
+nations	4	Andorra	Andorra	Андорра	Анд.
+nations	5	Angola	Angola	Ангола	Анг.
+nations	6	Anguilla	Anguilla	Ангилья	
+nations	7	Antigua & Barbuda	Antigua & Barbuda	Антигуа	
+nations	8	Argentina	Argentina	Арген.	Арг.
+nations	9	Armenia	Armenia	Армения	Арм.
+nations	10	Aruba	Aruba	Аруба	
+nations	11	Australia	Australia	Австрал.	Авс.
+nations	12	Austria	Austria	Австрия	Авс.
+nations	13	Azerbaijan	Azerbaijan	Азерб.	Азер.
+nations	14	Bahamas	Bahamas	Багамы	Баг.
+nations	15	Bahrain	Bahrain	Бахрейн	Бах.
+nations	16	Bangladesh	Bangladesh	Бангл.	Банг.
+nations	17	Barbados	Barbados	Барбадос	Бар.
+nations	18	Belarus	Belarus	Беларусь	Бел.
+nations	19	Belgium	Belgium	Бельгия	Белг.
+nations	20	Belize	Belize	Белиз	Бел.
+nations	21	Benin	Benin	Бенин	Бен.
+nations	22	Bermuda	Bermuda	Берм.	Берм.
+nations	23	Bhutan	Bhutan	Бутан	Бут.
+nations	24	Bolivia	Bolivia	Боливия	Бол.
+nations	25	Bosnia-Herzegovina	Bosnia	Босния	Бос.
+nations	26	Botswana	Botswana	Ботсвана	Бот.
+nations	27	Brazil	Brazil	Бразилия	Браз.
+nations	28	British Virgin Islands	British Virgin Is.	Вирг.	
+nations	29	Brunei Darussalam	Brunei	Бруней	Брун.
+nations	30	Bulgaria	Bulgaria	Болгария	Болг.
+nations	31	Burkina Faso	Burkina Faso	Бурк.	Бурк.
+nations	32	Burundi	Burundi	Бурунди	Буру.
+nations	33	Commonwealth of Soviet States	C.I.S.	СНГ	
+nations	34	Cambodia	Cambodia	Камбоджа	Камб.
+nations	35	Cameroon	Cameroon	Камерун	Камер.
+nations	36	Canada	Canada	Канада	Кан.
+nations	37	Cape Verde Islands	Cape Verde	Каб.	Каб.
+nations	39	Central African Republic	Central African Rep.	ЦАР	
+nations	40	Chad	Chad	Чад	Чад
+nations	41	Chile	Chile	Чили	Чили
+nations	42	China PR	China	Китай	Кит.
+nations	43	Chinese Taipei	Chinese Taipei	Тайвань	
+nations	44	Colombia	Colombia	Колумбия	Кол.
+nations	45	The Congo	Congo	Конго	
+nations	46	Cook Islands	Cook Islands	о-ва Кука	
+nations	47	Costa Rica	Costa Rica	Кост.	Кост.
+nations	48	Croatia	Croatia	Хорватия	Хорв.
+nations	49	Cuba	Cuba	Куба	Куба
+nations	50	Cyprus	Cyprus	Кипр	Кипр
+nations	51	Czech Republic	Czech Republic	Чехия	Чех.
+nations	52	Czechoslovakia	Czechoslovakia	Чехосл.	
+nations	53	Denmark	Denmark	Дания	Дан.
+nations	54	Djibouti	Djibouti	Джибути	
+nations	55	Dominica	Dominica	Доминика	
+nations	56	Dominican Republic	Dominican Republic	Доминик.	
+nations	57	East Germany	E Germany	ГДР	
+nations	58	Ecuador	Ecuador	Эквадор	Экв.
+nations	59	Egypt	Egypt	Египет	Егип.
+nations	61	England	England	Англия	Анг.
+nations	62	Equatorial Guinea	Equatorial Guinea	Экв. Гв.	
+nations	63	Eritrea	Eritrea	Эритрея	
+nations	64	Estonia	Estonia	Эстония	Эст.
+nations	65	Ethiopia	Ethiopia	Эфиопия	Эфи.
+nations	67	Faroe Islands	Faroe Islands	Фареры	
+nations	68	Fiji	Fiji	Фиджи	
+nations	69	Finland	Finland	Фин.	Фин.
+nations	70	France	France	Франция	Фран.
+nations	71	Gabon	Gabon	Габон	
+nations	72	The Gambia	Gambia	Гамбия	
+nations	73	Georgia	Georgia	Грузия	Груз.
+nations	74	Germany	Germany	Германия	Герм.
+nations	75	Ghana	Ghana	Гана	Ган.
+nations	76	Greece	Greece	Греция	Греч.
+nations	77	Grenada	Grenada	Гренада	
+nations	78	Guam	Guam	Гуам	
+nations	80	Guinea	Guinea	Гвинея	
+nations	81	Guinea-Bissau	Guinea-Bissau	Гвинея	
+nations	82	Guyana	Guyana	Гайана	
+nations	83	Haiti	Haiti	Гаити	
+nations	84	Holland	Holland	Нид.	Нид.
+nations	85	Honduras	Honduras	Гондурас	
+nations	86	Hong Kong	Hong Kong	Гонконг	
+nations	87	Hungary	Hungary	Венгрия	Венг.
+nations	88	Iceland	Iceland	Исландия	Исл.
+nations	89	India	India	Индия	Инд.
+nations	90	Indonesia	Indonesia	Индон.	Индон.
+nations	91	Iran	Iran	Иран	Иран
+nations	92	Iraq	Iraq	Ирак	Ирак
+nations	93	Republic of Ireland	Ireland	Ирландия	Ирл.
+nations	94	Israel	Israel	Израиль	Изр.
+nations	95	Italy	Italy	Италия	Итал.
+nations	97	Jamaica	Jamaica	Ямайка	
+nations	98	Japan	Japan	Япония	Япон.
+nations	99	Jordan	Jordan	Иордания	
+nations	100	Kazakhstan	Kazakhstan	Каз.	Каз.
+nations	101	Kenya	Kenya	Кения	Кен.
+nations	102	Kuwait	Kuwait	Кувейт	
+nations	103	Kyrgyzstan	Kyrgyzstan	Киргизия	
+nations	104	Laos	Laos	Лаос	
+nations	105	Latvia	Latvia	Латвия	Лат.
+nations	106	Lebanon	Lebanon	Ливан	
+nations	107	Lesotho	Lesotho	Лесото	
+nations	108	Liberia	Liberia	Либерия	
+nations	109	Libya	Libya	Ливия	
+nations	111	Lithuania	Lithuania	Литва	Лит.
+nations	113	Macau	Macau	Макао	
+nations	115	Malawi	Malawi	Малави	
+nations	116	Malaysia	Malaysia	Малайзия	
+nations	117	Maldives	Maldives	Мальдивы	
+nations	118	Mali	Mali	Мали	
+nations	119	Malta	Malta	Мальта	
+nations	121	Mauritius	Mauritius	Маврикий	
+nations	122	Mexico	Mexico	Мексика	Мекс.
+nations	123	Moldova	Moldova	Молдова	Молд.
+nations	124	Mongolia	Mongolia	Монголия	
+nations	126	Morocco	Morocco	Марокко	Марок.
+nations	127	Mozambique	Mozambique	Мозамбик	
+nations	128	Myanmar	Myanmar	Мьянма	
+nations	129	Northern Ireland	N.Ireland	Сев.Ирл.	Сев.Ирл.
+nations	130	Namibia	Namibia	Намибия	
+nations	131	Nepal	Nepal	Непал	
+nations	132	Netherlands Antilles	Netherlands Antilles	Антилы	
+nations	134	New Zealand	New Zealand	НЗ	НЗ
+nations	136	Niger	Niger	Нигер	
+nations	137	Nigeria	Nigeria	Нигерия	Ниг.
+nations	138	North Korea	North Korea	КНДР	КНДР
+nations	139	Norway	Norway	Норвегия	Норв.
+nations	140	Oman	Oman	Оман	
+nations	141	Pakistan	Pakistan	Пакистан	Пак.
+nations	143	Panama	Panama	Панама	
+nations	144	Papua New Guinea	Papua New Guinea	Папуа	
+nations	145	Paraguay	Paraguay	Парагвай	Пар.
+nations	147	Peru	Peru	Перу	Пер.
+nations	148	The Philippines	Philippines	Филипп.	
+nations	149	Poland	Poland	Польша	Пол.
+nations	150	Portugal	Portugal	Порт.	Порт.
+nations	152	Qatar	Qatar	Катар	
+nations	153	Democratic Republic of Congo	Republic of Congo	ДР Конго	
+nations	154	Romania	Romania	Румыния	Рум.
+nations	155	Russia	Russia	Россия	Рос.
+nations	156	Rwanda	Rwanda	Руанда	
+nations	157	Samoa	Samoa	Самоа	
+nations	159	São Tomé & Principe	São Tomé & Principe	Сан-Томе	
+nations	161	Scotland	Scotland	Шотл.	Шотл.
+nations	162	Senegal	Senegal	Сенегал	
+nations	165	Singapore	Singapore	Сингапур	
+nations	166	Slovakia	Slovakia	Словакия	Слов.
+nations	167	Slovenia	Slovenia	Словения	Слов.
+nations	168	Solomon Islands	Solomon Islands	Соломоны	
+nations	169	Somalia	Somalia	Сомали	
+nations	170	South Africa	South Africa	ЮАР	ЮАР
+nations	171	South Korea	South Korea	Ю.Корея	Ю.Корея
+nations	172	Spain	Spain	Испания	Исп.
+nations	173	Sri Lanka	Sri Lanka	Шри-Ланка	
+nations	174	St Kitts & Nevis	St Kitts & Nevis	Китс	
+nations	175	Saint Lucia	St Lucia	Люсия	
+nations	177	Sudan	Sudan	Судан	
+nations	178	Surinam	Surinam	Суринам	
+nations	179	Swaziland	Swaziland	Эсватини	
+nations	180	Sweden	Sweden	Швеция	Шв.
+nations	181	Switzerland	Switzerland	Швейц.	Швейц.
+nations	182	Syria	Syria	Сирия	
+nations	183	Tahiti	Tahiti	Таити	
+nations	185	Tanzania	Tanzania	Танзания	
+nations	186	Thailand	Thailand	Таиланд	
+nations	187	Timor	Timor	Тимор	
+nations	188	Togo	Togo	Того	
+nations	189	Tonga	Tonga	Тонга	
+nations	190	Trinidad & Tobago	Trinidad & Tobago	Тринидад	
+nations	191	Tunisia	Tunisia	Тунис	
+nations	192	Turkey	Turkey	Турция	Тур.
+nations	194	Turks and Caicos Islands	Turks and Caicos Is.	Теркс	
+nations	195	United Arab Emirates	U.A.E.	ОАЭ	ОАЭ
+nations	196	United States	U.S.A.	США	США
+nations	197	Soviet Union	U.S.S.R.	СССР	
+nations	198	US Virgin Islands	US Virgin Is.	Вирг. о-ва	
+nations	199	Uganda	Uganda	Уганда	
+nations	200	Ukraine	Ukraine	Украина	Укр.
+nations	201	Uruguay	Uruguay	Уругвай	
+nations	203	Vanuatu	Vanuatu	Вануату	
+nations	205	Vietnam	Vietnam	Вьетнам	
+nations	206	West Germany	W Germany	ФРГ	
+nations	207	Wales	Wales	Уэльс	Уэльс
+nations	208	Yemen	Yemen	Йемен	
+nations	210	Zaire	Zaire	Заир	
+nations	211	Zambia	Zambia	Замбия	
+nations	212	Zimbabwe	Zimbabwe	Зимбабве	
