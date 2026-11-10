@@ -14,8 +14,6 @@
 
 #define LANG_INDEX 0x009eb2dcu
 #define RUSSIAN_LANGUAGE_ID 13u
-#define DB_NAMES_LANGUAGE 0x009b5984u
-#define DB_NAMES_FILENAME 0x009b632cu
 #define MATCH_EVENT_LANGUAGE 0x00a1599cu
 #define MATCH_EVENT_FILENAME 0x00a15c3cu
 
@@ -26,6 +24,7 @@ void o_0066f4e0(void);
 void o_005d8480(void);
 void o_006d9e50(void);
 void o_00535930(void);
+void o_00827d50(void);
 
 int localisation_is_russian(void)
 {
@@ -101,6 +100,17 @@ void localisation_language_changed(void)
         uint32_t names[2] = {(uint32_t)language, 0};
         call_cdecl(0x005339a0u, 2, names);
     }
+}
+
+/* Setup Game's default-nation selector has a fixed switch for the original language IDs.
+ * Russian keeps the operating-system default nation instead of entering its unsupported-ID error path. */
+RT_WRAP(00827d50, russian_default_nation)
+{
+    uint32_t old_language = rd32(g_mem, LANG_INDEX);
+    if (localisation_is_russian())
+        wr32(g_mem, LANG_INDEX, system_language >= 0 && system_language <= 12 ? (uint32_t)system_language : 0u);
+    o_00827d50();
+    if (!rt_unwinding) wr32(g_mem, LANG_INDEX, old_language);
 }
 
 /* Langlib setup first chooses the operating-system language. Remember it for "System", then
