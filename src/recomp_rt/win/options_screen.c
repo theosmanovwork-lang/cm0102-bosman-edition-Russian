@@ -76,6 +76,7 @@
  * numbers, so the box needs no leave function. */
 #include "win.h"
 #include "options.h"
+#include "localisation.h"
 #include "dbfolders.h"
 #include "net_core.h"
 #include "net_errors.h"
@@ -121,7 +122,7 @@ extern const uint32_t rt_site_options_item, rt_site_main_poll;
 
 #define VALUE_ID 0x7d3au            /* data: row index * 16 + value index. Ids that the original does not use. */
 #define TAB_ID 0x7d3bu              /* data: the tab, 1 to TABS */
-#define TABS 3
+#define TABS 4
 #define CLOSE_ID 0x7d3cu
 #define ITEM_ID 0x4b8u              /* the side bar item; the side bar input 0x7615d0 uses no such id */
 #define REBUILD 0xfffffff5u         /* -0xb: build the box again */
@@ -144,10 +145,10 @@ extern const uint32_t rt_site_options_item, rt_site_main_poll;
 #define MANAGERS 15
 #define LIST_BOTTOM 505             /* the Kick list ends above Close (509) */
 
-typedef enum { ROW_SWITCH, ROW_DISPLAY, ROW_PATH } RowKind;
+typedef enum { ROW_SWITCH, ROW_DISPLAY, ROW_PATH, ROW_LANGUAGE } RowKind;
 
 typedef struct {
-    int tab;                        /* 1 Graphics, 2 Game, 3 Network */
+    int tab;                        /* 1 Graphics, 2 Game, 3 Network, 4 Language */
     OptionId id;
     RowKind kind;
     const char *label;
@@ -174,12 +175,15 @@ static const Row rows[] = {
     {2, OPT_CHANGING_RULES, ROW_SWITCH, "Changing rules", "Default for a new game\nSetup Game sets each game"},
     {2, OPT_SAVE_FOLDER, ROW_PATH, "Save folder", "Applies at the next start\nOld saves do not move"},
     {3, OPT_ONLINE_PLAY, ROW_SWITCH, "Online play", "Off: LAN games only"},
+    {4, OPT_LANGUAGE, ROW_LANGUAGE, "Game text", ""},
 };
 #define ROW_COUNT ((int)(sizeof rows / sizeof rows[0]))
 
 static const char *const switch_text[] = {"On", "Off"}, *const switch_word[] = {"on", "off"};
 static const char *const display_text[] = {"Widescreen", "Classic"};
 static const char *const display_word[] = {"widescreen", "classic"};
+static const char *const language_text[] = {"System", "Russian"};
+static const char *const language_word[] = {"system", "russian"};
 
 /* Game memory for the texts and the column weights. The create functions copy each text. */
 static uint32_t scratch;
@@ -228,7 +232,7 @@ static uint32_t display(void)
 
 static uint32_t text(const char *s)
 {
-    win_put_str(scratch, s, TEXT_SIZE);
+    win_put_str(scratch, localisation_text(s), TEXT_SIZE);
     return scratch;
 }
 
@@ -318,7 +322,7 @@ static int open_save_folder(const char *dir)
 static int current_index(const Row *r)
 {
     if (r->kind == ROW_SWITCH) return options_bool(r->id) ? 0 : 1;
-    if (r->kind == ROW_DISPLAY) return options_enum(r->id);
+    if (r->kind == ROW_DISPLAY || r->kind == ROW_LANGUAGE) return options_enum(r->id);
     return 0;
 }
 
@@ -381,7 +385,8 @@ static void build_row(const Row *r, int index, int y1, int y2, uint32_t green, u
     int a = area(ROW_X1, y1, ROW_X2, y2, 4, weights_two, 1, 0);
     plain(a, 0, r->label, 3, light);
     for (int i = 0; i < 2; i++) {
-        const char *s = r->kind == ROW_SWITCH ? switch_text[i] : display_text[i];
+        const char *s = r->kind == ROW_SWITCH ? switch_text[i]
+                      : r->kind == ROW_DISPLAY ? display_text[i] : language_text[i];
         if (i == cur) current(a, i + 1, s);
         else choice(a, i + 1, s, VALUE_ID, (uint32_t)index * 16u + (uint32_t)i, green);
     }
@@ -561,9 +566,9 @@ static void options_build(void)
     box_text(490, 115, 724, 135, 1, 0, 1, 1, light, "Changes save at once to settings.txt");
 
     /* The tabs: the open tab as a framed label, the other as a button. */
-    static const uint8_t weights_tabs[TABS] = {2, 2, 1};
+    static const uint8_t weights_tabs[TABS] = {2, 2, 1, 1};
     int t = area(165, 142, 724, 168, TABS, weights_tabs, 1, 0);
-    static const char *const tab_names[TABS] = {"Graphics", "Game", "Network"};
+    static const char *const tab_names[TABS] = {"Graphics", "Game", "Network", "Language"};
     for (int i = 1; i <= TABS; i++) {
         if (i == tab) current(t, i - 1, tab_names[i - 1]);
         else choice(t, i - 1, tab_names[i - 1], TAB_ID, (uint32_t)i, green);
@@ -631,6 +636,7 @@ static void apply(const Row *r, int index, int value)
     const char *word = NULL;
     if (r->kind == ROW_SWITCH && value < 2) word = switch_word[value];
     if (r->kind == ROW_DISPLAY && value < 2) word = display_word[value];
+    if (r->kind == ROW_LANGUAGE && value < 2) word = language_word[value];
     if (!word) return;
     char old[1100];
     snprintf(old, sizeof old, "%s", options_string(r->id));
@@ -644,6 +650,7 @@ static void apply(const Row *r, int index, int value)
     failed_row = -1;
     fprintf(stderr, "recomp: option %s = %s (%d)\n", options_name(r->id), word, ok);
     if (r->id == OPT_SHARP_PICTURE) win_sharp_picture_changed();
+    if (r->id == OPT_LANGUAGE) localisation_language_changed();
 }
 
 /* The input of the box: cdecl (s16 widget). Only the box's own widgets: the box covers the screen. */

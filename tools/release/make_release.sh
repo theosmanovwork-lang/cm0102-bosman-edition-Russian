@@ -108,10 +108,24 @@ python3 -I "$REPO/tools/seasons/make_rules.py" --out "$STAGE/Seasons/rules.tsv"
 python3 -I "$REPO/tools/seasons/make_names.py" --out "$STAGE/Seasons/names.tsv"
 python3 -I "$REPO/tools/seasons/make_clubs.py" --out "$STAGE/Seasons/clubs.tsv"
 python3 -I "$REPO/tools/seasons/make_club_records.py" --out "$STAGE/Seasons/club_records.tsv"
+# The Russian language.ldb block is generated from the player's clean file; the original ten
+# language IDs and records are copied unchanged by the builder. The source binary is not stored in git.
+python3 -I "$REPO/tools/localisation/build_extended_language_ldb.py" \
+    --source "$STAGE/Data/language.ldb" \
+    --translations "$REPO/locales/ru-RU-native.tsv" \
+    --output "$STAGE/Data/language.ru.ldb"
+mv -f "$STAGE/Data/language.ru.ldb" "$STAGE/Data/language.ldb"
+# Interface-only Russian scope: do not generate rus.lng or translated match-event
+# resources. Database identities (players, clubs, cities, stadiums, nations and
+# competitions) and match commentary remain byte-for-byte as in the clean game.
+# The IBM Plex UI family (OFL): the original T2K font scanner reads TTF files from Data/FONTS.
+python3 -I "$REPO/tools/fonts/install_ibm_plex.py" --source "$REPO/assets/fonts/IBM-Plex-Sans" --target "$STAGE/Data/FONTS"
 GAME="$STAGE"
 MANIFEST="$OUT/manifest-download.tsv"
 {
-    cat "$CLEAN/manifest.tsv"
+    awk -F '\t' '$3 != "Data/language.ldb" { print }' "$CLEAN/manifest.tsv"
+    printf '%s\t%s\tData/language.ldb\n' "$(shasum -a 256 "$STAGE/Data/language.ldb" | cut -d ' ' -f 1)" \
+        "$(wc -c < "$STAGE/Data/language.ldb" | tr -d ' ')"
     grep -v '^#' "$CLEAN/manifest-3960.tsv" | awk -F '\t' -v OFS='\t' '{ $3 = "Data-3.9.60/" $3; print }'
     grep -v '^#' "$CLEAN/manifest-3965.tsv" | awk -F '\t' -v OFS='\t' '{ $3 = "Data-3.9.65/" $3; print }'
     printf '%s\t%s\tData/bosman_logo.rgn\n' "$(shasum -a 256 "$STAGE/Data/bosman_logo.rgn" | cut -d ' ' -f 1)" \
@@ -122,6 +136,12 @@ MANIFEST="$OUT/manifest-download.tsv"
     for t in rules names clubs club_records; do
         printf '%s\t%s\tSeasons/%s.tsv\n' "$(shasum -a 256 "$STAGE/Seasons/$t.tsv" | cut -d ' ' -f 1)" \
             "$(wc -c < "$STAGE/Seasons/$t.tsv" | tr -d ' ')" "$t"
+    done
+    for f in "$STAGE"/Data/FONTS/IBMPlexSans*.ttf "$STAGE"/Data/FONTS/OFL.txt; do
+        [ -f "$f" ] || continue
+        rel="Data/FONTS/$(basename "$f")"
+        printf '%s\t%s\t%s\n' "$(shasum -a 256 "$f" | cut -d ' ' -f 1)" \
+            "$(wc -c < "$f" | tr -d ' ')" "$rel"
     done
 } > "$MANIFEST"
 CHECK_ARGS=(--manifest "$MANIFEST")

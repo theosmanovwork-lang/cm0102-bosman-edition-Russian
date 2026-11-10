@@ -58,6 +58,8 @@ static int has_one_comment(const char *text, OptionId id)
 static void check_defaults(void)
 {
     CHECK(options_enum(OPT_DISPLAY) == DISPLAY_WIDESCREEN);
+    CHECK(options_enum(OPT_LANGUAGE) == OPT_LANGUAGE_SYSTEM);
+    CHECK(!strcmp(options_string(OPT_LANGUAGE), "system"));
     CHECK(options_bool(OPT_SPACE_TO_CONTINUE) == 1);
     CHECK(options_bool(OPT_SHORTCUTS) == 1);
     CHECK(options_bool(OPT_SHARP_PICTURE) == 1);
@@ -203,7 +205,22 @@ int main(void)
     options_load(path);
     CHECK(options_bool(OPT_CHANGING_RULES) == 1);
 
-    /* 5d. season (0.6.0 slice 13): the 26 seasons; a bad word keeps 2001/02. The Choose Season screen writes it. */
+    /* 5d. Russian text overlay: a separate setting leaves all original language indices unchanged. */
+    put("language = russian\n");
+    options_load(path);
+    CHECK(options_enum(OPT_LANGUAGE) == OPT_LANGUAGE_RUSSIAN);
+    CHECK(!strcmp(options_string(OPT_LANGUAGE), "russian"));
+    put("language = system\n");
+    options_load(path);
+    CHECK(options_enum(OPT_LANGUAGE) == OPT_LANGUAGE_SYSTEM);
+    put("language = klingon\n");
+    options_load(path);
+    CHECK(options_enum(OPT_LANGUAGE) == OPT_LANGUAGE_SYSTEM);
+    CHECK(options_set_enum(OPT_LANGUAGE, "russian") == 1);
+    CHECK(options_enum(OPT_LANGUAGE) == OPT_LANGUAGE_RUSSIAN);
+    CHECK(options_set_enum(OPT_LANGUAGE, "klingon") == 0);
+
+    /* 5e. season (0.6.0 slice 13): the 26 seasons; a bad word keeps 2001/02. The Choose Season screen writes it. */
     put("season = 2010/11\n");
     options_load(path);
     CHECK(options_enum(OPT_SEASON) == 9 && !strcmp(options_string(OPT_SEASON), "2010/11"));
@@ -342,6 +359,8 @@ int main(void)
             CHECK(options_set(oid, "folder:Mixed Case") == 1 && options_enum(oid) == DATABASE_CUSTOM);
         } else if (!strcmp(options_name(oid), "season")) {
             CHECK(options_set(oid, "2026/27") == 1 && options_enum(oid) == 25);
+        } else if (!strcmp(options_name(oid), "language")) {
+            CHECK(options_set(oid, "russian") == 1 && options_enum(oid) == OPT_LANGUAGE_RUSSIAN);
         } else {
             CHECK(options_set(oid, "off") == 1 && options_bool(oid) == 0);
         }
@@ -352,7 +371,8 @@ int main(void)
           strstr(get(), "\ndatabase = folder:Mixed Case\n") && strstr(get(), "\nsquad_views = off\n"));
     options_load(path);
     CHECK(options_enum(OPT_DISPLAY) == DISPLAY_CLASSIC && !strcmp(options_string(OPT_SAVE_FOLDER), "/Users/me/My Saves") &&
-          options_bool(OPT_ATTRIBUTE_GROUPS) == 0 && options_enum(OPT_DATABASE) == DATABASE_CUSTOM);
+          options_bool(OPT_ATTRIBUTE_GROUPS) == 0 && options_enum(OPT_DATABASE) == DATABASE_CUSTOM &&
+          options_enum(OPT_LANGUAGE) == OPT_LANGUAGE_RUSSIAN);
     CHECK(options_set(OPT_SAVE_FOLDER, "") == 1 && !strcmp(options_string(OPT_SAVE_FOLDER), ""));   /* empty text */
     CHECK(strstr(get(), "\nsave_folder = \n") != NULL);
     /* 8c. A missing line is added at the end with its comment, in the file's own line end. */

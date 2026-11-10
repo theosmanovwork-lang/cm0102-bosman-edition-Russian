@@ -67,6 +67,8 @@ static const OptionDef defs[OPT_COUNT] = {
     /* 0.7.0 slice 6 (Q38): the Network tab of the Options box sets it; the join check reads it (net_lobby.c). */
     [OPT_GAME_PASSWORD] = {"game_password", KIND_TEXT, "", NULL,
         "game_password = the password that a human manager types to join a network game that you host. Empty: no password."},
+    [OPT_LANGUAGE] = {"language", KIND_ENUM, "system", "system|russian",
+        "language = system keeps the original game language. russian overlays the Bosman Edition interface with Russian text; the original ten language files remain available."},
 };
 
 #define TEXT_MAX 1100
