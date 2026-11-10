@@ -168,3 +168,10 @@ Added two source-grounded interface strings from the player-comparison and tacti
 - Added “Hall of Fame” as a Game Options menu item, translated as “Зал славы”.
 - Existing Game Options entries were checked against the same inventory and left unchanged where already present.
 - Current overlay catalogue: 355 contextual entries.
+
+
+## Past meetings filter labels
+
+- Added the verified “Period” and “Venue” filter captions from the club screen inventory, translated as “Период” and “Место проведения”.
+- These are filter labels only; venue, club and competition database names remain unchanged.
+- Current overlay catalogue: 357 contextual entries.
