@@ -363,3 +363,5 @@ Game"	"Выйти
 "match_tab_report"	"Match Report"	"Отчёт о матче"	"Match screen tab"
 "match_tab_player_ratings"	"Player Ratings"	"Оценки игроков"	"Match screen tab"
 "match_tab_latest_scores"	"Latest Scores"	"Последние результаты"	"Match screen tab"
+"profile_on_loan_from_prefix"	"On loan from "	"В аренде из клуба "	"Player comparison status prefix; preserve trailing space before the linked club name"
+"tactics_no_reserve_match"	"No tactics are available for the last reserve match"	"Для последнего матча резервной команды нет доступных тактик"	"Tactics screen message"
