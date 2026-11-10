@@ -86,3 +86,38 @@ The project owner clarified the requirement: Russian is to translate the game in
 - The 88-entry native catalogue is the current interface/football-terminology source batch. It is not yet a complete translation: the next work is to inventory and translate every remaining interface string, with context and consistent terminology. Proper-name source rows must be excluded from the translation catalogue.
 
 The scope correction is reflected in `docs/specs/russian-localisation-foundation.md` and `tools/release/make_release.sh`. A clean build and runtime test are still required to confirm that the release leaves all database identities untouched.
+
+
+## Authoritative scope and current branch state (2026-11-10)
+
+This section supersedes any earlier scope, coverage or next-step statements above that conflict with it.
+
+- **Scope is interface-only.** Translate menus, buttons, tabs, settings, dialogs, screen labels, actions, tactics, formations, positions, roles, attributes and statuses.
+- **Never translate or transliterate database identities:** player/staff names, clubs, cities, stadiums, countries/nations, or named competitions/tournaments remain exactly as supplied by the active database.
+- News prose and match commentary remain English and are not localisation targets.
+- The branch no longer contains the former database-name, news or match-event TSV catalogues, their builders, or their dedicated tests. The release script stages only the interface catalogue(s). The runtime uses the original English name/commentary resources.
+- Current catalogue sizes are 80 contextual overlay entries in `locales/ru-RU.tsv` and 88 native language-table entries in `locales/ru-RU-native.tsv`. These are an initial subset, not complete interface coverage.
+- Earlier sections describing 27/135 translations, Russian name/news/event resources, or adding `rus.lng` / `events_rus.cfg` are historical notes and are not the current implementation plan.
+
+## Interface inventory: translation work still required
+
+Use the existing reverse-engineered screen research as the source of UI context, then verify each candidate string against the actual runtime screen before adding it to a catalogue. Do not bulk-translate every string found in the executable or language table: those sources also contain database values and out-of-scope prose.
+
+| UI area | Required inventory | Current coverage |
+|---|---|---|
+| Start screen and new-game setup | Main menu, league selection controls, manager creation, nationality/team selection, confirmations, progress labels | Partial; initial labels exist |
+| Global navigation and daily flow | Main tabs, inbox/news navigation labels, continue/day advance, save/load, manager status, dialogs | Partial |
+| Squad and player screens | Squad views, filters, column headings, profile tabs, attributes, condition, morale, preferred foot, contract/status labels | Partial; core attribute/role terms exist |
+| Tactics and match controls | Formation names, positions, player instructions, team instructions, set pieces, tactical view names, action buttons | Partial; role vocabulary only, systematic screen pass pending |
+| Transfers and recruitment | Transfer/loan actions, offers/bids, shortlist, scouting controls, search filters and report labels | Not yet inventoried as a complete UI domain |
+| Training and staff | Training controls, schedules, coach/physio/scout roles, staff actions and status labels | Partial terminology only |
+| Club, competitions and calendar UI | Generic interface labels, fixture/calendar controls, tables, standings and navigation | Not yet inventoried as a complete UI domain; named entities stay untouched |
+| Settings and dialogs | All Bosman Edition and game settings, confirmations, errors, tooltips and keyboard hints | Overlay settings partly covered |
+
+## Next implementation slice
+
+1. Build a screen-by-screen candidate-string inventory from the existing research notes and actual UI call sites. Record source text, UI context, source location/ID, placeholder signature, and an explicit `interface` / `identity` / `news` / `commentary` classification.
+2. Admit only `interface` rows into the Russian catalogues. Reject all identity values and all news/commentary prose by construction.
+3. Translate in contextual batches using `locales/ru-RU-style-guide.md`; review tactical roles and position labels consistently across squad, profile and tactics screens.
+4. Add automated checks for duplicate source IDs, unchanged placeholder/control tokens, and accidental inclusion of excluded categories. Do not claim full coverage until every inventoried UI surface has been checked.
+5. Build and run the native target, CTest, and in-game Cyrillic/layout checks before describing the branch as playable. These checks have not yet been completed.
