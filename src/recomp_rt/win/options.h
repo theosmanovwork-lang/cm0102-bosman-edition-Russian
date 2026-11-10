@@ -37,11 +37,15 @@ typedef enum {
     OPT_SEASON,                /* enum: 2001/02 (default) to 2026/27: the season of a new game (season_screen.c) */
     OPT_ONLINE_PLAY,           /* switch, on: online games in the game list and a host in the lobby (net_lobby.c) */
     OPT_GAME_PASSWORD,         /* text, empty: the password of a network game that this computer hosts (net_lobby.c) */
+    OPT_LANGUAGE,              /* enum: system (default), russian: extra Bosman text overlay; original language indices stay intact */
     OPT_COUNT
 } OptionId;
 
 /* Values of OPT_DISPLAY for options_enum. */
 enum { DISPLAY_WIDESCREEN = 0, DISPLAY_CLASSIC = 1 };
+
+/* Values of OPT_LANGUAGE for options_enum. */
+enum { OPT_LANGUAGE_SYSTEM = 0, OPT_LANGUAGE_RUSSIAN = 1 };
 
 /* Values of OPT_DATABASE for options_enum. */
 enum { DATABASE_3968 = 0, DATABASE_3960 = 1, DATABASE_3965 = 2, DATABASE_CUSTOM = 3 };   /* custom: the value "folder:<name>", a folder in Databases */
