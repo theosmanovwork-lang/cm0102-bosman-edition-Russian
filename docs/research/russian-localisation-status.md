@@ -7,6 +7,7 @@ Branch: `feature/russian-language-foundation`
 - A new `language = system|russian` option is appended to `settings.txt`. Existing options keep their identifiers and defaults.
 - The Bosman Edition Options box has a fourth tab, Language, with a Game text choice: System / Russian.
 - A UTF-8 source catalogue at `locales/ru-RU.tsv` contains the first 80 contextual UI translations.
+- IBM Plex Sans Regular, Medium, SemiBold and Bold, plus Sans Condensed Regular and Bold, are bundled under the SIL OFL. The release staging script decodes the checked-in base64 assets into `Data/FONTS` and records their hashes in the download manifest. The original font selector exposes them; the default font is not changed until in-game QA is complete.
 - `tools/localisation/build_catalog.py` validates unique IDs, printf placeholder signatures, game markup and the game's four-digit Unicode escape range. It generates an ASCII-only C header for the runtime.
 - `src/recomp_rt/win/localisation.c` wraps the original Langlib formatter. When Russian is selected, exact catalogue matches are substituted; missing strings fall back to the original source text. The original language selector/index is not renumbered or overwritten outside the duration of the formatter call.
 - Tests cover the new setting, persistence, catalogue validation and generated-header consistency.
@@ -19,7 +20,7 @@ The initial catalogue covers only a subset of the interface and Bosman settings.
 
 ## Fonts
 
-The current full recompile uses the original T2K renderer. Its font scanner accepts `.ttf`, `.ttc` and `.t2k` files under `Data/FONTS`. The next font slice should package IBM Plex Sans Regular, Medium, SemiBold and Bold under the OFL licence, then verify Cyrillic coverage and layout in the original executable. No font binary is bundled in this slice: rendering and clipping cannot be certified without the clean game files and an in-game test.
+The current full recompile uses the original T2K renderer. Its font scanner accepts `.ttf`, `.ttc` and `.t2k` files under `Data/FONTS`. The next font slice should package IBM Plex Sans Regular, Medium, SemiBold and Bold under the OFL licence, then verify Cyrillic coverage and layout in the original executable. The font files are now included as optional choices, but the game has not yet been run with them. Rendering, glyph coverage and clipping cannot be certified without the clean game files and an in-game test.
 
 ## Required next steps
 
