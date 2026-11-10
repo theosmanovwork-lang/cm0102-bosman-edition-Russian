@@ -186,39 +186,10 @@ RT_WRAP(006d9e50, russian_match_events_read_config)
     if (!rt_unwinding) {
         memcpy(g_mem + MATCH_EVENT_FILENAME, old_name, sizeof old_name);
         wr32(g_mem, LANG_INDEX, old_language);
-        wr32(g_mem, MATCH_EVENT_LANGUAGE, RUSSIAN_LANGUAGE_ID);
+        wr32(g_mem, MATCH_EVENT_LANGUAGE, 1);
     }
 }
 
-
-/* The database's old name-file switch knows only IDs 0..12. ID 13 uses the English
- * branch's path slot, temporarily pointed at rus.lng. Missing rus.lng deliberately
- * falls back to eng.lng rather than raising the original database error box. */
-RT_WRAP(005339a0, russian_database_names)
-{
-    uint32_t language_at = cpu.esp + 4u;
-    uint32_t requested = rd32(g_mem, language_at);
-    if (requested != RUSSIAN_LANGUAGE_ID) {
-        o_005339a0();
-        return;
-    }
-
-    uint32_t old_language = rd32(g_mem, 0x009b5984u);
-    uint32_t old_arg = requested;
-    char old_name[8];
-    memcpy(old_name, g_mem + 0x009b632cu, sizeof old_name);
-    wr32(g_mem, language_at, 1);
-    if (localisation_russian_names_available())
-        memcpy(g_mem + 0x009b632cu, "rus.lng", sizeof "rus.lng");
-    o_005339a0();
-    if (!rt_unwinding) {
-        wr32(g_mem, language_at, old_arg);
-        memcpy(g_mem + 0x009b632cu, old_name, sizeof old_name);
-        /* Keep 13 as the public name-language marker so switching back to System reloads. */
-        wr32(g_mem, 0x009b5984u, RUSSIAN_LANGUAGE_ID);
-        (void)old_language;
-    }
-}
 
 /* The separate availability check has the same fixed switch. */
 RT_WRAP(00535930, russian_database_name_exists)
