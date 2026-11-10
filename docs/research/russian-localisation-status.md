@@ -96,7 +96,7 @@ This section supersedes any earlier scope, coverage or next-step statements abov
 - **Never translate or transliterate database identities:** player/staff names, clubs, cities, stadiums, countries/nations, or named competitions/tournaments remain exactly as supplied by the active database.
 - News prose and match commentary remain English and are not localisation targets.
 - The branch no longer contains the former database-name, news or match-event TSV catalogues, their builders, or their dedicated tests. The release script stages only the interface catalogue(s). The runtime uses the original English name/commentary resources.
-- Current catalogue sizes are 320 contextual overlay entries in `locales/ru-RU.tsv` and 88 native language-table entries in `locales/ru-RU-native.tsv`. These are an initial subset, not complete interface coverage.
+- Current catalogue sizes are 330 contextual overlay entries in `locales/ru-RU.tsv` and 88 native language-table entries in `locales/ru-RU-native.tsv`. These are an initial subset, not complete interface coverage.
 - Earlier sections describing 27/135 translations, Russian name/news/event resources, or adding `rus.lng` / `events_rus.cfg` are historical notes and are not the current implementation plan.
 
 ## Interface catalogue expansion (2026-11-10)
@@ -134,3 +134,8 @@ Use the existing reverse-engineered screen research as the source of UI context,
 A second source-grounded batch adds 108 overlay strings. It covers the left navigation and news filters, holiday options and confirmations, manager/network status labels, club squad-number and tournament actions, player profile tabs and status values, all 31 player attributes, and the researched tactics list views and individual instructions. News category names are treated as UI navigation; article/news body text and match commentary remain excluded. The batch also preserves intentional line breaks and leading whitespace in the relevant source labels.
 
 The overlay catalogue now contains 320 contextual strings and the native language-table terminology batch remains at 88. This is still not full interface coverage: several screens are represented only by function-level research, without complete literal-string inventories. All 31 player attributes now have overlay translations, but in-game width and wording review remains outstanding. Transfer/scouting workflows, full training/staff screens, calendar/table views, and the remaining dialogs/tooltips still need full extraction and validation.
+
+
+## System and network UI pass (2026-11-10)
+
+Added 10 more verified strings for network navigation, connection/progress messages, startup and disk errors, network exit confirmation, manager-control resumption, the sweeper position label, and the dynamic news screen heading. The heading retains its original formatter-note tag and %s placeholder. Catalogue size: 330 overlay entries. This addition does not include any news article content or match commentary.
