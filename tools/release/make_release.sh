@@ -126,7 +126,12 @@ python3 -I "$REPO/tools/fonts/install_ibm_plex.py" --source "$REPO/assets/fonts/
 GAME="$STAGE"
 MANIFEST="$OUT/manifest-download.tsv"
 {
-    grep -v     grep -v '^#' "$CLEAN/manifest-3960.tsv" | awk -F '\t' -v OFS='\t' '{ $3 = "Data-3.9.60/" $3; print }'
+    awk -F '\t' '$3 != "Data/language.ldb" { print }' "$CLEAN/manifest.tsv"
+    printf '%s\t%s\tData/language.ldb\n' "$(shasum -a 256 "$STAGE/Data/language.ldb" | cut -d ' ' -f 1)" \
+        "$(wc -c < "$STAGE/Data/language.ldb" | tr -d ' ')"
+    printf '%s\t%s\tData/events_rus.cfg\n' "$(shasum -a 256 "$STAGE/Data/events_rus.cfg" | cut -d ' ' -f 1)" \
+        "$(wc -c < "$STAGE/Data/events_rus.cfg" | tr -d ' ')"
+    grep -v '^#' "$CLEAN/manifest-3960.tsv" | awk -F '\t' -v OFS='\t' '{ $3 = "Data-3.9.60/" $3; print }'
     grep -v '^#' "$CLEAN/manifest-3965.tsv" | awk -F '\t' -v OFS='\t' '{ $3 = "Data-3.9.65/" $3; print }'
     printf '%s\t%s\tData/bosman_logo.rgn\n' "$(shasum -a 256 "$STAGE/Data/bosman_logo.rgn" | cut -d ' ' -f 1)" \
         "$(wc -c < "$STAGE/Data/bosman_logo.rgn" | tr -d ' ')"
