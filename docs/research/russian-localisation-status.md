@@ -207,6 +207,6 @@ Added two source-grounded interface strings from the player-comparison and tacti
 
 ## Squad filters and staff profile fields
 
-- Added 2 exact squad-filter menu labels and staff-profile field captions confirmed by the screen inventories.
+- Confirmed the remaining squad-filter and staff-profile captions were already represented in the catalogue; no duplicate entries were retained.
 - Kept the game data itself unchanged; these are only visible interface labels.
-- Current overlay catalogue: 406 contextual entries.
+- Current overlay catalogue: 404 contextual entries.
