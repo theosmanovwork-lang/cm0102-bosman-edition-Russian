@@ -60,14 +60,18 @@
 | Reputation | репутация | |
 | Nationality | гражданство / национальность | Context determines player nationality vs national team |
 
-## Names and proper nouns
+## Names and proper nouns — strict preservation rule
 
-- Preserve player and club names exactly as supplied by the active database. Do not silently transliterate names.
-- Translate generic competition words (League, Cup, Championship) while preserving official sponsor/brand names.
-- Country names use established Russian exonyms (England — Англия, Holland — Нидерланды, Germany — Германия).
-- City and stadium names follow the official Russian spelling when one is established; otherwise use a consistent practical transliteration.
-- Awards use a translated generic title but retain a proper-name honouree.
-- Do not change database identifiers, abbreviations, short codes or IDs.
+- Preserve every database identity exactly as supplied: player and staff names, club names, city names, stadium names, country/nation names, and competition/tournament names. Do not translate, transliterate, respell, or normalise them.
+- This rule applies even when a proper name contains an ordinary English word such as “United”, “City”, “County”, “Town”, “League” or “Cup”.
+- Translate only generic interface labels and controls such as “League”, “Cup”, “Nation”, “Club”, “Stadium” or “Competition” when they are labels rather than the actual database value.
+- Preserve database abbreviations, short codes, IDs, and source spelling byte-for-byte.
+- News prose and match commentary are not part of the current interface-only localisation scope.
+
+## Interface wording
+
+- Translate menu items, buttons, tabs, settings, dialogs, screen headings, actions, tactical labels, formations, positions, roles, attributes and statuses.
+- Keep one approved Russian equivalent for each concept across all screens. Record context-specific exceptions in the glossary rather than silently varying terminology.
 
 ## Grammar and formatting
 
