@@ -196,3 +196,10 @@ Added two source-grounded interface strings from the player-comparison and tacti
 - Added nine verified assistant-selection and holiday captions/messages from the original UI inventory and runtime string references.
 - Other holiday preference labels and confirmation prompts were already present in the catalogue and were not duplicated.
 - Current overlay catalogue: 379 contextual entries.
+
+
+## Transfer and contract dialog batch
+
+- Added 25 verified dynamic transfer/contract notices and confirmation prompts from the original 3.9.68 data-map string references.
+- Dynamic player and club placeholders remain intact; no player, staff or club names are translated.
+- Current overlay catalogue: 404 contextual entries.
