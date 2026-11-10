@@ -1,0 +1,23 @@
+event_id	event_occurrence	variant_index	source_game_en	source_report_en	game_text_ru	report_text_ru
+0	0	0	<p1> holds up the ball	<p1> held up the ball	<p1> придерживает мяч	<p1> придержал мяч
+0	0	1	<p1> is forced to hold onto the ball	<p1> was forced to hold onto the ball	<p1> вынужден задержать мяч	<p1> был вынужден задержать мяч
+0	0	2	<p1> holds up play	<p1> held up the ball	<p1> не торопится с мячом	<p1> не торопился с мячом
+0	0	3	<p1> holds up the play	<p1> tried to hold up the play	<p1> выжидает с мячом	<p1> выжидал с мячом
+0	0	4	<p1> delays playing the ball	<p1> delayed playing the ball	<p1> медлит с передачей	<p1> задержал передачу
+0	0	5	<p1> puts his foot on the ball	<p1> put his foot on the ball	<p1> накрывает мяч ногой	<p1> накрыл мяч ногой
+0	0	6	<p1> pauses and waits for support	<p1> paused and waited for support	<p1> ждёт поддержки партнёров	<p1> подождал поддержки партнёров
+1	0	0	The ball goes loose	The ball went loose	Мяч отскакивает в свободную зону	Мяч отскочил в свободную зону
+1	0	1	The ball has run loose	The ball ran loose	Мяч остаётся ничейным	Мяч остался ничейным
+1	0	2	No-one can get hold of the ball	Neither side had possession of the ball	Никто не может завладеть мячом	Ни одна из команд не смогла завладеть мячом
+1	0	3	The ball rolls free	The ball rolled free	Мяч катится по полю без хозяина	Мяч продолжил катиться по полю без хозяина
+1	0	4	The ball's run free	The ball ran free	Мяч выкатился из-под контроля	Мяч вышел из-под контроля игроков
+2	0	0	<p1> loses control of the ball	<p1> lost control of the ball	<p1> теряет контроль над мячом	<p1> потерял контроль над мячом
+2	0	1	<p1> loses the ball	<p1> lost the ball	<p1> теряет мяч	<p1> потерял мяч
+2	0	2	<p1> can't hold onto the ball	<p1> could not hold onto the ball	<p1> не может удержать мяч	<p1> не сумел удержать мяч
+2	0	3	<p1> lets the ball slip away	<p1> let the ball slip away from himself	<p1> отпускает мяч от себя	<p1> упустил мяч
+2	0	4	<p1> miscontrols the ball	<p1> could not hold onto the ball	<p1> ошибается при обработке мяча	<p1> не сумел обработать мяч
+2	0	5	<p1> takes his eye of the ball|He's lost possession	<p1> took his eye off the ball and lost possession	<p1> теряет мяч из виду|И соперник перехватывает его	<p1> упустил мяч из виду и потерял владение
+2	0	6	Poor control there by <p1>|He's lost the ball	Poor control by <p1> as he lost the ball	<p1> неудачно обрабатывает мяч|Мяч потерян	<p1> не сумел обработать мяч и потерял владение
+2	0	7	<p1> loses control of the ball	<p1> lost control of the ball	<p1> теряет контроль над мячом	<p1> потерял контроль над мячом
+2	0	8	<p1> loses possession	<p1> lost possession	<p1> теряет владение	<p1> потерял владение мячом
+2	0	9	<p1> gives the ball away	<p1> gave the ball away	<p1> отдаёт мяч сопернику	<p1> подарил мяч сопернику
