@@ -22,6 +22,7 @@
 | Staff | персонал | People employed by the club |
 | Coach | тренер | |
 | Assistant Manager | помощник главного тренера | Use «ассистент» only where space is tight |
+| Ball-winner | полузащитник-разрушитель | A midfield role focused on winning possession |
 | Scout | скаут | |
 | Physio | физиотерапевт | |
 | Transfer | трансфер | |
