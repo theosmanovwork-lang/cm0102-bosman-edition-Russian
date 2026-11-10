@@ -177,9 +177,8 @@ RT_WRAP(0066f4e0, russian_langlib_sprintf)
     }
 }
 
-/* The original name loader has a switch for IDs 0..12. Map Russian ID 13 to its
- * English branch, whose filename pointer is temporarily changed from eng.lng to rus.lng.
- * The database-name language marker is restored to 13 after a successful load. */
+/* The match-event config loader has fixed branches for the original language IDs. Map Russian
+ * to its English/default branch and substitute the separate events_rus.cfg path. */
 RT_WRAP(006d9e50, russian_match_events_read_config)
 {
     if (!localisation_is_russian() || rd32(g_mem, LANG_INDEX) != RUSSIAN_LANGUAGE_ID) {
