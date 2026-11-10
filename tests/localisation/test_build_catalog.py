@@ -16,7 +16,7 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(build_catalog.encode_t2k("Ёж"), "#0401##0436#")
 
     def test_latin_and_punctuation_stay_readable(self):
-        self.assertEqual(build_catalog.encode_t2k("CM 01/02 — Русский"), "CM 01/02 — #0420##0443##0441##0441##043A##0438##0439#")
+        self.assertEqual(build_catalog.encode_t2k("CM 01/02 — Русский"), "CM 01/02 #2014# #0420##0443##0441##0441##043A##0438##0439#")
 
     def test_printf_argument_types_and_order_are_preserved(self):
         self.assertEqual(
