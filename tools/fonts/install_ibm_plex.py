@@ -20,7 +20,8 @@ TTF_SIGNATURE = b"\x00\x01\x00\x00"
 
 def decode_font(source: Path) -> bytes:
     try:
-        data = base64.b64decode(source.read_bytes(), validate=True)
+        encoded = b"".join(source.read_bytes().split())
+        data = base64.b64decode(encoded, validate=True)
     except (binascii.Error, ValueError) as exc:
         raise ValueError(f"{source}: invalid base64 font asset") from exc
     if not data.startswith(TTF_SIGNATURE):
