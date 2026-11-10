@@ -96,7 +96,7 @@ This section supersedes any earlier scope, coverage or next-step statements abov
 - **Never translate or transliterate database identities:** player/staff names, clubs, cities, stadiums, countries/nations, or named competitions/tournaments remain exactly as supplied by the active database.
 - News prose and match commentary remain English and are not localisation targets.
 - The branch no longer contains the former database-name, news or match-event TSV catalogues, their builders, or their dedicated tests. The release script stages only the interface catalogue(s). The runtime uses the original English name/commentary resources.
-- Current catalogue sizes are 350 contextual overlay entries in `locales/ru-RU.tsv` and 88 native language-table entries in `locales/ru-RU-native.tsv`. These are an initial subset, not complete interface coverage.
+- Current catalogue sizes are 352 contextual overlay entries in `locales/ru-RU.tsv` and 88 native language-table entries in `locales/ru-RU-native.tsv`. These are an initial subset, not complete interface coverage.
 - Earlier sections describing 27/135 translations, Russian name/news/event resources, or adding `rus.lng` / `events_rus.cfg` are historical notes and are not the current implementation plan.
 
 ## Interface catalogue expansion (2026-11-10)
@@ -149,3 +149,8 @@ Added 13 source-grounded labels for the player transfer-status and discipline di
 ## Match and manager-status UI pass (2026-11-10)
 
 Added 7 further interface labels from the match-screen and manager-status inventories: the tactics captain marker and match navigation tabs (overview, statistics, action zones, report, player ratings and latest scores). The manager status values and single-player exit confirmation already had existing source entries in the catalogue and were not duplicated. 'Match Report' here is only the screen-tab caption; report prose and match commentary remain untranslated. Catalogue size: 350 overlay entries.
+
+
+## Comparison and tactics UI follow-up (2026-11-10)
+
+Added two source-grounded interface strings from the player-comparison and tactics screen inventories: the “On loan from ” prefix that precedes a linked club name, and the message shown when no tactics are available for the last reserve match. The prefix retains its trailing space so the club link and its database name remain untouched. The overlay catalogue now contains 352 contextual entries; the native language-table batch remains at 88. No player/staff/club/city/stadium/nation/competition names, news prose or match commentary were added.
