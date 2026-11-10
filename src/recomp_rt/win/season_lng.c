@@ -37,6 +37,7 @@
  * three readers run with them hidden (season_comps.c), and they have no translation in any file. */
 #include "win.h"
 #include "season_comps.h"
+#include "localisation.h"
 #include "../host.h"
 
 #include <stdio.h>
@@ -72,7 +73,7 @@ static const Section sections[SECTIONS] = {
 
 /* The ten files (database_language_file_exists 0x535930). */
 static const char *const files[] = {"eng.lng", "fra.lng", "ger.lng", "ita.lng", "esp.lng",
-                                    "dan.lng", "hol.lng", "nor.lng", "por.lng", "swe.lng"};
+                                    "dan.lng", "hol.lng", "nor.lng", "por.lng", "swe.lng", "rus.lng"};
 #define FILES ((int)(sizeof files / sizeof files[0]))
 
 /* ---- A .lng file ---- */
@@ -154,6 +155,43 @@ static int lng_read(const char *path, Lng *l, int sort)
         qsort(l->sorted[s], (size_t)c, sizeof(int), by_name);
     }
     return 1;
+}
+
+/* The original data loader copies only the ten built-in .lng files. Give the Russian
+ * language its own file in CM3_TEMP. Until a reviewed Russian names table is supplied,
+ * a byte-for-byte English copy is a safe fallback, not a fabricated transliteration.
+ * A valid user-provided rus.lng is preserved. */
+static int ensure_russian_lng(const char *eng_path)
+{
+    char rus_path[1400];
+    Lng existing;
+    if (find_in(win_user_dir, "rus.lng", rus_path, sizeof rus_path)) {
+        if (lng_read(rus_path, &existing, 0)) {
+            lng_free(&existing);
+            return 1;
+        }
+    } else {
+        snprintf(rus_path, sizeof rus_path, "%s/rus.lng", win_user_dir);
+    }
+
+    FILE *in = host_fopen(eng_path, "rb");
+    if (!in) return 0;
+    FILE *out = host_fopen(rus_path, "wb");
+    if (!out) { fclose(in); return 0; }
+    uint8_t buffer[65536];
+    size_t n;
+    int ok = 1;
+    while ((n = fread(buffer, 1, sizeof buffer, in)) != 0) {
+        if (fwrite(buffer, 1, n, out) != n) { ok = 0; break; }
+    }
+    if (ferror(in)) ok = 0;
+    if (fclose(in) != 0) ok = 0;
+    if (fclose(out) != 0) ok = 0;
+    if (!ok) {
+        host_unlink(rus_path);
+        fprintf(stderr, "recomp: could not create rus.lng from eng.lng; Russian club and competition names will fall back\n");
+    }
+    return ok;
 }
 
 /* The eng.lng row of a name: the same row number first, then the first row with that name that no record took.
@@ -323,6 +361,7 @@ void season_lng_fit_temp(void)
     written_now = 0;
     char eng_path[1400];
     if (!find_in(win_user_dir, "eng.lng", eng_path, sizeof eng_path)) return;    /* CM3_TEMP: the user folder */
+    if (localisation_is_russian()) ensure_russian_lng(eng_path);
     Lng eng;
     if (!lng_read(eng_path, &eng, 1)) return;
     Rows rows[SECTIONS];
