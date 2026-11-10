@@ -98,4 +98,3 @@ cannot be written"	"Не удалось сохранить:
 "setup_select_team"	"Select Team"	"Выберите команду"	"Manager creation screen heading"
 "setup_no_memory"	"No Memory"	"Недостаточно памяти"	"New-game setup error screen"
 "setup_insert_cd"	"Insert CD"	"Вставьте CD"	"Legacy startup error; verify whether reachable in Bosman Edition"
-"setup_please_confirm"	"Please Confirm"	"Подтверждение"	"Confirmation dialog"
