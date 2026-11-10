@@ -28,6 +28,12 @@ class CatalogTests(unittest.TestCase):
             build_catalog.printf_signature("Signed %d: %s"),
         )
 
+    def test_legacy_cp1252_source_characters_are_ascii_escaped(self):
+        header = build_catalog.render_header(
+            [{"source": "Unable to initialise…", "translation": "Не удалось запустить"}]
+        )
+        self.assertIn("initialise" + chr(92) + "205", header)
+        header.encode("ascii")
     def test_repository_catalog_is_valid_and_generated_header_is_ascii(self):
         rows = build_catalog.read_catalog(ROOT / "locales" / "ru-RU.tsv")
         self.assertEqual(len(rows), 352)
