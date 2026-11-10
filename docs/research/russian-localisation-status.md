@@ -38,3 +38,14 @@ The current full recompile uses the original T2K renderer. Its font scanner acce
 ## Build requirements
 
 A source build still needs the player's own `CM0102.iso` and official 3.9.68 patch, as described in the repository README. These proprietary inputs are not stored in this repository.
+
+
+## News and match commentary batch (2026-11-10)
+
+- Added `locales/ru-RU-news.tsv`: 47 native `language.ldb` translations covering transfer negotiations, bids, contracts, scouting, player availability, work permits, match outcomes and press statements. The source IDs and the ten grammatical argument slots are retained.
+- Added `tools/localisation/build_russian_events.py`: creates a separate `events_rus.cfg` from `events_eng.cfg`; it only replaces G/R text lines, uses `#XXXX#` escapes for Cyrillic, and validates source strings, special placeholders (`<p1>`, `<Rf>`, `<t>`), and multi-part separators. Event IDs, occurrence order, flags, probability, delays, sounds, comments and line endings remain unchanged. Missing rows fall back to English.
+- Added `locales/ru-RU-match-events.tsv`: the committed starter set covers 22 variants in the first ball-control, loose-ball and possession-loss groups. A larger 67-variant working batch was built and validated locally from the supplied files, but is not yet committed as the full catalogue.
+- The extended LDB builder now accepts multiple TSV batches, checks each supplied source string and format signature when present, and validates the number and ordering of argument markers. Combining the 88-entry UI/football batch and 47-entry news batch creates 135 Russian LDB rows.
+- Local verification against the supplied original files: the extended 9,807-entry LDB is 225,149,162 bytes; all ten original language IDs and every original record payload remain byte-for-byte unchanged, with candidate ID 13 appended. The separate match CFG retains all 10,857 lines; only the translated G/R text lines change.
+- Ten isolated unit tests passed in the local test harness for the LDB and event builders. A full CMake/CTest run, clean game build and in-game launch have not yet been confirmed.
+- Important: the game's match-event loader still chooses only the ten original `events_<language>.cfg` filenames. The new `events_rus.cfg` is generated and ready for loader integration, but is not automatically selected in the current game.
