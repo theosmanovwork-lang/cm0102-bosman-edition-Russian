@@ -96,7 +96,7 @@ This section supersedes any earlier scope, coverage or next-step statements abov
 - **Never translate or transliterate database identities:** player/staff names, clubs, cities, stadiums, countries/nations, or named competitions/tournaments remain exactly as supplied by the active database.
 - News prose and match commentary remain English and are not localisation targets.
 - The branch no longer contains the former database-name, news or match-event TSV catalogues, their builders, or their dedicated tests. The release script stages only the interface catalogue(s). The runtime uses the original English name/commentary resources.
-- Current catalogue sizes are 352 contextual overlay entries in `locales/ru-RU.tsv` and 88 native language-table entries in `locales/ru-RU-native.tsv`. These are an initial subset, not complete interface coverage.
+- Current catalogue sizes are 354 contextual overlay entries in `locales/ru-RU.tsv` and 88 native language-table entries in `locales/ru-RU-native.tsv`. These are an initial subset, not complete interface coverage.
 - Earlier sections describing 27/135 translations, Russian name/news/event resources, or adding `rus.lng` / `events_rus.cfg` are historical notes and are not the current implementation plan.
 
 ## Interface catalogue expansion (2026-11-10)
@@ -154,3 +154,10 @@ Added 7 further interface labels from the match-screen and manager-status invent
 ## Comparison and tactics UI follow-up (2026-11-10)
 
 Added two source-grounded interface strings from the player-comparison and tactics screen inventories: the “On loan from ” prefix that precedes a linked club name, and the message shown when no tactics are available for the last reserve match. The prefix retains its trailing space so the club link and its database name remain untouched. The overlay catalogue now contains 352 contextual entries; the native language-table batch remains at 88. No player/staff/club/city/stadium/nation/competition names, news prose or match commentary were added.
+
+
+## Interface labels added in the latest pass
+
+- Added the two Screen Mode choices, Full and Windowed, from the original Game Settings dialog.
+- These are interface captions only; database values and match/news prose remain outside the translation scope.
+- Current overlay catalogue: 354 contextual entries.
