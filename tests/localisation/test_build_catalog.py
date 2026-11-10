@@ -36,7 +36,7 @@ class CatalogTests(unittest.TestCase):
         header.encode("ascii")
     def test_repository_catalog_is_valid_and_generated_header_is_ascii(self):
         rows = build_catalog.read_catalog(ROOT / "locales" / "ru-RU.tsv")
-        self.assertEqual(len(rows), 379)
+        self.assertEqual(len(rows), 404)
         header = build_catalog.render_header(rows)
         header.encode("ascii")
         self.assertIn("#041D#", header)
