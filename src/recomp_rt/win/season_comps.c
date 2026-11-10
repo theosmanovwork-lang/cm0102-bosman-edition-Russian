@@ -5,6 +5,7 @@
 #include "season_comps.h"
 #include "season_rules.h"
 #include "season_uefa.h"
+#include "localisation.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -838,5 +839,27 @@ static void hidden_once(void (*fn)(void))
 }
 
 RT_WRAP(00601a40, set_key_ids) { hidden_once(o_00601a40); }
-RT_WRAP(005339a0, database_load_language_names) { hidden_once(o_005339a0); }
+RT_WRAP(005339a0, database_load_language_names)
+{
+    uint32_t language_at = cpu.esp + 4u;
+    uint32_t requested = rd32(g_mem, language_at);
+    if (requested != 13u) {
+        hidden_once(o_005339a0);
+        return;
+    }
+
+    char old_name[8];
+    memcpy(old_name, g_mem + 0x009b632cu, sizeof old_name);
+    wr32(g_mem, language_at, 1);
+    if (localisation_russian_names_available())
+        memcpy(g_mem + 0x009b632cu, "rus.lng", sizeof "rus.lng");
+
+    hidden_once(o_005339a0);
+    if (!rt_unwinding) {
+        wr32(g_mem, language_at, requested);
+        memcpy(g_mem + 0x009b632cu, old_name, sizeof old_name);
+        /* Keep 13 as the public marker so a switch back to System reloads its names. */
+        wr32(g_mem, 0x009b5984u, 13u);
+    }
+}
 RT_WRAP(00544fc0, eng_lng_load_tables) { hidden_once(o_00544fc0); }
