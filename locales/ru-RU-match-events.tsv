@@ -21,3 +21,48 @@ event_id	event_occurrence	variant_index	source_game_en	source_report_en	game_tex
 2	0	7	<p1> loses control of the ball	<p1> lost control of the ball	<p1> теряет контроль над мячом	<p1> потерял контроль над мячом
 2	0	8	<p1> loses possession	<p1> lost possession	<p1> теряет владение	<p1> потерял владение мячом
 2	0	9	<p1> gives the ball away	<p1> gave the ball away	<p1> отдаёт мяч сопернику	<p1> подарил мяч сопернику
+3	0	0	<p1> unmarked !	<p1> was unmarked	<p1> остаётся без опеки!	<p1> оказался без опеки
+3	0	1	<p1> finds himself with space	<p1> found himself in some space	<p1> находит свободное пространство	<p1> нашёл свободное пространство
+3	0	2	<p1> is free in the area !	<p1> got free in the penalty area	<p1> один в штрафной!	<p1> оказался один в штрафной площади
+3	0	3	<p1> loses his man !	<p1> lost his man and found himself with plenty of room	<p1> уходит от опеки защитника!	<p1> оторвался от защитника и получил свободу
+3	0	4	<p1> in acres of space !	Good play by <p1> in making himself some space	<p1> находит уйму свободного места!	<p1> грамотно открылся и получил много свободного пространства
+3	0	5	<p1> with plenty of time !	<p1> found himself with plenty of time	<p1> никто не мешает!	<p1> получил много времени для принятия решения
+4	0	0	<p1> takes it in his stride...	<p1> took it in his stride	<p1> принимает мяч на ход...	<p1> принял мяч на ходу
+4	0	1	Excellent first touch by <p1>	<p1> took an excellent first touch	Отличный первый приём мяча от <p1>	<p1> отлично обработал мяч первым касанием
+4	0	2	<p1> brings the ball down well	<p1> brought the ball down well	<p1> хорошо принимает мяч	<p1> хорошо обработал мяч
+4	0	3	Good control there by <p1>	Good control by <p1>	Хороший приём мяча от <p1>	<p1> хорошо принял мяч
+4	0	4	<p1> shows some good control	<p1> showed some good control	<p1> демонстрирует отличную обработку мяча	<p1> продемонстрировал отличную технику приёма мяча
+4	0	5	Well controlled by <p1>...|He brought the ball down well	<p1> controlled the ball when bringing it down	<p1> хорошо принимает мяч...|Отлично укрощает его	<p1> уверенно обработал мяч при приёме
+4	0	6	<p1> traps the ball nicely	<p1> trapped the ball nicely	<p1> мягко принимает мяч	<p1> мягко обработал мяч
+4	0	7	Superb control of the ball by <p1>	<p1> showed superb control on the ball	Прекрасная обработка мяча от <p1>	<p1> великолепно обработал мяч
+4	0	8	<p1> elegantly controls the ball	<p1> elegantly controlled the ball	<p1> изящно укрощает мяч	<p1> изящно обработал мяч
+4	0	9	Excellent control by <p1>	Excellent control by <p1>	Отличная обработка мяча от <p1>	<p1> отлично обработал мяч
+5	0	0	<p1> clean through on goal	<p1> got clean through on goal	<p1> прорывается к воротам без помех	<p1> вырвался к воротам без помех
+5	0	1	<p1> is free of the last defender	<p1> was free of the last defender	<p1> отрывается от последнего защитника	<p1> ушёл от последнего защитника
+5	0	2	<p1> has only the goalie to beat	<p1> had only the goalie to beat	Перед <p1> только вратарь!	<p1> оставил перед собой только вратаря
+5	0	3	<p1> has found himself clear..|Only the goalie to beat...	<p1> found himself in the clear with just the goalie to beat	<p1> вырывается на оперативный простор...|Нужно переиграть только вратаря!	<p1> оказался один перед вратарём
+5	0	4	<p1> is through on goal...	<p1> was through on goal	<p1> выходит на ворота...	<p1> вышел один на ворота
+5	0	5	<p1> is in the clear...	<p1> was in the clear	<p1> вырывается на свободное пространство...	<p1> оказался на свободном пространстве
+5	0	6	<p1> is one on one with the keeper...	<p1> was one on one with the keeper	<p1> выходит один на один с голкипером...	<p1> вышел один на один с голкипером
+5	0	7	<p1> is behind the defence...|Only the keeper to beat...	<p1> got behind the defence and had only the keeper to beat	<p1> оказывается за спинами защитников...|Нужно обыграть только вратаря...	<p1> оказался за линией обороны и вышел один на один с вратарём
+5	0	8	<p1> is clean through behind the defence...	<p1> was clean through behind the defence	<p1> прорывается за спины защитников...	<p1> прорвался за спины защитников
+6	0	0	<p1> picks up the loose ball	<p1> picked up the loose ball	<p1> подбирает свободный мяч	<p1> подобрал свободный мяч
+6	0	1	<p1> takes control of the loose ball	<p1> took control of the loose ball	<p1> устанавливает контроль над свободным мячом	<p1> завладел свободным мячом
+6	0	2	The ball is picked up by <p1>	The loose ball was picked up by <p1>	<p1> подбирает мяч	<p1> подобрал свободный мяч
+6	0	3	<p1> gathers up the loose ball	<p1> gathered up the loose ball	<p1> подбирает свободный мяч	<p1> подобрал свободный мяч
+6	0	4	<p1> collects the ball	<p1> collected the ball	<p1> забирает мяч себе	<p1> забрал мяч себе
+6	0	5	<p1> picks up on the loose ball	<p1> picked up on the loose ball	<p1> успевает к свободному мячу	<p1> успел первым к свободному мячу
+7	0	0	<p1> moves onto the ball	<p1> moved onto the ball	<p1> открывается под мяч	<p1> открылся под передачу
+7	0	1	<p1> picks up the ball	<p1> spotted it and picked up the ball	<p1> подбирает мяч	<p1> заметил мяч и завладел им
+7	0	2	<p1> latches onto it	<p1> latched onto the ball	<p1> цепляется за мяч	<p1> сумел зацепиться за мяч
+7	0	3	<p1> runs onto it	<p1> ran onto the ball	<p1> набегает на мяч	<p1> набежал на мяч
+7	0	4	<p1> picks up on the ball	<p1> picked up on the ball	<p1> успевает к мячу	<p1> успел к мячу
+7	0	5	<p1> moves onto the ball	<p1> moved onto the ball	<p1> открывается под мяч	<p1> открылся под передачу
+7	0	6	<p1> runs onto the ball	<p1> ran onto the ball	<p1> бежит на мяч	<p1> выбежал на мяч
+7	0	7	<p1> latches onto the ball	<p1> latched onto the ball	<p1> цепляется за мяч	<p1> зацепился за мяч
+7	0	8	The ball is picked up by <p1>	The ball was picked up by <p1>	<p1> подбирает мяч	<p1> подобрал мяч
+8	0	0	<p1> turns with the ball	<p1> turned with the ball	<p1> разворачивается с мячом	<p1> развернулся с мячом
+8	0	1	<p1> uses his feet well to turn on the ball	<p1> used his feet well to turn on the ball	<p1> отлично разворачивается с мячом	<p1> умело развернулся с мячом
+8	0	2	Nice turn on the ball by <p1>	<p1> turned nicely on the ball	Красивый разворот с мячом от <p1>	<p1> отлично развернулся с мячом
+8	0	3	<p1> manages to turn on the ball	<p1> managed to turn on the ball	<p1> удаётся развернуться с мячом	<p1> сумел развернуться с мячом
+8	0	4	<p1> swivels on the ball	<p1> swivelled on the ball	<p1> разворачивается на мяче	<p1> развернулся с мячом
