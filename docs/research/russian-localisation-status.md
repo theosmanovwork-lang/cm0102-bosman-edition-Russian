@@ -6,7 +6,7 @@ Branch: `feature/russian-language-foundation`
 
 - A new `language = system|russian` option is appended to `settings.txt`. Existing options keep their identifiers and defaults.
 - The Bosman Edition Options box has a fourth tab, Language, with a Game text choice: System / Russian.
-- A UTF-8 source catalogue at `locales/ru-RU.tsv` contains the first 80 contextual UI translations for the Bosman overlay.
+- A UTF-8 source catalogue at `locales/ru-RU.tsv` contains the contextual overlay catalogue, expanded to 212 verified UI entries.
 - A separate `locales/ru-RU-native.tsv` adds 27 native `language.ldb` translations for the start menu, game setup and navigation, using stable source-record IDs and Russian text. The native batch now has 88 entries: the first 27 menu/setup labels plus 61 football-role, player-attribute, staff-role and squad terms.
 - `tools/localisation/build_extended_language_ldb.py` builds a separate extended copy of the original `language.ldb`, appending candidate language ID 13 and one text/grammar block per record. It refuses to overwrite the source, checks the original fixed-record size and runtime ID-table capacity, and writes through a temporary file.
 - The supplied clean 3.9.68 `language.ldb` was processed locally: all 9,807 original record payloads were checked byte-for-byte against the source, the ten original IDs remained `(0,2,3,4,5,6,7,8,9,10)`, and 27 Russian text slots were verified in the appended block. The resulting test file is 225,149,162 bytes and is not committed because it is derived from proprietary game data.
@@ -96,8 +96,14 @@ This section supersedes any earlier scope, coverage or next-step statements abov
 - **Never translate or transliterate database identities:** player/staff names, clubs, cities, stadiums, countries/nations, or named competitions/tournaments remain exactly as supplied by the active database.
 - News prose and match commentary remain English and are not localisation targets.
 - The branch no longer contains the former database-name, news or match-event TSV catalogues, their builders, or their dedicated tests. The release script stages only the interface catalogue(s). The runtime uses the original English name/commentary resources.
-- Current catalogue sizes are 105 contextual overlay entries in `locales/ru-RU.tsv` and 88 native language-table entries in `locales/ru-RU-native.tsv`. These are an initial subset, not complete interface coverage.
+- Current catalogue sizes are 212 contextual overlay entries in `locales/ru-RU.tsv` and 88 native language-table entries in `locales/ru-RU-native.tsv`. These are an initial subset, not complete interface coverage.
 - Earlier sections describing 27/135 translations, Russian name/news/event resources, or adding `rus.lng` / `events_rus.cfg` are historical notes and are not the current implementation plan.
+
+## Interface catalogue expansion (2026-11-10)
+
+A screen-research pass added 107 source-grounded overlay entries in one batch. The catalogue now has 212 contextual UI entries; the separate native language-table catalogue remains at 88. The new overlay entries cover squad filters and actions, club navigation tabs, team selectors, tactics-menu commands and preset labels, player-comparison prompts and statistics, tactical position labels, additional Game Settings rows, and club information headings. The entries were admitted only where research notes identify the string as a control, tab, heading, filter, status or other interface label. No player/staff/club/city/stadium/nation/competition identity, news prose or match commentary was added.
+
+This is a materially broader interface pass, **not yet a complete translation of every game screen**. The available checked-in research does not yet enumerate every in-game label, tooltip, dialog, transfer/scouting workflow, calendar/table view or staff/training screen. Those areas still need a complete source-string inventory and contextual validation. A final full-coverage claim must wait until that inventory and in-game screen review are finished.
 
 ## Interface inventory: translation work still required
 
@@ -107,8 +113,8 @@ Use the existing reverse-engineered screen research as the source of UI context,
 |---|---|---|
 | Start screen and new-game setup | Main menu, league selection controls, manager creation, nationality/team selection, confirmations, progress labels | Partial; initial labels exist |
 | Global navigation and daily flow | Main tabs, inbox/news navigation labels, continue/day advance, save/load, manager status, dialogs | Partial |
-| Squad and player screens | Squad views, filters, column headings, profile tabs, attributes, condition, morale, preferred foot, contract/status labels | Partial; core attribute/role terms exist |
-| Tactics and match controls | Formation names, positions, player instructions, team instructions, set pieces, tactical view names, action buttons | Partial; role vocabulary only, systematic screen pass pending |
+| Squad and player screens | Squad views, filters, column headings, profile tabs, attributes, condition, morale, preferred foot, contract/status labels | Expanded initial batch: squad filters, club tabs/actions, comparison labels and profile stats; deeper profile/status screens remain |
+| Tactics and match controls | Formation names, positions, player instructions, team instructions, set pieces, tactical view names, action buttons | Core tactics menu actions, preset labels and tactical positions added; detailed team/player instructions remain |
 | Transfers and recruitment | Transfer/loan actions, offers/bids, shortlist, scouting controls, search filters and report labels | Not yet inventoried as a complete UI domain |
 | Training and staff | Training controls, schedules, coach/physio/scout roles, staff actions and status labels | Partial terminology only |
 | Club, competitions and calendar UI | Generic interface labels, fixture/calendar controls, tables, standings and navigation | Not yet inventoried as a complete UI domain; named entities stay untouched |
