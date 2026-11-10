@@ -370,3 +370,6 @@ Game"	"Выйти
 "game_options_hall_of_fame"	"Hall of Fame"	"Зал славы"	"Game Options menu"
 "meeting_period_filter"	"Period"	"Период"	"Club screen past meetings filter"
 "meeting_venue_filter"	"Venue"	"Место проведения"	"Club screen past meetings filter"
+"squad_first_team"	"First Team"	"Основной состав"	"Squad selector"
+"squad_reserve_team"	"Reserve Team"	"Резервный состав"	"Squad selector"
+"squad_youth_team"	"Youth Team"	"Молодёжный состав"	"Squad selector"
