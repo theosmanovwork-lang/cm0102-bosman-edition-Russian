@@ -182,3 +182,10 @@ Added two source-grounded interface strings from the player-comparison and tacti
 - Added the verified generic squad-choice captions “First Team”, “Reserve Team” and “Youth Team”, translated as “Основной состав”, “Резервный состав” and “Молодёжный состав”.
 - These are interface labels, not club or player database names.
 - Current overlay catalogue: 360 contextual entries.
+
+
+## Player and staff search interface labels
+
+- Added ten verified captions from the Player & Staff Search interface: Short List, Player Search, Staff Search, Filters, Search, Scout #1, Scout #2, Basic Wage, Contract Expiry and Value.
+- These are search tabs, controls and result-column headings only; player, staff and club identities remain unchanged.
+- Current overlay catalogue: 370 contextual entries.
