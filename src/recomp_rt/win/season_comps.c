@@ -853,6 +853,8 @@ RT_WRAP(005339a0, database_load_language_names)
     wr32(g_mem, language_at, 1);
     if (localisation_russian_names_available())
         memcpy(g_mem + 0x009b632cu, "rus.lng", sizeof "rus.lng");
+    /* Force a reload even when the OS language is also ID 1 (English US). */
+    wr32(g_mem, 0x009b5984u, 0xffffffffu);
 
     hidden_once(o_005339a0);
     if (!rt_unwinding) {
