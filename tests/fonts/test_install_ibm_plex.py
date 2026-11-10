@@ -18,7 +18,7 @@ class FontInstallerTests(unittest.TestCase):
             source = Path(folder) / "font.ttf.b64"
             raw = installer.TTF_SIGNATURE + bytes(16_000)
             encoded = base64.b64encode(raw).decode("ascii")
-            source.write_text(encoded[:24] + "\\n" + encoded[24:], encoding="ascii")
+            source.write_text(encoded[:24] + "\n" + encoded[24:], encoding="ascii")
             self.assertTrue(installer.decode_font(source).startswith(b"\x00\x01\x00\x00"))
 
     def test_rejects_non_font_data(self):
