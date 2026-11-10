@@ -1,419 +1,421 @@
-"id"	"source"	"translation"	"context"
-"menu_start_new_game"	"Start New Game"	"Начать новую игру"	"Start screen menu"
-"menu_quick_start_game"	"Quick Start Game"	"Быстрый старт"	"Start screen menu"
-"menu_restore_saved_game"	"Restore Saved Game"	"Загрузить сохранение"	"Start screen menu"
-"menu_delete_saved_game"	"Delete Saved Game"	"Удалить сохранение"	"Start screen menu"
-"menu_network_play"	"Network Play"	"Сетевая игра"	"Start screen menu"
-"menu_game_settings"	"Game Settings"	"Настройки игры"	"Start screen menu"
-"menu_hall_of_fame"	"Hall Of Fame"	"Зал славы"	"Start screen menu"
-"menu_game_credits"	"Game Credits"	"Авторы игры"	"Start screen menu"
-"menu_web_sites"	"Web Sites"	"Сайты"	"Start screen menu"
-"setup_game"	"Setup Game"	"Настройка игры"	"Setup screen heading"
-"loading_database"	"Loading database"	"Загрузка базы данных"	"Database loading"
-"select_leagues"	"Select League(s)"	"Выбор лиг"	"League selection"
-"selected_leagues"	"Selected League(s)"	"Выбранные лиги"	"League selection"
-"real_players"	"  Use Real Players:"	"  Использовать реальных игроков:"	"League selection; preserve leading spaces"
-"yes"	"Yes"	"Да"	"Common choice"
-"no"	"No"	"Нет"	"Common choice"
-"attribute_masking"	"  Attribute Masking:"	"  Скрывать атрибуты:"	"League selection; preserve leading spaces"
-"select_all"	"Select All"	"Выбрать все"	"League selection"
-"deselect_all"	"De-Select All"	"Снять выделение"	"League selection"
-"selected"	"SELECTED"	"ВЫБРАНО"	"League selection flag"
-"background"	"BACKGROUND"	"В ФОНЕ"	"League selection flag"
-"regional_divisions"	"Regional Divisions"	"Региональные дивизионы"	"League selection"
-"not_enough_memory"	"Not enough memory"	"Недостаточно памяти"	"Error"
-"not_enough_memory_leagues"	"Not enough memory to select that many leagues"	"Недостаточно памяти для выбора такого числа лиг"	"Error"
-"back"	"Back"	"Назад"	"Navigation"
-"next"	"Next"	"Далее"	"Navigation"
-"please_confirm"	"Please Confirm"	"Подтверждение"	"Confirmation dialog"
-"exit_game"	"Exit the game ?"	"Выйти из игры?"	"Confirmation dialog"
-"save_game"	"Save Game"	"Сохранить игру"	"Game menu"
-"add_manager"	"Add Manager"	"Добавить менеджера"	"Game menu"
-"manager_status"	"Manager Status"	"Статус менеджера"	"Game menu"
-"playing"	"Playing"	"Играет"	"Manager status"
-"waiting"	"Waiting"	"Ожидает"	"Manager status"
-"on_holiday"	"On Holiday"	"В отпуске"	"Manager status"
-"on_holiday_watching"	"On Holiday (Watching)"	"В отпуске (с просмотром)"	"Manager status"
-"not_playing"	"Not Playing"	"Не играет"	"Manager status"
-"finish"	"Finish"	"Завершить"	"Navigation"
-"close"	"Close"	"Закрыть"	"Navigation"
-"game_options"	"Game Options"	"Игровые настройки"	"Game menu"
-"bosman_options"	"Bosman Edition Options"	"Настройки Bosman Edition"	"Bosman options"
-"display_mode"	"Display mode"	"Режим экрана"	"Bosman options"
-"widescreen"	"Widescreen"	"Широкий экран"	"Bosman options"
-"classic"	"Classic"	"Классический"	"Bosman options"
-"sharp_picture"	"Sharp picture"	"Чёткое изображение"	"Bosman options"
-"remember_window"	"Remember window"	"Запоминать размер окна"	"Bosman options"
-"all_sound"	"All sound"	"Звук игры"	"Bosman options"
-"attribute_colours"	"Attribute colours"	"Цвета атрибутов"	"Bosman options"
-"condition_colours"	"Condition colours"	"Цвета состояния"	"Bosman options"
-"foreign_colours"	"Foreign colours"	"Выделение легионеров"	"Bosman options"
-"match_columns"	"Match columns"	"Колонки матча"	"Bosman options"
-"attribute_groups"	"Attribute groups"	"Группы атрибутов"	"Bosman options"
-"space_to_continue"	"Space to continue"	"Пробел — продолжить"	"Bosman options"
-"shortcut_keys"	"Shortcut keys"	"Горячие клавиши"	"Bosman options"
-"clickable_names"	"Clickable names"	"Переход по именам"	"Bosman options"
-"team_views"	"Team views"	"Обзор команды"	"Bosman options"
-"full_player_search"	"Full player search"	"Полный список игроков"	"Bosman options"
-"faster_holidays"	"Faster holidays"	"Ускоренный отпуск"	"Bosman options"
-"save_backups"	"Save backups"	"Резервные копии сохранений"	"Bosman options"
-"changing_rules"	"Changing rules"	"Изменение правил"	"Bosman options"
-"save_folder"	"Save folder"	"Папка сохранений"	"Bosman options"
-"online_play"	"Online play"	"Игра по сети"	"Bosman options"
-"game_password"	"Game password"	"Пароль игры"	"Bosman options"
-"language"	"Language"	"Язык"	"Bosman options"
-"game_text"	"Game text"	"Язык текста"	"Bosman options"
-"system"	"System"	"Системный"	"Bosman options"
-"russian"	"Russian"	"Русский"	"Bosman options"
-"graphics"	"Graphics"	"Графика"	"Bosman options tab"
-"game"	"Game"	"Игра"	"Bosman options tab"
-"network"	"Network"	"Сеть"	"Bosman options tab"
-"on"	"On"	"Вкл."	"Bosman options"
-"off"	"Off"	"Выкл."	"Bosman options"
-"change"	"Change"	"Изменить"	"Bosman options"
-"open_folder"	"Open folder"	"Открыть папку"	"Bosman options"
-"apply_next_start"	"Applies at the next start"	"Вступит в силу после перезапуска"	"Bosman options note"
-"match_columns_note"	"When the tactics or
+id	source	translation	context
+menu_start_new_game	Start New Game	Начать новую игру	Start screen menu
+menu_quick_start_game	Quick Start Game	Быстрый старт	Start screen menu
+menu_restore_saved_game	Restore Saved Game	Загрузить сохранение	Start screen menu
+menu_delete_saved_game	Delete Saved Game	Удалить сохранение	Start screen menu
+menu_network_play	Network Play	Сетевая игра	Start screen menu
+menu_game_settings	Game Settings	Настройки игры	Start screen menu
+menu_hall_of_fame	Hall Of Fame	Зал славы	Start screen menu
+menu_game_credits	Game Credits	Авторы игры	Start screen menu
+menu_web_sites	Web Sites	Сайты	Start screen menu
+setup_game	Setup Game	Настройка игры	Setup screen heading
+loading_database	Loading database	Загрузка базы данных	Database loading
+select_leagues	Select League(s)	Выбор лиг	League selection
+selected_leagues	Selected League(s)	Выбранные лиги	League selection
+real_players	  Use Real Players:	  Использовать реальных игроков:	League selection; preserve leading spaces
+yes	Yes	Да	Common choice
+no	No	Нет	Common choice
+attribute_masking	  Attribute Masking:	  Скрывать атрибуты:	League selection; preserve leading spaces
+select_all	Select All	Выбрать все	League selection
+deselect_all	De-Select All	Снять выделение	League selection
+selected	SELECTED	ВЫБРАНО	League selection flag
+background	BACKGROUND	В ФОНЕ	League selection flag
+regional_divisions	Regional Divisions	Региональные дивизионы	League selection
+not_enough_memory	Not enough memory	Недостаточно памяти	Error
+not_enough_memory_leagues	Not enough memory to select that many leagues	Недостаточно памяти для выбора такого числа лиг	Error
+back	Back	Назад	Navigation
+next	Next	Далее	Navigation
+please_confirm	Please Confirm	Подтверждение	Confirmation dialog
+exit_game	Exit the game ?	Выйти из игры?	Confirmation dialog
+save_game	Save Game	Сохранить игру	Game menu
+add_manager	Add Manager	Добавить менеджера	Game menu
+manager_status	Manager Status	Статус менеджера	Game menu
+playing	Playing	Играет	Manager status
+waiting	Waiting	Ожидает	Manager status
+on_holiday	On Holiday	В отпуске	Manager status
+on_holiday_watching	On Holiday (Watching)	В отпуске (с просмотром)	Manager status
+not_playing	Not Playing	Не играет	Manager status
+finish	Finish	Завершить	Navigation
+close	Close	Закрыть	Navigation
+game_options	Game Options	Игровые настройки	Game menu
+bosman_options	Bosman Edition Options	Настройки Bosman Edition	Bosman options
+display_mode	Display mode	Режим экрана	Bosman options
+widescreen	Widescreen	Широкий экран	Bosman options
+classic	Classic	Классический	Bosman options
+sharp_picture	Sharp picture	Чёткое изображение	Bosman options
+remember_window	Remember window	Запоминать размер окна	Bosman options
+all_sound	All sound	Звук игры	Bosman options
+attribute_colours	Attribute colours	Цвета атрибутов	Bosman options
+condition_colours	Condition colours	Цвета состояния	Bosman options
+foreign_colours	Foreign colours	Выделение легионеров	Bosman options
+match_columns	Match columns	Колонки матча	Bosman options
+attribute_groups	Attribute groups	Группы атрибутов	Bosman options
+space_to_continue	Space to continue	Пробел — продолжить	Bosman options
+shortcut_keys	Shortcut keys	Горячие клавиши	Bosman options
+clickable_names	Clickable names	Переход по именам	Bosman options
+team_views	Team views	Обзор команды	Bosman options
+full_player_search	Full player search	Полный список игроков	Bosman options
+faster_holidays	Faster holidays	Ускоренный отпуск	Bosman options
+save_backups	Save backups	Резервные копии сохранений	Bosman options
+changing_rules	Changing rules	Изменение правил	Bosman options
+save_folder	Save folder	Папка сохранений	Bosman options
+online_play	Online play	Игра по сети	Bosman options
+game_password	Game password	Пароль игры	Bosman options
+language	Language	Язык	Bosman options
+game_text	Game text	Язык текста	Bosman options
+system	System	Системный	Bosman options
+russian	Russian	Русский	Bosman options
+graphics	Graphics	Графика	Bosman options tab
+game	Game	Игра	Bosman options tab
+network	Network	Сеть	Bosman options tab
+on	On	Вкл.	Bosman options
+off	Off	Выкл.	Bosman options
+change	Change	Изменить	Bosman options
+open_folder	Open folder	Открыть папку	Bosman options
+apply_next_start	Applies at the next start	Вступит в силу после перезапуска	Bosman options note
+match_columns_note	"When the tactics or
 match screen opens next"	"При следующем открытии экрана
-тактики или матча"	"Bosman options note"
-"attribute_groups_note"	"When a profile opens next"	"При следующем открытии профиля"	"Bosman options note"
-"full_player_search_note"	"From the next game day"	"Начиная со следующего игрового дня"	"Bosman options note"
-"changing_rules_note"	"Default for a new game
+тактики или матча"	Bosman options note
+attribute_groups_note	When a profile opens next	При следующем открытии профиля	Bosman options note
+full_player_search_note	From the next game day	Начиная со следующего игрового дня	Bosman options note
+changing_rules_note	"Default for a new game
 Setup Game sets each game"	"По умолчанию для новой игры
-Настройка игры меняет параметр"	"Bosman options note"
-"save_folder_note"	"Applies at the next start
+Настройка игры меняет параметр"	Bosman options note
+save_folder_note	"Applies at the next start
 Old saves do not move"	"Вступит в силу после перезапуска
-Старые сохранения не перемещаются"	"Bosman options note"
-"settings_not_saved"	"Not saved: settings.txt
+Старые сохранения не перемещаются"	Bosman options note
+settings_not_saved	"Not saved: settings.txt
 cannot be written"	"Не удалось сохранить:
-невозможно записать settings.txt"	"Bosman options note"
-"progress_player_initialisation"	"Player Initialisation"	"Подготовка игроков"	"New-game progress box"
-"progress_player_histories"	"Player histories"	"Загрузка истории игроков"	"New-game progress box"
-"progress_initialising_game_data"	"Initialising game data"	"Подготовка игровых данных"	"New-game progress box"
-"progress_initialising_leagues"	"Initialising Leagues"	"Подготовка лиг"	"New-game progress box"
-"progress_assessing_club_squads"	"Assessing Club Squads"	"Формирование составов клубов"	"New-game progress box"
-"progress_creating_shortlists"	"Creating Shortlists"	"Создание списков кандидатов"	"New-game progress box"
-"setup_enter_name"	"Enter Name"	"Введите имя"	"Manager creation screen heading"
-"setup_select_nationality"	"Select Nationality"	"Выберите гражданство"	"Manager creation screen heading"
-"setup_select_team"	"Select Team"	"Выберите команду"	"Manager creation screen heading"
-"setup_no_memory"	"No Memory"	"Недостаточно памяти"	"New-game setup error screen"
-"setup_first_name"	"First Name"	"Имя"	"Manager creation form label"
-"setup_second_name"	"Second Name"	"Фамилия"	"Manager creation form label"
-"setup_password_optional"	"Password (Optional)"	"Пароль (необязательно)"	"Manager creation form label"
-"setup_retype"	"Re-Type"	"Повторите пароль"	"Manager creation form label"
-"setup_cancel"	"Cancel"	"Отмена"	"Manager creation action"
-"nationality_filter"	"Filter"	"Фильтр"	"Nationality selection screen"
-"nationality_all"	"All Nations"	"Все страны"	"Nationality selection filter"
-"nationality_major"	"Major Nations"	"Основные страны"	"Nationality selection filter"
-"team_nation_label"	"Nation"	"Страна"	"Team selection screen label"
-"manager_already_controlled"	"Already Controlled"	"Уже под управлением"	"Manager setup validation dialog"
-"manager_playing_in_match"	"Playing In Match"	"Идёт матч"	"Manager setup validation dialog"
-"manager_names_blank"	"The first and second names entered are blank."	"Не указаны имя и фамилия."	"Manager setup validation dialog"
-"manager_first_name_blank"	"The first name entered is blank."	"Не указано имя."	"Manager setup validation dialog"
-"manager_second_name_blank"	"The second name entered is blank."	"Не указана фамилия."	"Manager setup validation dialog"
-"manager_password_mismatch"	"The password and re-typed password do not match."	"Пароли не совпадают."	"Manager setup validation dialog"
-"squad_undo_clear"	"Undo Clear"	"Отменить очистку"	"Squad screen; undo action"
-"squad_clear"	"Clear Squad"	"Очистить состав"	"Squad screen; action"
-"squad_all_positions"	"All Positions"	"Все позиции"	"Squad filter"
-"squad_goalkeepers"	"Goalkeepers"	"Вратари"	"Squad filter"
-"squad_defenders"	"Defenders"	"Защитники"	"Squad filter"
-"squad_midfielders"	"Midfielders"	"Полузащитники"	"Squad filter"
-"squad_attackers"	"Attackers"	"Нападающие"	"Squad filter"
-"squad_all_sides"	"All Sides"	"Все варианты фланга"	"Squad filter"
-"squad_left_sided"	"Left Sided"	"Левый фланг"	"Squad filter"
-"squad_central"	"Central"	"Центр"	"Squad filter"
-"squad_right_sided"	"Right Sided"	"Правый фланг"	"Squad filter"
-"squad_available_only"	"Available Only"	"Только доступные"	"Squad filter"
-"squad_unavailable"	"Unavailable"	"Недоступные"	"Squad filter"
-"squad_european"	"European Squad"	"Еврокубковый состав"	"Squad filter"
-"squad_include_seniors"	" Include Seniors"	" Включить игроков основной команды"	"Squad filter; preserve leading space"
-"squad_include_reserves"	" Include Reserves"	" Включить резервистов"	"Squad filter; preserve leading space"
-"squad_penalty_takers"	"Penalty Takers"	"Исполнители пенальти"	"Squad view"
-"club_tab_transfers"	"Transfers"	"Трансферы"	"Club screen tab"
-"club_tab_next_match"	"Next Match"	"Следующий матч"	"Club screen tab"
-"club_tab_fixtures"	"Fixtures"	"Календарь"	"Club screen tab"
-"club_tab_finances_info"	"Finances & Info"	"Финансы и сведения"	"Club screen tab"
-"club_tab_general_info"	"General Info"	"Общие сведения"	"Club screen tab"
-"club_tab_tactics"	"Tactics"	"Тактика"	"Club screen tab"
-"club_tab_training"	"Training"	"Тренировки"	"Club screen tab"
-"club_tab_last_match"	"Last Match"	"Последний матч"	"Club screen tab"
-"club_tab_division"	"Division"	"Дивизион"	"Club screen tab"
-"club_tab_history"	"History"	"История"	"Club screen tab"
-"club_team_main"	"Main Squad"	"Основной состав"	"Club team selector"
-"club_team_b"	"'B' Squad"	"Команда «Б»"	"Club team selector"
-"club_team_reserve"	"Reserve Squad"	"Резервная команда"	"Club team selector"
-"club_take_control"	"Take Control"	"Взять под управление"	"Club action"
-"club_scout"	"Scout Club"	"Разведать клуб"	"Club action"
-"club_invite"	"Invite Club"	"Пригласить клуб"	"Club action"
-"club_uninvite"	"Uninvite Club"	"Отменить приглашение"	"Club action"
-"common_print"	"Print"	"Печать"	"Club screen action"
-"common_formation"	"Formation"	"Схема"	"Tactics screen control"
-"tactics_team_instructions"	"Team Instructions"	"Командные установки"	"Tactics menu"
-"tactics_set_default"	"Set To Default"	"Установить по умолчанию"	"Tactics menu"
-"tactics_load"	"Load"	"Загрузить"	"Tactics menu"
-"tactics_load_preset"	"Load Preset"	"Загрузить готовую схему"	"Tactics menu"
-"tactics_save"	"Save"	"Сохранить"	"Tactics menu"
-"tactics_save_as"	"Save As"	"Сохранить как"	"Tactics menu"
-"tactics_save_for"	"Save For"	"Сохранить для"	"Tactics menu"
-"tactics_delete"	"Delete"	"Удалить"	"Tactics menu"
-"tactics_unlock"	"Unlock"	"Разблокировать"	"Tactics menu"
-"tactics_lock"	"Lock"	"Заблокировать"	"Tactics menu"
-"formation_442_defensive"	"4-4-2 Defensive"	"4-4-2 (оборонительная)"	"Preset formation name"
-"formation_442_attacking"	"4-4-2 Attacking"	"4-4-2 (атакующая)"	"Preset formation name"
-"formation_442_diamond"	"4-4-2 Diamond"	"4-4-2 (ромб)"	"Preset formation name"
-"formation_352_defensive"	"3-5-2 Defensive"	"3-5-2 (оборонительная)"	"Preset formation name"
-"formation_352_attacking"	"3-5-2 Attacking"	"3-5-2 (атакующая)"	"Preset formation name"
-"formation_532_defensive"	"5-3-2 Defensive"	"5-3-2 (оборонительная)"	"Preset formation name"
-"formation_532_attacking"	"5-3-2 Attacking"	"5-3-2 (атакующая)"	"Preset formation name"
-"compare_players_header"	"Compare Players"	"Сравнение игроков"	"Player profile action menu"
-"compare_set_first"	"Set as 1st player in comparison"	"Выбрать первым для сравнения"	"Player profile action menu"
-"compare_set_second"	"Set as 2nd player in comparison"	"Выбрать вторым для сравнения"	"Player profile action menu"
-"compare_set_first_question"	"Set as 1st player in comparison?"	"Назначить первым игроком для сравнения?"	"Player comparison prompt heading"
-"compare_set_second_question"	"Set as 2nd player in comparison?"	"Назначить вторым игроком для сравнения?"	"Player comparison prompt heading"
-"compare_two_selected"	"Compare two chosen players"	"Сравнить выбранных игроков"	"Player profile action menu"
-"compare_unavailable"	"Can not compare players"	"Невозможно сравнить игроков"	"Player comparison message"
-"compare_need_two_prompt"	"Two players must be selected to compare against each other"	"Для сравнения нужно выбрать двух игроков"	"Player comparison message"
-"compare_okay"	"Okay"	"ОК"	"Player comparison confirmation"
-"compare_need_two"	"Need two players to compare."	"Для сравнения нужны два игрока."	"Player comparison empty state"
-"compare_legend"	"Legend:"	"Обозначения:"	"Player comparison legend"
-"compare_masked_note"	"( - ) indicates that this attribute is masked and requires further scouting"	"(–) означает, что атрибут скрыт и для его оценки требуется дополнительная работа скаута"	"Player comparison legend"
-"compare_na"	"n/a"	"н/д"	"Player comparison value"
-"compare_both_same"	"Both the same"	"Одинаковый результат"	"Player comparison summary"
-"profile_avg_rating"	"Avg. Rating"	"Средняя оценка"	"Player comparison column"
-"profile_appearances"	"Appearances"	"Матчи"	"Player comparison column"
-"profile_goals"	"Goals"	"Голы"	"Player comparison column"
-"profile_conceded"	"Conceded"	"Пропущено"	"Player comparison column"
-"profile_assists"	"Assists"	"Голевые передачи"	"Player comparison column"
-"profile_man_of_match"	"Man of Match"	"Лучший игрок матча"	"Player comparison column"
-"profile_on_loan"	"On Loan"	"В аренде"	"Player profile attribute"
-"profile_preferred_foot"	"Preferred Foot"	"Предпочитаемая нога"	"Player profile attribute"
-"position_goalkeeper"	"Goalkeeper"	"Вратарь"	"Tactical position"
-"position_centre_back"	"Centre Back"	"Центральный защитник"	"Tactical position"
-"position_full_back"	"Full Back"	"Крайний защитник"	"Tactical position"
-"position_wing_back"	"Wing Back"	"Фланговый защитник"	"Tactical position"
-"position_def_mid"	"Def. Mid."	"Опорный полузащитник"	"Tactical position"
-"position_midfielder"	"Midfielder"	"Полузащитник"	"Tactical position"
-"position_att_mid"	"Att. Mid."	"Атакующий полузащитник"	"Tactical position"
-"position_winger"	"Winger"	"Вингер"	"Tactical position"
-"position_striker"	"Striker"	"Нападающий"	"Tactical position"
-"game_settings_currency"	"Currency"	"Валюта"	"Game Settings row"
-"game_settings_fonts"	"Fonts"	"Шрифты"	"Game Settings row"
-"game_settings_wages"	"Wages"	"Зарплата"	"Game Settings row"
-"game_settings_screen_mode"	"Screen Mode"	"Режим экрана"	"Game Settings row"
-"game_settings_background_changes"	"Background Changes"	"Смена фона"	"Game Settings row"
-"game_settings_sound"	"Sound"	"Звук"	"Game Settings row"
-"game_settings_database"	"Database"	"База данных"	"Game Settings row"
-"game_settings_matches_stored"	"Matches Stored"	"Сохраняемые матчи"	"Game Settings row"
-"game_settings_auto_save"	"Auto Save"	"Автосохранение"	"Game Settings row"
-"game_settings_save_compressed"	"Save Compressed"	"Сжатие сохранений"	"Game Settings row"
-"game_settings_save_safely"	"Save Safely"	"Безопасное сохранение"	"Game Settings row"
-"game_settings_flashing_text"	"Flashing Text"	"Мигающий текст"	"Game Settings row"
-"game_settings_background_matches"	"Background Matches"	"Матчи в фоновом режиме"	"Game Settings row"
-"game_settings_print_to"	"Print To"	"Вывод на печать"	"Game Settings row"
-"game_settings_reset"	"Reset"	"Сбросить"	"Game Settings button"
-"manager_selected_leagues"	"Selected Leagues"	"Выбранные лиги"	"Game Options menu"
-"manager_restart_game"	"Restart Game"	"Перезапустить игру"	"Game Options menu"
-"manager_exit_game"	"Exit Game"	"Выйти из игры"	"Game Options menu"
-"club_match_rules"	"Match Rules"	"Правила матча"	"Next Match screen section"
-"club_non_eu_players"	"Number Of Non-EU Players"	"Количество игроков не из ЕС"	"Club information label"
-"club_foreign_players"	"Number Of Foreign Players"	"Количество легионеров"	"Club information label"
-"compare_p1_better"	"<p1> better"	"<p1> лучше"	"Player comparison summary; preserve player token"
-"compare_p2_better"	"<p2> better"	"<p2> лучше"	"Player comparison summary; preserve player token"
-"sidebar_add_manager"	"Add
+невозможно записать settings.txt"	Bosman options note
+progress_player_initialisation	Player Initialisation	Подготовка игроков	New-game progress box
+progress_player_histories	Player histories	Загрузка истории игроков	New-game progress box
+progress_initialising_game_data	Initialising game data	Подготовка игровых данных	New-game progress box
+progress_initialising_leagues	Initialising Leagues	Подготовка лиг	New-game progress box
+progress_assessing_club_squads	Assessing Club Squads	Формирование составов клубов	New-game progress box
+progress_creating_shortlists	Creating Shortlists	Создание списков кандидатов	New-game progress box
+setup_enter_name	Enter Name	Введите имя	Manager creation screen heading
+setup_select_nationality	Select Nationality	Выберите гражданство	Manager creation screen heading
+setup_select_team	Select Team	Выберите команду	Manager creation screen heading
+setup_no_memory	No Memory	Недостаточно памяти	New-game setup error screen
+setup_first_name	First Name	Имя	Manager creation form label
+setup_second_name	Second Name	Фамилия	Manager creation form label
+setup_password_optional	Password (Optional)	Пароль (необязательно)	Manager creation form label
+setup_retype	Re-Type	Повторите пароль	Manager creation form label
+setup_cancel	Cancel	Отмена	Manager creation action
+nationality_filter	Filter	Фильтр	Nationality selection screen
+nationality_all	All Nations	Все страны	Nationality selection filter
+nationality_major	Major Nations	Основные страны	Nationality selection filter
+team_nation_label	Nation	Страна	Team selection screen label
+manager_already_controlled	Already Controlled	Уже под управлением	Manager setup validation dialog
+manager_playing_in_match	Playing In Match	Идёт матч	Manager setup validation dialog
+manager_names_blank	The first and second names entered are blank.	Не указаны имя и фамилия.	Manager setup validation dialog
+manager_first_name_blank	The first name entered is blank.	Не указано имя.	Manager setup validation dialog
+manager_second_name_blank	The second name entered is blank.	Не указана фамилия.	Manager setup validation dialog
+manager_password_mismatch	The password and re-typed password do not match.	Пароли не совпадают.	Manager setup validation dialog
+squad_undo_clear	Undo Clear	Отменить очистку	Squad screen; undo action
+squad_clear	Clear Squad	Очистить состав	Squad screen; action
+squad_all_positions	All Positions	Все позиции	Squad filter
+squad_goalkeepers	Goalkeepers	Вратари	Squad filter
+squad_defenders	Defenders	Защитники	Squad filter
+squad_midfielders	Midfielders	Полузащитники	Squad filter
+squad_attackers	Attackers	Нападающие	Squad filter
+squad_all_sides	All Sides	Все варианты фланга	Squad filter
+squad_left_sided	Left Sided	Левый фланг	Squad filter
+squad_central	Central	Центр	Squad filter
+squad_right_sided	Right Sided	Правый фланг	Squad filter
+squad_available_only	Available Only	Только доступные	Squad filter
+squad_unavailable	Unavailable	Недоступные	Squad filter
+squad_european	European Squad	Еврокубковый состав	Squad filter
+squad_include_seniors	 Include Seniors	 Включить игроков основной команды	Squad filter; preserve leading space
+squad_include_reserves	 Include Reserves	 Включить резервистов	Squad filter; preserve leading space
+squad_penalty_takers	Penalty Takers	Исполнители пенальти	Squad view
+club_tab_transfers	Transfers	Трансферы	Club screen tab
+club_tab_next_match	Next Match	Следующий матч	Club screen tab
+club_tab_fixtures	Fixtures	Календарь	Club screen tab
+club_tab_finances_info	Finances & Info	Финансы и сведения	Club screen tab
+club_tab_general_info	General Info	Общие сведения	Club screen tab
+club_tab_tactics	Tactics	Тактика	Club screen tab
+club_tab_training	Training	Тренировки	Club screen tab
+club_tab_last_match	Last Match	Последний матч	Club screen tab
+club_tab_division	Division	Дивизион	Club screen tab
+club_tab_history	History	История	Club screen tab
+club_team_main	Main Squad	Основной состав	Club team selector
+club_team_b	'B' Squad	Команда «Б»	Club team selector
+club_team_reserve	Reserve Squad	Резервная команда	Club team selector
+club_take_control	Take Control	Взять под управление	Club action
+club_scout	Scout Club	Разведать клуб	Club action
+club_invite	Invite Club	Пригласить клуб	Club action
+club_uninvite	Uninvite Club	Отменить приглашение	Club action
+common_print	Print	Печать	Club screen action
+common_formation	Formation	Схема	Tactics screen control
+tactics_team_instructions	Team Instructions	Командные установки	Tactics menu
+tactics_set_default	Set To Default	Установить по умолчанию	Tactics menu
+tactics_load	Load	Загрузить	Tactics menu
+tactics_load_preset	Load Preset	Загрузить готовую схему	Tactics menu
+tactics_save	Save	Сохранить	Tactics menu
+tactics_save_as	Save As	Сохранить как	Tactics menu
+tactics_save_for	Save For	Сохранить для	Tactics menu
+tactics_delete	Delete	Удалить	Tactics menu
+tactics_unlock	Unlock	Разблокировать	Tactics menu
+tactics_lock	Lock	Заблокировать	Tactics menu
+formation_442_defensive	4-4-2 Defensive	4-4-2 (оборонительная)	Preset formation name
+formation_442_attacking	4-4-2 Attacking	4-4-2 (атакующая)	Preset formation name
+formation_442_diamond	4-4-2 Diamond	4-4-2 (ромб)	Preset formation name
+formation_352_defensive	3-5-2 Defensive	3-5-2 (оборонительная)	Preset formation name
+formation_352_attacking	3-5-2 Attacking	3-5-2 (атакующая)	Preset formation name
+formation_532_defensive	5-3-2 Defensive	5-3-2 (оборонительная)	Preset formation name
+formation_532_attacking	5-3-2 Attacking	5-3-2 (атакующая)	Preset formation name
+compare_players_header	Compare Players	Сравнение игроков	Player profile action menu
+compare_set_first	Set as 1st player in comparison	Выбрать первым для сравнения	Player profile action menu
+compare_set_second	Set as 2nd player in comparison	Выбрать вторым для сравнения	Player profile action menu
+compare_set_first_question	Set as 1st player in comparison?	Назначить первым игроком для сравнения?	Player comparison prompt heading
+compare_set_second_question	Set as 2nd player in comparison?	Назначить вторым игроком для сравнения?	Player comparison prompt heading
+compare_two_selected	Compare two chosen players	Сравнить выбранных игроков	Player profile action menu
+compare_unavailable	Can not compare players	Невозможно сравнить игроков	Player comparison message
+compare_need_two_prompt	Two players must be selected to compare against each other	Для сравнения нужно выбрать двух игроков	Player comparison message
+compare_okay	Okay	ОК	Player comparison confirmation
+compare_need_two	Need two players to compare.	Для сравнения нужны два игрока.	Player comparison empty state
+compare_legend	Legend:	Обозначения:	Player comparison legend
+compare_masked_note	( - ) indicates that this attribute is masked and requires further scouting	(–) означает, что атрибут скрыт и для его оценки требуется дополнительная работа скаута	Player comparison legend
+compare_na	n/a	н/д	Player comparison value
+compare_both_same	Both the same	Одинаковый результат	Player comparison summary
+profile_avg_rating	Avg. Rating	Средняя оценка	Player comparison column
+profile_appearances	Appearances	Матчи	Player comparison column
+profile_goals	Goals	Голы	Player comparison column
+profile_conceded	Conceded	Пропущено	Player comparison column
+profile_assists	Assists	Голевые передачи	Player comparison column
+profile_man_of_match	Man of Match	Лучший игрок матча	Player comparison column
+profile_on_loan	On Loan	В аренде	Player profile attribute
+profile_preferred_foot	Preferred Foot	Предпочитаемая нога	Player profile attribute
+position_goalkeeper	Goalkeeper	Вратарь	Tactical position
+position_centre_back	Centre Back	Центральный защитник	Tactical position
+position_full_back	Full Back	Крайний защитник	Tactical position
+position_wing_back	Wing Back	Фланговый защитник	Tactical position
+position_def_mid	Def. Mid.	Опорный полузащитник	Tactical position
+position_midfielder	Midfielder	Полузащитник	Tactical position
+position_att_mid	Att. Mid.	Атакующий полузащитник	Tactical position
+position_winger	Winger	Вингер	Tactical position
+position_striker	Striker	Нападающий	Tactical position
+game_settings_currency	Currency	Валюта	Game Settings row
+game_settings_fonts	Fonts	Шрифты	Game Settings row
+game_settings_wages	Wages	Зарплата	Game Settings row
+game_settings_screen_mode	Screen Mode	Режим экрана	Game Settings row
+game_settings_background_changes	Background Changes	Смена фона	Game Settings row
+game_settings_sound	Sound	Звук	Game Settings row
+game_settings_database	Database	База данных	Game Settings row
+game_settings_matches_stored	Matches Stored	Сохраняемые матчи	Game Settings row
+game_settings_auto_save	Auto Save	Автосохранение	Game Settings row
+game_settings_save_compressed	Save Compressed	Сжатие сохранений	Game Settings row
+game_settings_save_safely	Save Safely	Безопасное сохранение	Game Settings row
+game_settings_flashing_text	Flashing Text	Мигающий текст	Game Settings row
+game_settings_background_matches	Background Matches	Матчи в фоновом режиме	Game Settings row
+game_settings_print_to	Print To	Вывод на печать	Game Settings row
+game_settings_reset	Reset	Сбросить	Game Settings button
+manager_selected_leagues	Selected Leagues	Выбранные лиги	Game Options menu
+manager_restart_game	Restart Game	Перезапустить игру	Game Options menu
+manager_exit_game	Exit Game	Выйти из игры	Game Options menu
+club_match_rules	Match Rules	Правила матча	Next Match screen section
+club_non_eu_players	Number Of Non-EU Players	Количество игроков не из ЕС	Club information label
+club_foreign_players	Number Of Foreign Players	Количество легионеров	Club information label
+compare_p1_better	<p1> better	<p1> лучше	Player comparison summary; preserve player token
+compare_p2_better	<p2> better	<p2> лучше	Player comparison summary; preserve player token
+sidebar_add_manager	"Add
 Manager"	"Добавить
-менеджера"	"Left sidebar action; preserve line break"
-"sidebar_restart_game"	"Restart
+менеджера"	Left sidebar action; preserve line break
+sidebar_restart_game	"Restart
 Game"	"Перезапустить
-игру"	"Left sidebar action; preserve line break"
-"sidebar_exit_game"	"Exit
+игру"	Left sidebar action; preserve line break
+sidebar_exit_game	"Exit
 Game"	"Выйти
-из игры"	"Left sidebar action; preserve line break"
-"restart_confirm"	"Restart the game ?"	"Перезапустить игру?"	"Restart confirmation dialog"
-"news_title"	"News"	"Новости"	"Left sidebar navigation"
-"news_category_all"	"All"	"Все"	"News category filter"
-"news_category_messages"	"Messages"	"Сообщения"	"News category filter"
-"news_category_competitions"	"Competitions"	"Соревнования"	"News category filter"
-"news_category_injuries_bans"	"Injuries and Bans"	"Травмы и дисквалификации"	"News category filter"
-"news_category_contracts_media"	"Contracts and Media"	"Контракты и пресса"	"News category filter"
-"news_category_jobs"	"Jobs"	"Вакансии"	"News category filter"
-"news_category_records"	"Records"	"Рекорды"	"News category filter"
-"news_filter_label"	"Filter :"	"Фильтр:"	"News screen filter label"
-"news_next_unread"	"Next Unread"	"Следующее непрочитанное"	"News screen navigation"
-"sidebar_player_staff_search"	"Player & Staff Search"	"Поиск игроков и персонала"	"Left sidebar navigation"
-"sidebar_job_information"	"Job Information"	"Информация о вакансии"	"Left sidebar navigation"
-"sidebar_go_on_holiday"	"Go on Holiday"	"Уйти в отпуск"	"Left sidebar action"
-"sidebar_retire"	"Retire"	"Завершить карьеру"	"Left sidebar action"
-"holiday_heading"	"Go on holiday ?"	"Уйти в отпуск?"	"Holiday confirmation dialog heading"
-"holiday_return_confirm"	"Return from holiday ?"	"Вернуться из отпуска?"	"Holiday confirmation dialog"
-"holiday_network_exit"	"Exit the network game as you go on holiday ?"	"Выйти из сетевой игры и уйти в отпуск?"	"Holiday network confirmation"
-"holiday_reject_all_offers"	"Reject all offers for players"	"Отклонять все предложения по игрокам"	"Holiday preference"
-"holiday_below_asking_price"	"below asking price"	"ниже запрашиваемой цены"	"Holiday preference"
-"holiday_do_not_buy"	"Do not buy any players"	"Не покупать игроков"	"Holiday preference"
-"holiday_only_shortlist"	"Only buy from shortlist"	"Покупать только из списка кандидатов"	"Holiday preference"
-"holiday_apply_higher_clubs"	"Apply for manager position at higher clubs"	"Подавать заявки на работу в более крупных клубах"	"Holiday preference"
-"holiday_keep_tactics"	"Use current match tactics"	"Использовать текущую тактику"	"Holiday preference"
-"holiday_keep_selection"	"Use current team selection when possible"	"По возможности сохранять текущий состав"	"Holiday preference"
-"holiday_control_reserves"	"Control Reserve Team"	"Управлять резервной командой"	"Holiday preference"
-"manager_not_playing_locked"	"Not Playing (locked)"	"Не играет (заблокирован)"	"Manager status"
-"manager_server_ip"	"Server IP Address"	"IP-адрес сервера"	"Network manager status screen"
-"manager_already_running"	"Already Running"	"Игра уже запущена"	"Startup error dialog"
-"common_ok"	"Ok"	"ОК"	"Generic confirmation button"
-"club_squad_tab"	"Squad"	"Состав"	"Club screen tab"
-"club_auto"	"Auto"	"Авто"	"Squad numbers / European squad action"
-"club_clear"	"Clear"	"Очистить"	"Squad numbers / European squad action"
-"club_submit"	"Submit"	"Подтвердить"	"Squad numbers / European squad action"
-"club_invite_another"	"Invite Another"	"Пригласить ещё"	"Tournament invitations action"
-"club_apply_for_job"	"Apply for Job"	"Подать заявку на вакансию"	"Club screen action"
-"club_configure_tournament"	"Configure Tournament"	"Настроить турнир"	"Friendly tournament dialog heading"
-"club_arrange_friendly_tour"	"Arrange Friendly Tour"	"Организовать турне"	"Friendly tour screen heading"
-"profile_bans_tab"	" Bans"	" Дисквалификации"	"Player profile tab; preserve leading space"
-"profile_appeal"	"Appeal"	"Подать апелляцию"	"Ban appeal action button"
-"profile_given_free_transfer"	"Given free transfer"	"Отпущен бесплатно"	"Player profile status"
-"profile_unemployed"	"Unemployed"	"Безработный"	"Player comparison job status"
-"profile_form"	"Form"	"Форма"	"Player profile attribute"
-"profile_condition"	"Condition"	"Физическое состояние"	"Player profile attribute"
-"profile_morale"	"Morale"	"Моральное состояние"	"Player profile attribute"
-"profile_positions"	"Position(s)"	"Позиции"	"Player squad list view"
-"profile_average_rating"	"Average Rating"	"Средняя оценка"	"Player list view"
-"profile_match_rating"	"Match Rating"	"Оценка за матч"	"Player list view"
-"profile_inj_short"	"Inj"	"Тр"	"Player list injury status"
-"profile_foreign_short"	"Fgn"	"Лег"	"Player list foreign-player status"
-"profile_foot_left_only"	"Left Only"	"Только левая"	"Preferred-foot value"
-"profile_foot_either"	"Either"	"Обе ноги"	"Preferred-foot value"
-"profile_foot_right_only"	"Right Only"	"Только правая"	"Preferred-foot value"
-"morale_very_low"	"Very Low"	"Очень низкая"	"Player morale status"
-"morale_low"	"Low"	"Низкая"	"Player morale status"
-"morale_good"	"Good"	"Хорошая"	"Player morale status"
-"morale_very_good"	"Very Good"	"Очень хорошая"	"Player morale status"
-"morale_superb"	"Superb"	"Превосходная"	"Player morale status"
-"attribute_acceleration"	"Acceleration"	"Ускорение"	"Player attribute"
-"attribute_aggression"	"Aggression"	"Агрессивность"	"Player attribute"
-"attribute_agility"	"Agility"	"Ловкость"	"Player attribute"
-"attribute_anticipation"	"Anticipation"	"Предвидение"	"Player attribute"
-"attribute_balance"	"Balance"	"Равновесие"	"Player attribute"
-"attribute_bravery"	"Bravery"	"Храбрость"	"Player attribute"
-"attribute_creativity"	"Creativity"	"Креативность"	"Player attribute"
-"attribute_decisions"	"Decisions"	"Принятие решений"	"Player attribute"
-"attribute_determination"	"Determination"	"Решительность"	"Player attribute"
-"attribute_dribbling"	"Dribbling"	"Дриблинг"	"Player attribute"
-"attribute_finishing"	"Finishing"	"Завершение атак"	"Player attribute"
-"attribute_flair"	"Flair"	"Фантазия"	"Player attribute"
-"attribute_handling"	"Handling"	"Ловля мяча"	"Player attribute"
-"attribute_heading"	"Heading"	"Игра головой"	"Player attribute"
-"attribute_influence"	"Influence"	"Влияние"	"Player attribute"
-"attribute_jumping"	"Jumping"	"Прыжки"	"Player attribute"
-"attribute_leadership"	"Leadership"	"Лидерские качества"	"Player attribute"
-"attribute_long_shots"	"Long Shots"	"Удары издали"	"Player attribute"
-"attribute_marking"	"Marking"	"Опека"	"Player attribute"
-"attribute_off_the_ball"	"Off The Ball"	"Игра без мяча"	"Player attribute"
-"attribute_pace"	"Pace"	"Скорость"	"Player attribute"
-"attribute_passing"	"Passing"	"Пас"	"Player attribute"
-"attribute_positioning"	"Positioning"	"Выбор позиции"	"Player attribute"
-"attribute_reflexes"	"Reflexes"	"Реакция"	"Player attribute"
-"attribute_set_pieces"	"Set Pieces"	"Стандартные положения"	"Player attribute"
-"attribute_stamina"	"Stamina"	"Выносливость"	"Player attribute"
-"attribute_strength"	"Strength"	"Сила"	"Player attribute"
-"attribute_tackling"	"Tackling"	"Отбор мяча"	"Player attribute"
-"attribute_teamwork"	"Teamwork"	"Командная игра"	"Player attribute"
-"attribute_technique"	"Technique"	"Техника"	"Player attribute"
-"attribute_work_rate"	"Work Rate"	"Работоспособность"	"Player attribute"
-"tactics_pressing"	"Pressing"	"Прессинг"	"Tactical instruction"
-"tactics_pass_to"	"Pass To"	"Направление паса"	"Tactical instruction"
-"tactics_set_pieces_attack"	"Set Pieces (A)"	"Стандарты (атака)"	"Tactical instruction"
-"tactics_set_pieces_defence"	"Set Pieces (D)"	"Стандарты (оборона)"	"Tactical instruction"
-"tactics_free_role"	"Free Role"	"Свободная роль"	"Tactical instruction"
-"tactics_forward_runs"	"Forward Runs"	"Подключения в атаку"	"Tactical instruction"
-"tactics_run_with_ball"	"Run With Ball"	"Продвижение с мячом"	"Tactical instruction"
-"tactics_hold_up_ball"	"Hold Up Ball"	"Игра на удержание мяча"	"Tactical instruction"
-"tactics_try_through_balls"	"Try Through Balls"	"Попытки передач вразрез"	"Tactical instruction"
-"tactics_cross_ball"	"Cross Ball"	"Навесы"	"Tactical instruction"
-"tactics_marker"	"Marker"	"Опекаемый игрок"	"Tactical instruction"
-"match_no_player_restrictions"	"No player restrictions"	"Ограничений на игроков нет"	"Next Match rules status"
-"match_respond"	"Respond"	"Ответить"	"Transfer bid / match-day action"
-"match_reject"	"Reject"	"Отклонить"	"Transfer bid / match-day action"
-"continue_game"	"Continue Game"	"Продолжить игру"	"Game progression action"
-"common_continue"	"Continue"	"Продолжить"	"Game progression action"
-"network_chat"	"Chat"	"Чат"	"Network left sidebar item"
-"network_contacting_server"	"Contacting Server..."	"Подключение к серверу..."	"Network connection status"
-"runtime_processing_wait"	"Processing, Please Wait ..."	"Выполняется обработка, подождите ..."	"Runtime progress message"
-"runtime_disk_full"	"Disk Full"	"Диск заполнен"	"Save / file error dialog"
-"runtime_graphics_init_error"	"Unable to initialise the graphics…"	"Не удалось инициализировать графику…"	"Startup error dialog"
-"runtime_sound_init_error"	"Unable to initialise the sound…"	"Не удалось инициализировать звук…"	"Startup error dialog"
-"network_exit_confirm"	"Exit the network game ?"	"Выйти из сетевой игры?"	"Network exit confirmation"
-"manager_resume_control"	"Resume control"	"Возобновить управление"	"Manager status action"
-"position_sweeper"	"Sweeper"	"Либеро"	"Tactical position"
-"news_manager_heading"	"<%s - Manager Name(e.g.Walter Smith)> News"	"<%s - Manager Name(e.g.Walter Smith)> Новости"	"News screen heading; preserve formatter note and placeholder"
-"transfer_status_screen"	"Set Staff Transfer Status"	"Настройка трансферного статуса"	"Transfer status dialog heading"
-"transfer_asking_price"	"Asking Price"	"Запрашиваемая цена"	"Transfer status price control"
-"discipline_screen"	"Discipline Player"	"Дисциплинарное взыскание"	"Player discipline dialog heading"
-"discipline_official_warning"	"Official Warning"	"Официальное предупреждение"	"Player discipline option"
-"discipline_one_week_fine"	"1 Week Fine"	"Штраф в размере недельной зарплаты"	"Player discipline option"
-"discipline_two_week_fine"	"2 Week Fine"	"Штраф в размере двухнедельной зарплаты"	"Player discipline option"
-"profile_tab_profile"	"Profile"	"Профиль"	"Player profile tab"
-"profile_tab_transfer"	"Transfer"	"Трансфер"	"Player profile tab"
-"squad_column_contract"	"Contract"	"Контракт"	"Squad list column heading"
-"club_stats_menu"	"Stats"	"Статистика"	"Club screen menu"
-"history_view_menu"	"View"	"Вид"	"Club history view dropdown"
-"common_sort_menu"	"Sort"	"Сортировка"	"Player/club list menu"
-"profile_action_menu"	"Action"	"Действия"	"Player profile action dropdown"
-"tactics_captain_marker"	"capt"	"кап"	"Tactics player list captain marker"
-"match_tab_overview"	"Match Overview"	"Обзор матча"	"Match screen tab"
-"match_tab_stats"	"Match Stats"	"Статистика матча"	"Match screen tab"
-"match_tab_action_zones"	"Action Zones"	"Зоны атак"	"Match screen tab"
-"match_tab_report"	"Match Report"	"Отчёт о матче"	"Match screen tab"
-"match_tab_player_ratings"	"Player Ratings"	"Оценки игроков"	"Match screen tab"
-"match_tab_latest_scores"	"Latest Scores"	"Последние результаты"	"Match screen tab"
-"profile_on_loan_from_prefix"	"On loan from "	"В аренде из клуба "	"Player comparison status prefix; preserve trailing space before the linked club name"
-"tactics_no_reserve_match"	"No tactics are available for the last reserve match"	"Для последнего матча резервной команды нет доступных тактик"	"Tactics screen message"
-"game_settings_screen_full"	"Full"	"Полный экран"	"Game Settings Screen Mode choice"
-"game_settings_screen_windowed"	"Windowed"	"Оконный режим"	"Game Settings Screen Mode choice"
-"game_options_hall_of_fame"	"Hall of Fame"	"Зал славы"	"Game Options menu"
-"meeting_period_filter"	"Period"	"Период"	"Club screen past meetings filter"
-"meeting_venue_filter"	"Venue"	"Место проведения"	"Club screen past meetings filter"
-"squad_first_team"	"First Team"	"Основной состав"	"Squad selector"
-"squad_reserve_team"	"Reserve Team"	"Резервный состав"	"Squad selector"
-"squad_youth_team"	"Youth Team"	"Молодёжный состав"	"Squad selector"
-"search_short_list"	"Short List"	"Список кандидатов"	"Player & Staff Search tab"
-"search_player_search"	"Player Search"	"Поиск игроков"	"Player & Staff Search tab"
-"search_staff_search"	"Staff Search"	"Поиск персонала"	"Player & Staff Search tab"
-"search_filters"	"Filters"	"Фильтры"	"Player and staff search action"
-"search_search"	"Search"	"Поиск"	"Player and staff search action"
-"search_scout_1"	"Scout #1"	"Скаут №1"	"Player & Staff Search scout tab"
-"search_scout_2"	"Scout #2"	"Скаут №2"	"Player & Staff Search scout tab"
-"search_basic_wage"	"Basic Wage"	"Базовая зарплата"	"Player search results column"
-"search_contract_expiry"	"Contract Expiry"	"Окончание контракта"	"Player search results column"
-"search_value"	"Value"	"Стоимость"	"Player search results column"
-"assistant_title"	"Assistant"	"Помощник"	"Assistant squad-selection menu"
-"assistant_pick_best"	"Pick best team"	"Выбрать сильнейший состав"	"Assistant squad-selection action"
-"assistant_pick_fit"	"Pick most match-fit team"	"Выбрать состав с лучшей готовностью"	"Assistant squad-selection action"
-"assistant_pick_u21"	"Pick under-21 team"	"Выбрать состав до 21 года"	"Assistant squad-selection action"
-"assistant_clear"	"Clear squad"	"Очистить состав"	"Assistant squad-selection action; exact source casing"
-"assistant_undo_clear"	"Undo clear"	"Отменить очистку"	"Assistant squad-selection action; exact source casing"
-"holiday_until_next"	"Holiday until next match"	"Отпуск до следующего матча"	"Holiday confirmation/action"
-"holiday_no_match_60"	"Your club has no match in the next 60 days."	"У вашего клуба нет матчей в ближайшие 60 дней."	"Holiday-until-next-match notice"
-"holiday_below_asking"	"Below asking price"	"Ниже запрашиваемой цены"	"Go on holiday setting"
-"transfer_board_fee"	"Your board will allow transfer fees up to <%s - value string(e.g.£5 million)>."	"Совет директоров разрешает расходы на трансферы до <%s - value string(e.g.£5 million)>."	"Transfer budget notice"
-"transfer_board_fee_low"	"Your board will only allow transfer fees up to <%s - value string(e.g.£5 million)> because they know very little about this player."	"Совет директоров разрешает расходы на трансферы до <%s - value string(e.g.£5 million)>, поскольку клубу почти ничего не известно об этом игроке."	"Transfer budget notice"
-"transfer_board_fee_cap"	"Your board will only allow transfer fees up to <%s - value string(e.g.£5 million)>."	"Совет директоров разрешает расходы на трансферы только до <%s - value string(e.g.£5 million)>."	"Transfer budget notice"
-"transfer_board_fee_unknown"	"Your board will only allow transfer fees up to <%s - value string(e.g.£5 million)> because they don't know anything about this player."	"Совет директоров разрешает расходы на трансферы до <%s - value string(e.g.£5 million)>, поскольку клуб ничего не знает об этом игроке."	"Transfer budget notice"
-"transfer_value_sentence"	"{}<%s - Club Name(e.g.Newcastle)>{s} <%s - Player name(e.g.Alan Shearer)> is currently valued at <%s - money amount(e.g.£10 Million)>."	"{}<%s - Club Name(e.g.Newcastle)>{s} <%s - Player name(e.g.Alan Shearer)> сейчас оценивается в <%s - money amount(e.g.£10 Million)>."	"Transfer screen sentence"
-"transfer_sell_part_cash"	"Sell <%s - Player name(e.g.Kevin James)> to {}<%s - Club name(e.g.Hearts)>{} for <%s - Cash(e.g.£4 million)> plus <%s - Player list(e.g.Neil McCann and Colin Cameron)>?"	"Продать <%s - Player name(e.g.Kevin James)> в {}<%s - Club name(e.g.Hearts)>{} за <%s - Cash(e.g.£4 million)> и дополнительно получить <%s - Player list(e.g.Neil McCann and Colin Cameron)>?"	"Transfer confirmation"
-"transfer_sign_part_cash"	"Sign <%s - Player name(e.g.Kevin James)> from {}<%s - Club name(e.g.Hearts)>{} for <%s - Cash(e.g.£4 million)> plus <%s - Player list(e.g.Neil McCann and Colin Cameron)>?"	"Подписать <%s - Player name(e.g.Kevin James)> из {}<%s - Club name(e.g.Hearts)>{} за <%s - Cash(e.g.£4 million)> и дополнительно отдать <%s - Player list(e.g.Neil McCann and Colin Cameron)>?"	"Transfer confirmation"
-"transfer_sell_cash"	"Sell <%s - Player name(e.g.Kevin James)> to {}<%s - Club name(e.g.Hearts)>{} for <%s - Cash(e.g.£4 million)>?"	"Продать <%s - Player name(e.g.Kevin James)> в {}<%s - Club name(e.g.Hearts)>{} за <%s - Cash(e.g.£4 million)>?"	"Transfer confirmation"
-"transfer_sign_cash"	"Sign <%s - Player name(e.g.Kevin James)> from {}<%s - Club name(e.g.Hearts)>{} for <%s - Cash(e.g.£4 million)>?"	"Подписать <%s - Player name(e.g.Kevin James)> из {}<%s - Club name(e.g.Hearts)>{} за <%s - Cash(e.g.£4 million)>?"	"Transfer confirmation"
-"transfer_sell_part_exchange"	"Sell <%s - Player name(e.g.Kevin James)> to {}<%s - Club name(e.g.Hearts)>{} in <%s - Cash(e.g.£4 million)> part exchange deal with <%s - Player list(e.g.Neil McCann and Colin Cameron)>?"	"Продать <%s - Player name(e.g.Kevin James)> в {}<%s - Club name(e.g.Hearts)>{} в рамках обмена с доплатой <%s - Cash(e.g.£4 million)> и получением <%s - Player list(e.g.Neil McCann and Colin Cameron)>?"	"Transfer confirmation"
-"transfer_sign_part_exchange"	"Sign <%s - Player name(e.g.Kevin James)> from {}<%s - Club name(e.g.Hearts)>{} in <%s - Cash(e.g.£4 million)> part exchange deal with <%s - Player list(e.g.Neil McCann and Colin Cameron)>?"	"Подписать <%s - Player name(e.g.Kevin James)> из {}<%s - Club name(e.g.Hearts)>{} в рамках обмена с доплатой <%s - Cash(e.g.£4 million)> и передачей <%s - Player list(e.g.Neil McCann and Colin Cameron)>?"	"Transfer confirmation"
-"transfer_sell_deal"	"Sell <%s - Player name(e.g.Kevin James)> to {}<%s - Club name(e.g.Hearts)>{} in <%s - Cash(e.g.£4 million)> deal?"	"Продать <%s - Player name(e.g.Kevin James)> в {}<%s - Club name(e.g.Hearts)>{} за <%s - Cash(e.g.£4 million)>?"	"Transfer confirmation"
-"transfer_sign_deal"	"Sign <%s - Player name(e.g.Kevin James)> from {}<%s - Club name(e.g.Hearts)>{} in <%s - Cash(e.g.£4 million)> deal?"	"Подписать <%s - Player name(e.g.Kevin James)> из {}<%s - Club name(e.g.Hearts)>{} за <%s - Cash(e.g.£4 million)>?"	"Transfer confirmation"
-"transfer_release_compensation"	"Are you sure you want to release <%s - Staff Name(e.g.Alan Shearer)> on a free transfer ? {}<%s - Club Name(e.g.Arsenal)>{} will have to pay <%s - Value of Money(e.g.£1,000,000)> in compensation."	"Вы уверены, что хотите отпустить <%s - Staff Name(e.g.Alan Shearer)> бесплатно? {}<%s - Club Name(e.g.Arsenal)>{} придётся выплатить компенсацию в размере <%s - Value of Money(e.g.£1,000,000)>."	"Staff release confirmation"
-"contract_board_wage"	"Your board will allow wages up to <%s - wage amount(e.g.£12,000 p/w)>."	"Совет директоров разрешает зарплату до <%s - wage amount(e.g.£12,000 p/w)>."	"Contract negotiation notice"
-"contract_board_key_wage"	"Your board feel he will be a key signing and will allow wages up to <%s - wage amount(e.g.£12,000 p/w)>."	"Совет директоров считает его важным приобретением и разрешает зарплату до <%s - wage amount(e.g.£12,000 p/w)>."	"Contract negotiation notice"
-"contract_board_important_wage"	"Your board feel he is an important member of the team and will allow wages up to <%s - wage amount(e.g.£12,000 p/w)>."	"Совет директоров считает его важным игроком команды и разрешает зарплату до <%s - wage amount(e.g.£12,000 p/w)>."	"Contract negotiation notice"
-"contract_player_expects_wage"	"< %s - Player Name > expects a wage of < %s - weekly wage(e.g.£10,000 p/w)> until {}< %s - contract end date >."	"< %s - Player Name > рассчитывает на зарплату < %s - weekly wage(e.g.£10,000 p/w)> до {}< %s - contract end date >."	"Contract negotiation message"
-"contract_player_demanding"	"< %s - Player Name > is demanding < %s - weekly wage(e.g.£10,000 p/w)> until {}< %s - contract end date > in addition to a signing on fee of <%s - Signing on fee eg $100000>."	"< %s - Player Name > требует зарплату < %s - weekly wage(e.g.£10,000 p/w)> до {}< %s - contract end date >, а также бонус за подписание <%s - Signing on fee eg $100000>."	"Contract negotiation message"
-"contract_player_requesting"	"< %s - Player Name > is requesting < %s - weekly wage(e.g.£10,000 p/w)> until {}< %s - contract end date > in addition to a signing on fee of <%s - Signing on fee eg $100000>."	"< %s - Player Name > запрашивает зарплату < %s - weekly wage(e.g.£10,000 p/w)> до {}< %s - contract end date >, а также бонус за подписание <%s - Signing on fee eg $100000>."	"Contract negotiation message"
-"contract_player_wants"	"< %s - Player Name > wants < %s - weekly wage(e.g.£10,000 p/w)> until {}< %s - contract end date > plus a signing on fee of <%s - Signing on fee eg $100000>."	"< %s - Player Name > хочет получать < %s - weekly wage(e.g.£10,000 p/w)> до {}< %s - contract end date > и бонус за подписание <%s - Signing on fee eg $100000>."	"Contract negotiation message"
-"contract_part_time"	"< %s - Player Name > expects a part-time contract with a wage of < %s - weekly wage(e.g.£10,000 p/w)> until {}< %s - contract end date >."	"< %s - Player Name > рассчитывает на контракт с частичной занятостью и зарплатой < %s - weekly wage(e.g.£10,000 p/w)> до {}< %s - contract end date >."	"Contract negotiation message"
-"contract_month_to_month"	"< %s - Player Name > expects < %s - weekly wage(e.g.£10,000 p/w)> full-time month to month contract."	"< %s - Player Name > рассчитывает на помесячный контракт с полной занятостью и зарплатой < %s - weekly wage(e.g.£10,000 p/w)>."	"Contract negotiation message"
-"contract_part_time_month"	"< %s - Player Name > expects a < %s - weekly wage(e.g.£10,000 p/w)> part-time month to month contract."	"< %s - Player Name > рассчитывает на помесячный контракт с частичной занятостью и зарплатой < %s - weekly wage(e.g.£10,000 p/w)>."	"Contract negotiation message"
-"contract_compensation_due"	" {}<%s - Club Name(e.g.Falkirk)>{} will be due <%s - Cash(e.g.£2,000,000)> in compensation."	" {}<%s - Club Name(e.g.Falkirk)>{} должна будет выплатить компенсацию в размере <%s - Cash(e.g.£2,000,000)>."	"Contract termination notice"
+из игры"	Left sidebar action; preserve line break
+restart_confirm	Restart the game ?	Перезапустить игру?	Restart confirmation dialog
+news_title	News	Новости	Left sidebar navigation
+news_category_all	All	Все	News category filter
+news_category_messages	Messages	Сообщения	News category filter
+news_category_competitions	Competitions	Соревнования	News category filter
+news_category_injuries_bans	Injuries and Bans	Травмы и дисквалификации	News category filter
+news_category_contracts_media	Contracts and Media	Контракты и пресса	News category filter
+news_category_jobs	Jobs	Вакансии	News category filter
+news_category_records	Records	Рекорды	News category filter
+news_filter_label	Filter :	Фильтр:	News screen filter label
+news_next_unread	Next Unread	Следующее непрочитанное	News screen navigation
+sidebar_player_staff_search	Player & Staff Search	Поиск игроков и персонала	Left sidebar navigation
+sidebar_job_information	Job Information	Информация о вакансии	Left sidebar navigation
+sidebar_go_on_holiday	Go on Holiday	Уйти в отпуск	Left sidebar action
+sidebar_retire	Retire	Завершить карьеру	Left sidebar action
+holiday_heading	Go on holiday ?	Уйти в отпуск?	Holiday confirmation dialog heading
+holiday_return_confirm	Return from holiday ?	Вернуться из отпуска?	Holiday confirmation dialog
+holiday_network_exit	Exit the network game as you go on holiday ?	Выйти из сетевой игры и уйти в отпуск?	Holiday network confirmation
+holiday_reject_all_offers	Reject all offers for players	Отклонять все предложения по игрокам	Holiday preference
+holiday_below_asking_price	below asking price	ниже запрашиваемой цены	Holiday preference
+holiday_do_not_buy	Do not buy any players	Не покупать игроков	Holiday preference
+holiday_only_shortlist	Only buy from shortlist	Покупать только из списка кандидатов	Holiday preference
+holiday_apply_higher_clubs	Apply for manager position at higher clubs	Подавать заявки на работу в более крупных клубах	Holiday preference
+holiday_keep_tactics	Use current match tactics	Использовать текущую тактику	Holiday preference
+holiday_keep_selection	Use current team selection when possible	По возможности сохранять текущий состав	Holiday preference
+holiday_control_reserves	Control Reserve Team	Управлять резервной командой	Holiday preference
+manager_not_playing_locked	Not Playing (locked)	Не играет (заблокирован)	Manager status
+manager_server_ip	Server IP Address	IP-адрес сервера	Network manager status screen
+manager_already_running	Already Running	Игра уже запущена	Startup error dialog
+common_ok	Ok	ОК	Generic confirmation button
+club_squad_tab	Squad	Состав	Club screen tab
+club_auto	Auto	Авто	Squad numbers / European squad action
+club_clear	Clear	Очистить	Squad numbers / European squad action
+club_submit	Submit	Подтвердить	Squad numbers / European squad action
+club_invite_another	Invite Another	Пригласить ещё	Tournament invitations action
+club_apply_for_job	Apply for Job	Подать заявку на вакансию	Club screen action
+club_configure_tournament	Configure Tournament	Настроить турнир	Friendly tournament dialog heading
+club_arrange_friendly_tour	Arrange Friendly Tour	Организовать турне	Friendly tour screen heading
+profile_bans_tab	 Bans	 Дисквалификации	Player profile tab; preserve leading space
+profile_appeal	Appeal	Подать апелляцию	Ban appeal action button
+profile_given_free_transfer	Given free transfer	Отпущен бесплатно	Player profile status
+profile_unemployed	Unemployed	Безработный	Player comparison job status
+profile_form	Form	Форма	Player profile attribute
+profile_condition	Condition	Физическое состояние	Player profile attribute
+profile_morale	Morale	Моральное состояние	Player profile attribute
+profile_positions	Position(s)	Позиции	Player squad list view
+profile_average_rating	Average Rating	Средняя оценка	Player list view
+profile_match_rating	Match Rating	Оценка за матч	Player list view
+profile_inj_short	Inj	Тр	Player list injury status
+profile_foreign_short	Fgn	Лег	Player list foreign-player status
+profile_foot_left_only	Left Only	Только левая	Preferred-foot value
+profile_foot_either	Either	Обе ноги	Preferred-foot value
+profile_foot_right_only	Right Only	Только правая	Preferred-foot value
+morale_very_low	Very Low	Очень низкая	Player morale status
+morale_low	Low	Низкая	Player morale status
+morale_good	Good	Хорошая	Player morale status
+morale_very_good	Very Good	Очень хорошая	Player morale status
+morale_superb	Superb	Превосходная	Player morale status
+attribute_acceleration	Acceleration	Ускорение	Player attribute
+attribute_aggression	Aggression	Агрессивность	Player attribute
+attribute_agility	Agility	Ловкость	Player attribute
+attribute_anticipation	Anticipation	Предвидение	Player attribute
+attribute_balance	Balance	Равновесие	Player attribute
+attribute_bravery	Bravery	Храбрость	Player attribute
+attribute_creativity	Creativity	Креативность	Player attribute
+attribute_decisions	Decisions	Принятие решений	Player attribute
+attribute_determination	Determination	Решительность	Player attribute
+attribute_dribbling	Dribbling	Дриблинг	Player attribute
+attribute_finishing	Finishing	Завершение атак	Player attribute
+attribute_flair	Flair	Фантазия	Player attribute
+attribute_handling	Handling	Ловля мяча	Player attribute
+attribute_heading	Heading	Игра головой	Player attribute
+attribute_influence	Influence	Влияние	Player attribute
+attribute_jumping	Jumping	Прыжки	Player attribute
+attribute_leadership	Leadership	Лидерские качества	Player attribute
+attribute_long_shots	Long Shots	Удары издали	Player attribute
+attribute_marking	Marking	Опека	Player attribute
+attribute_off_the_ball	Off The Ball	Игра без мяча	Player attribute
+attribute_pace	Pace	Скорость	Player attribute
+attribute_passing	Passing	Пас	Player attribute
+attribute_positioning	Positioning	Выбор позиции	Player attribute
+attribute_reflexes	Reflexes	Реакция	Player attribute
+attribute_set_pieces	Set Pieces	Стандартные положения	Player attribute
+attribute_stamina	Stamina	Выносливость	Player attribute
+attribute_strength	Strength	Сила	Player attribute
+attribute_tackling	Tackling	Отбор мяча	Player attribute
+attribute_teamwork	Teamwork	Командная игра	Player attribute
+attribute_technique	Technique	Техника	Player attribute
+attribute_work_rate	Work Rate	Работоспособность	Player attribute
+tactics_pressing	Pressing	Прессинг	Tactical instruction
+tactics_pass_to	Pass To	Направление паса	Tactical instruction
+tactics_set_pieces_attack	Set Pieces (A)	Стандарты (атака)	Tactical instruction
+tactics_set_pieces_defence	Set Pieces (D)	Стандарты (оборона)	Tactical instruction
+tactics_free_role	Free Role	Свободная роль	Tactical instruction
+tactics_forward_runs	Forward Runs	Подключения в атаку	Tactical instruction
+tactics_run_with_ball	Run With Ball	Продвижение с мячом	Tactical instruction
+tactics_hold_up_ball	Hold Up Ball	Игра на удержание мяча	Tactical instruction
+tactics_try_through_balls	Try Through Balls	Попытки передач вразрез	Tactical instruction
+tactics_cross_ball	Cross Ball	Навесы	Tactical instruction
+tactics_marker	Marker	Опекаемый игрок	Tactical instruction
+match_no_player_restrictions	No player restrictions	Ограничений на игроков нет	Next Match rules status
+match_respond	Respond	Ответить	Transfer bid / match-day action
+match_reject	Reject	Отклонить	Transfer bid / match-day action
+continue_game	Continue Game	Продолжить игру	Game progression action
+common_continue	Continue	Продолжить	Game progression action
+network_chat	Chat	Чат	Network left sidebar item
+network_contacting_server	Contacting Server...	Подключение к серверу...	Network connection status
+runtime_processing_wait	Processing, Please Wait ...	Выполняется обработка, подождите ...	Runtime progress message
+runtime_disk_full	Disk Full	Диск заполнен	Save / file error dialog
+runtime_graphics_init_error	Unable to initialise the graphics…	Не удалось инициализировать графику…	Startup error dialog
+runtime_sound_init_error	Unable to initialise the sound…	Не удалось инициализировать звук…	Startup error dialog
+network_exit_confirm	Exit the network game ?	Выйти из сетевой игры?	Network exit confirmation
+manager_resume_control	Resume control	Возобновить управление	Manager status action
+position_sweeper	Sweeper	Либеро	Tactical position
+news_manager_heading	<%s - Manager Name(e.g.Walter Smith)> News	<%s - Manager Name(e.g.Walter Smith)> Новости	News screen heading; preserve formatter note and placeholder
+transfer_status_screen	Set Staff Transfer Status	Настройка трансферного статуса	Transfer status dialog heading
+transfer_asking_price	Asking Price	Запрашиваемая цена	Transfer status price control
+discipline_screen	Discipline Player	Дисциплинарное взыскание	Player discipline dialog heading
+discipline_official_warning	Official Warning	Официальное предупреждение	Player discipline option
+discipline_one_week_fine	1 Week Fine	Штраф в размере недельной зарплаты	Player discipline option
+discipline_two_week_fine	2 Week Fine	Штраф в размере двухнедельной зарплаты	Player discipline option
+profile_tab_profile	Profile	Профиль	Player profile tab
+profile_tab_transfer	Transfer	Трансфер	Player profile tab
+squad_column_contract	Contract	Контракт	Squad list column heading
+club_stats_menu	Stats	Статистика	Club screen menu
+history_view_menu	View	Вид	Club history view dropdown
+common_sort_menu	Sort	Сортировка	Player/club list menu
+profile_action_menu	Action	Действия	Player profile action dropdown
+tactics_captain_marker	capt	кап	Tactics player list captain marker
+match_tab_overview	Match Overview	Обзор матча	Match screen tab
+match_tab_stats	Match Stats	Статистика матча	Match screen tab
+match_tab_action_zones	Action Zones	Зоны атак	Match screen tab
+match_tab_report	Match Report	Отчёт о матче	Match screen tab
+match_tab_player_ratings	Player Ratings	Оценки игроков	Match screen tab
+match_tab_latest_scores	Latest Scores	Последние результаты	Match screen tab
+profile_on_loan_from_prefix	On loan from 	В аренде из клуба 	Player comparison status prefix; preserve trailing space before the linked club name
+tactics_no_reserve_match	No tactics are available for the last reserve match	Для последнего матча резервной команды нет доступных тактик	Tactics screen message
+game_settings_screen_full	Full	Полный экран	Game Settings Screen Mode choice
+game_settings_screen_windowed	Windowed	Оконный режим	Game Settings Screen Mode choice
+game_options_hall_of_fame	Hall of Fame	Зал славы	Game Options menu
+meeting_period_filter	Period	Период	Club screen past meetings filter
+meeting_venue_filter	Venue	Место проведения	Club screen past meetings filter
+squad_first_team	First Team	Основной состав	Squad selector
+squad_reserve_team	Reserve Team	Резервный состав	Squad selector
+squad_youth_team	Youth Team	Молодёжный состав	Squad selector
+search_short_list	Short List	Список кандидатов	Player & Staff Search tab
+search_player_search	Player Search	Поиск игроков	Player & Staff Search tab
+search_staff_search	Staff Search	Поиск персонала	Player & Staff Search tab
+search_filters	Filters	Фильтры	Player and staff search action
+search_search	Search	Поиск	Player and staff search action
+search_scout_1	Scout #1	Скаут №1	Player & Staff Search scout tab
+search_scout_2	Scout #2	Скаут №2	Player & Staff Search scout tab
+search_basic_wage	Basic Wage	Базовая зарплата	Player search results column
+search_contract_expiry	Contract Expiry	Окончание контракта	Player search results column
+search_value	Value	Стоимость	Player search results column
+assistant_title	Assistant	Помощник	Assistant squad-selection menu
+assistant_pick_best	Pick best team	Выбрать сильнейший состав	Assistant squad-selection action
+assistant_pick_fit	Pick most match-fit team	Выбрать состав с лучшей готовностью	Assistant squad-selection action
+assistant_pick_u21	Pick under-21 team	Выбрать состав до 21 года	Assistant squad-selection action
+assistant_clear	Clear squad	Очистить состав	Assistant squad-selection action; exact source casing
+assistant_undo_clear	Undo clear	Отменить очистку	Assistant squad-selection action; exact source casing
+holiday_until_next	Holiday until next match	Отпуск до следующего матча	Holiday confirmation/action
+holiday_no_match_60	Your club has no match in the next 60 days.	У вашего клуба нет матчей в ближайшие 60 дней.	Holiday-until-next-match notice
+holiday_below_asking	Below asking price	Ниже запрашиваемой цены	Go on holiday setting
+transfer_board_fee	Your board will allow transfer fees up to <%s - value string(e.g.£5 million)>.	Совет директоров разрешает расходы на трансферы до <%s - value string(e.g.£5 million)>.	Transfer budget notice
+transfer_board_fee_low	Your board will only allow transfer fees up to <%s - value string(e.g.£5 million)> because they know very little about this player.	Совет директоров разрешает расходы на трансферы до <%s - value string(e.g.£5 million)>, поскольку клубу почти ничего не известно об этом игроке.	Transfer budget notice
+transfer_board_fee_cap	Your board will only allow transfer fees up to <%s - value string(e.g.£5 million)>.	Совет директоров разрешает расходы на трансферы только до <%s - value string(e.g.£5 million)>.	Transfer budget notice
+transfer_board_fee_unknown	Your board will only allow transfer fees up to <%s - value string(e.g.£5 million)> because they don't know anything about this player.	Совет директоров разрешает расходы на трансферы до <%s - value string(e.g.£5 million)>, поскольку клуб ничего не знает об этом игроке.	Transfer budget notice
+transfer_value_sentence	{}<%s - Club Name(e.g.Newcastle)>{s} <%s - Player name(e.g.Alan Shearer)> is currently valued at <%s - money amount(e.g.£10 Million)>.	{}<%s - Club Name(e.g.Newcastle)>{s} <%s - Player name(e.g.Alan Shearer)> сейчас оценивается в <%s - money amount(e.g.£10 Million)>.	Transfer screen sentence
+transfer_sell_part_cash	Sell <%s - Player name(e.g.Kevin James)> to {}<%s - Club name(e.g.Hearts)>{} for <%s - Cash(e.g.£4 million)> plus <%s - Player list(e.g.Neil McCann and Colin Cameron)>?	Продать <%s - Player name(e.g.Kevin James)> в {}<%s - Club name(e.g.Hearts)>{} за <%s - Cash(e.g.£4 million)> и дополнительно получить <%s - Player list(e.g.Neil McCann and Colin Cameron)>?	Transfer confirmation
+transfer_sign_part_cash	Sign <%s - Player name(e.g.Kevin James)> from {}<%s - Club name(e.g.Hearts)>{} for <%s - Cash(e.g.£4 million)> plus <%s - Player list(e.g.Neil McCann and Colin Cameron)>?	Подписать <%s - Player name(e.g.Kevin James)> из {}<%s - Club name(e.g.Hearts)>{} за <%s - Cash(e.g.£4 million)> и дополнительно отдать <%s - Player list(e.g.Neil McCann and Colin Cameron)>?	Transfer confirmation
+transfer_sell_cash	Sell <%s - Player name(e.g.Kevin James)> to {}<%s - Club name(e.g.Hearts)>{} for <%s - Cash(e.g.£4 million)>?	Продать <%s - Player name(e.g.Kevin James)> в {}<%s - Club name(e.g.Hearts)>{} за <%s - Cash(e.g.£4 million)>?	Transfer confirmation
+transfer_sign_cash	Sign <%s - Player name(e.g.Kevin James)> from {}<%s - Club name(e.g.Hearts)>{} for <%s - Cash(e.g.£4 million)>?	Подписать <%s - Player name(e.g.Kevin James)> из {}<%s - Club name(e.g.Hearts)>{} за <%s - Cash(e.g.£4 million)>?	Transfer confirmation
+transfer_sell_part_exchange	Sell <%s - Player name(e.g.Kevin James)> to {}<%s - Club name(e.g.Hearts)>{} in <%s - Cash(e.g.£4 million)> part exchange deal with <%s - Player list(e.g.Neil McCann and Colin Cameron)>?	Продать <%s - Player name(e.g.Kevin James)> в {}<%s - Club name(e.g.Hearts)>{} в рамках обмена с доплатой <%s - Cash(e.g.£4 million)> и получением <%s - Player list(e.g.Neil McCann and Colin Cameron)>?	Transfer confirmation
+transfer_sign_part_exchange	Sign <%s - Player name(e.g.Kevin James)> from {}<%s - Club name(e.g.Hearts)>{} in <%s - Cash(e.g.£4 million)> part exchange deal with <%s - Player list(e.g.Neil McCann and Colin Cameron)>?	Подписать <%s - Player name(e.g.Kevin James)> из {}<%s - Club name(e.g.Hearts)>{} в рамках обмена с доплатой <%s - Cash(e.g.£4 million)> и передачей <%s - Player list(e.g.Neil McCann and Colin Cameron)>?	Transfer confirmation
+transfer_sell_deal	Sell <%s - Player name(e.g.Kevin James)> to {}<%s - Club name(e.g.Hearts)>{} in <%s - Cash(e.g.£4 million)> deal?	Продать <%s - Player name(e.g.Kevin James)> в {}<%s - Club name(e.g.Hearts)>{} за <%s - Cash(e.g.£4 million)>?	Transfer confirmation
+transfer_sign_deal	Sign <%s - Player name(e.g.Kevin James)> from {}<%s - Club name(e.g.Hearts)>{} in <%s - Cash(e.g.£4 million)> deal?	Подписать <%s - Player name(e.g.Kevin James)> из {}<%s - Club name(e.g.Hearts)>{} за <%s - Cash(e.g.£4 million)>?	Transfer confirmation
+transfer_release_compensation	Are you sure you want to release <%s - Staff Name(e.g.Alan Shearer)> on a free transfer ? {}<%s - Club Name(e.g.Arsenal)>{} will have to pay <%s - Value of Money(e.g.£1,000,000)> in compensation.	Вы уверены, что хотите отпустить <%s - Staff Name(e.g.Alan Shearer)> бесплатно? {}<%s - Club Name(e.g.Arsenal)>{} придётся выплатить компенсацию в размере <%s - Value of Money(e.g.£1,000,000)>.	Staff release confirmation
+contract_board_wage	Your board will allow wages up to <%s - wage amount(e.g.£12,000 p/w)>.	Совет директоров разрешает зарплату до <%s - wage amount(e.g.£12,000 p/w)>.	Contract negotiation notice
+contract_board_key_wage	Your board feel he will be a key signing and will allow wages up to <%s - wage amount(e.g.£12,000 p/w)>.	Совет директоров считает его важным приобретением и разрешает зарплату до <%s - wage amount(e.g.£12,000 p/w)>.	Contract negotiation notice
+contract_board_important_wage	Your board feel he is an important member of the team and will allow wages up to <%s - wage amount(e.g.£12,000 p/w)>.	Совет директоров считает его важным игроком команды и разрешает зарплату до <%s - wage amount(e.g.£12,000 p/w)>.	Contract negotiation notice
+contract_player_expects_wage	< %s - Player Name > expects a wage of < %s - weekly wage(e.g.£10,000 p/w)> until {}< %s - contract end date >.	< %s - Player Name > рассчитывает на зарплату < %s - weekly wage(e.g.£10,000 p/w)> до {}< %s - contract end date >.	Contract negotiation message
+contract_player_demanding	< %s - Player Name > is demanding < %s - weekly wage(e.g.£10,000 p/w)> until {}< %s - contract end date > in addition to a signing on fee of <%s - Signing on fee eg $100000>.	< %s - Player Name > требует зарплату < %s - weekly wage(e.g.£10,000 p/w)> до {}< %s - contract end date >, а также бонус за подписание <%s - Signing on fee eg $100000>.	Contract negotiation message
+contract_player_requesting	< %s - Player Name > is requesting < %s - weekly wage(e.g.£10,000 p/w)> until {}< %s - contract end date > in addition to a signing on fee of <%s - Signing on fee eg $100000>.	< %s - Player Name > запрашивает зарплату < %s - weekly wage(e.g.£10,000 p/w)> до {}< %s - contract end date >, а также бонус за подписание <%s - Signing on fee eg $100000>.	Contract negotiation message
+contract_player_wants	< %s - Player Name > wants < %s - weekly wage(e.g.£10,000 p/w)> until {}< %s - contract end date > plus a signing on fee of <%s - Signing on fee eg $100000>.	< %s - Player Name > хочет получать < %s - weekly wage(e.g.£10,000 p/w)> до {}< %s - contract end date > и бонус за подписание <%s - Signing on fee eg $100000>.	Contract negotiation message
+contract_part_time	< %s - Player Name > expects a part-time contract with a wage of < %s - weekly wage(e.g.£10,000 p/w)> until {}< %s - contract end date >.	< %s - Player Name > рассчитывает на контракт с частичной занятостью и зарплатой < %s - weekly wage(e.g.£10,000 p/w)> до {}< %s - contract end date >.	Contract negotiation message
+contract_month_to_month	< %s - Player Name > expects < %s - weekly wage(e.g.£10,000 p/w)> full-time month to month contract.	< %s - Player Name > рассчитывает на помесячный контракт с полной занятостью и зарплатой < %s - weekly wage(e.g.£10,000 p/w)>.	Contract negotiation message
+contract_part_time_month	< %s - Player Name > expects a < %s - weekly wage(e.g.£10,000 p/w)> part-time month to month contract.	< %s - Player Name > рассчитывает на помесячный контракт с частичной занятостью и зарплатой < %s - weekly wage(e.g.£10,000 p/w)>.	Contract negotiation message
+contract_compensation_due	 {}<%s - Club Name(e.g.Falkirk)>{} will be due <%s - Cash(e.g.£2,000,000)> in compensation.	 {}<%s - Club Name(e.g.Falkirk)>{} должна будет выплатить компенсацию в размере <%s - Cash(e.g.£2,000,000)>.	Contract termination notice
+club_transfer_part_exchange_short	<%s - cash e.g. £1.2M> p/x	<%s - cash e.g. £1.2M> обмен	Club transfer list; part-exchange fee
+staff_current_player_value	 <%s - Player name(e.g.Alan Shearer)> is currently valued at <%s - money amount(e.g.£10 Million)>.	 <%s - Player name(e.g.Alan Shearer)> сейчас оценивается в <%s - money amount(e.g.£10 Million)>.	Staff transfer status dialog
