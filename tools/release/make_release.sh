@@ -108,6 +108,8 @@ python3 -I "$REPO/tools/seasons/make_rules.py" --out "$STAGE/Seasons/rules.tsv"
 python3 -I "$REPO/tools/seasons/make_names.py" --out "$STAGE/Seasons/names.tsv"
 python3 -I "$REPO/tools/seasons/make_clubs.py" --out "$STAGE/Seasons/clubs.tsv"
 python3 -I "$REPO/tools/seasons/make_club_records.py" --out "$STAGE/Seasons/club_records.tsv"
+# The IBM Plex UI family (OFL): the original T2K font scanner reads TTF files from Data/FONTS.
+python3 -I "$REPO/tools/fonts/install_ibm_plex.py" --source "$REPO/assets/fonts/IBM-Plex-Sans" --target "$STAGE/Data/FONTS"
 GAME="$STAGE"
 MANIFEST="$OUT/manifest-download.tsv"
 {
@@ -122,6 +124,12 @@ MANIFEST="$OUT/manifest-download.tsv"
     for t in rules names clubs club_records; do
         printf '%s\t%s\tSeasons/%s.tsv\n' "$(shasum -a 256 "$STAGE/Seasons/$t.tsv" | cut -d ' ' -f 1)" \
             "$(wc -c < "$STAGE/Seasons/$t.tsv" | tr -d ' ')" "$t"
+    done
+    for f in "$STAGE"/Data/FONTS/IBMPlexSans*.ttf "$STAGE"/Data/FONTS/OFL.txt; do
+        [ -f "$f" ] || continue
+        rel="Data/FONTS/$(basename "$f")"
+        printf '%s\t%s\t%s\n' "$(shasum -a 256 "$f" | cut -d ' ' -f 1)" \
+            "$(wc -c < "$f" | tr -d ' ')" "$rel"
     done
 } > "$MANIFEST"
 CHECK_ARGS=(--manifest "$MANIFEST")
