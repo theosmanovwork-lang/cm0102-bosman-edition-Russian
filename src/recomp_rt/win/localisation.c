@@ -2,8 +2,8 @@
  *
  * The original language.ldb format supports an ID list in its header. Candidate ID 13 is
  * appended by the release builder; the original IDs are not renumbered. The older database
- * name and match-event loaders have fixed 0..12 language switches, so their wrappers map
- * ID 13 to the English loader branch while substituting rus.lng / events_rus.cfg.
+ * name and match-event loaders have fixed 0..12 language switches, so ID 13 uses their
+ * English branches. Database names and match commentary are intentionally not translated.
  */
 #include "localisation.h"
 #include "options.h"
@@ -177,8 +177,8 @@ RT_WRAP(0066f4e0, russian_langlib_sprintf)
     }
 }
 
-/* The match-event config loader has fixed branches for the original language IDs. Map Russian
- * to its English/default branch and substitute the separate events_rus.cfg path. */
+/* Match commentary is outside the interface-only scope. Use the original English event file
+ * while the Russian UI is active; never substitute a translated events_rus.cfg. */
 RT_WRAP(006d9e50, russian_match_events_read_config)
 {
     if (!localisation_is_russian() || rd32(g_mem, LANG_INDEX) != RUSSIAN_LANGUAGE_ID) {
@@ -190,7 +190,7 @@ RT_WRAP(006d9e50, russian_match_events_read_config)
     memcpy(old_name, g_mem + MATCH_EVENT_FILENAME, sizeof old_name);
     uint32_t old_language = rd32(g_mem, LANG_INDEX);
     wr32(g_mem, LANG_INDEX, 1);
-    memcpy(g_mem + MATCH_EVENT_FILENAME, "events_rus.cfg", sizeof "events_rus.cfg");
+    memcpy(g_mem + MATCH_EVENT_FILENAME, "events_eng.cfg", sizeof "events_eng.cfg");
     o_006d9e50();
     if (!rt_unwinding) {
         memcpy(g_mem + MATCH_EVENT_FILENAME, old_name, sizeof old_name);
