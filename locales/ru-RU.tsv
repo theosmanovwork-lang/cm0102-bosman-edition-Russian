@@ -368,3 +368,5 @@ Game"	"Выйти
 "game_settings_screen_full"	"Full"	"Полный экран"	"Game Settings Screen Mode choice"
 "game_settings_screen_windowed"	"Windowed"	"Оконный режим"	"Game Settings Screen Mode choice"
 "game_options_hall_of_fame"	"Hall of Fame"	"Зал славы"	"Game Options menu"
+"meeting_period_filter"	"Period"	"Период"	"Club screen past meetings filter"
+"meeting_venue_filter"	"Venue"	"Место проведения"	"Club screen past meetings filter"
