@@ -157,27 +157,15 @@ static int lng_read(const char *path, Lng *l, int sort)
     return 1;
 }
 
-/* The original data loader copies only the ten built-in .lng files. Give Russian its own
- * CM3_TEMP file: prefer the curated Data/rus.lng from the release (or a custom data set), and
- * fall back to eng.lng only when no Russian resource exists. A valid user rus.lng is preserved. */
+/* Russian UI localisation does not translate database identities. The legacy loader
+ * expects a rus.lng slot for language ID 13, so provide an exact copy of eng.lng.
+ * This deliberately ignores any Data/rus.lng file: player, club, city, stadium,
+ * nation and competition names must remain the original database strings. */
 static int ensure_russian_lng(const char *eng_path)
 {
-    char rus_path[1400], source_path[2048];
-    Lng existing;
-    if (find_in(win_user_dir, "rus.lng", rus_path, sizeof rus_path)) {
-        if (lng_read(rus_path, &existing, 0)) {
-            lng_free(&existing);
-            return 1;
-        }
-    } else {
-        snprintf(rus_path, sizeof rus_path, "%s/rus.lng", win_user_dir);
-    }
-
-    /* Resolve through the normal Data path so custom databases and user overrides win. */
-    if (!win_existing_file("Data/rus.lng", source_path, sizeof source_path))
-        snprintf(source_path, sizeof source_path, "%s", eng_path);
-
-    FILE *in = host_fopen(source_path, "rb");
+    char rus_path[1400];
+    snprintf(rus_path, sizeof rus_path, "%s/rus.lng", win_user_dir);
+    FILE *in = host_fopen(eng_path, "rb");
     if (!in) return 0;
     FILE *out = host_fopen(rus_path, "wb");
     if (!out) { fclose(in); return 0; }
@@ -192,8 +180,8 @@ static int ensure_russian_lng(const char *eng_path)
     if (fclose(out) != 0) ok = 0;
     if (!ok) {
         host_unlink(rus_path);
-        fprintf(stderr, "recomp: could not create rus.lng from %s; Russian club and competition names will fall back\n",
-                source_path);
+        fprintf(stderr, "recomp: could not create rus.lng from %s; database names remain English\\n",
+                eng_path);
     }
     return ok;
 }
