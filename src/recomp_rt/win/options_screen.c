@@ -650,6 +650,7 @@ static void apply(const Row *r, int index, int value)
     failed_row = -1;
     fprintf(stderr, "recomp: option %s = %s (%d)\n", options_name(r->id), word, ok);
     if (r->id == OPT_SHARP_PICTURE) win_sharp_picture_changed();
+    if (r->id == OPT_LANGUAGE) localisation_language_changed();
 }
 
 /* The input of the box: cdecl (s16 widget). Only the box's own widgets: the box covers the screen. */
