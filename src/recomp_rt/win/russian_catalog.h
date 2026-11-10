@@ -359,6 +359,8 @@ static const LocalisationEntry russian_catalog[] = {
     {"Full", "#041F##043E##043B##043D##044B##0439# #044D##043A##0440##0430##043D#"},
     {"Windowed", "#041E##043A##043E##043D##043D##044B##0439# #0440##0435##0436##0438##043C#"},
     {"Hall of Fame", "#0417##0430##043B# #0441##043B##0430##0432##044B#"},
+    {"Period", "#041F##0435##0440##0438##043E##0434#"},
+    {"Venue", "#041C##0435##0441##0442##043E# #043F##0440##043E##0432##0435##0434##0435##043D##0438##044F#"},
 };
 #define RUSSIAN_CATALOG_COUNT (sizeof russian_catalog / sizeof russian_catalog[0])
 
