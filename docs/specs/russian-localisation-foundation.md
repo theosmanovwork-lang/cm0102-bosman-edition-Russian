@@ -86,7 +86,7 @@ Working branch: feature/russian-language-foundation
 
 ## Current status / limitations
 
-Implementation progress is tracked in [russian-localisation-status.md](../research/russian-localisation-status.md). The first Russian overlay stage now has a persisted setting, a dedicated Language tab, an 80-entry UTF-8 catalogue, a T2K-escape generator, a Langlib wrapper and automated catalogue/settings tests. This is not yet the native eleventh item in the original language dropdown. The original language.ldb and .lng binary formats still need a verified extension, and the Cyrillic font path must be tested against the clean executable before shipping.
+Implementation progress is tracked in [russian-localisation-status.md](../research/russian-localisation-status.md). The first Russian overlay stage now has a persisted setting, a dedicated Language tab, a 91-entry UTF-8 catalogue, a T2K-escape generator, a Langlib wrapper and automated catalogue/settings tests. This is not yet the native eleventh item in the original language dropdown. The original language.ldb and .lng binary formats still need a verified extension, and the Cyrillic font path must be tested against the clean executable before shipping.
 
 
 ## Scope correction (2026-11-10)
