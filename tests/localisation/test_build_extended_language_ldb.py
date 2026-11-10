@@ -1,8 +1,13 @@
 import csv
 import struct
+import sys
 import tempfile
 import unittest
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+MODULE_DIR = ROOT / "tools" / "localisation"
+sys.path.insert(0, str(MODULE_DIR))
 
 from build_extended_language_ldb import (
     DEFAULT_LANGUAGE_ID,
