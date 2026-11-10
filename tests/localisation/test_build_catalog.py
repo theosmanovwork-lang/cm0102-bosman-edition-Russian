@@ -34,6 +34,8 @@ class CatalogTests(unittest.TestCase):
         header = build_catalog.render_header(rows)
         header.encode("ascii")
         self.assertIn("#041D#", header)
+        committed = (ROOT / "src" / "recomp_rt" / "win" / "russian_catalog.h").read_text(encoding="ascii")
+        self.assertEqual(header, committed)
 
     def test_duplicate_ids_are_rejected(self):
         with tempfile.TemporaryDirectory() as folder:
