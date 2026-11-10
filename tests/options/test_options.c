@@ -206,14 +206,14 @@ int main(void)
     CHECK(options_bool(OPT_CHANGING_RULES) == 1);
 
     /* 5d. Russian text overlay: a separate setting leaves all original language indices unchanged. */
-    put("language = russian\\n");
+    put("language = russian\n");
     options_load(path);
     CHECK(options_enum(OPT_LANGUAGE) == OPT_LANGUAGE_RUSSIAN);
     CHECK(!strcmp(options_string(OPT_LANGUAGE), "russian"));
-    put("language = system\\n");
+    put("language = system\n");
     options_load(path);
     CHECK(options_enum(OPT_LANGUAGE) == OPT_LANGUAGE_SYSTEM);
-    put("language = klingon\\n");
+    put("language = klingon\n");
     options_load(path);
     CHECK(options_enum(OPT_LANGUAGE) == OPT_LANGUAGE_SYSTEM);
     CHECK(options_set_enum(OPT_LANGUAGE, "russian") == 1);
