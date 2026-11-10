@@ -180,7 +180,7 @@ static int ensure_russian_lng(const char *eng_path)
     if (fclose(out) != 0) ok = 0;
     if (!ok) {
         host_unlink(rus_path);
-        fprintf(stderr, "recomp: could not create rus.lng from %s; database names remain English\\n",
+        fprintf(stderr, "recomp: could not create rus.lng from %s; database names remain English\n",
                 eng_path);
     }
     return ok;
