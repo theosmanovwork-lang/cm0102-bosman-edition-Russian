@@ -52,9 +52,26 @@ def encode_t2k(value: str) -> str:
 
 
 def c_string(value: str) -> str:
-    escaped = value.replace("\\", "\\\\").replace('"', '\\\"')
-    escaped = escaped.replace("\n", "\\n").replace("\r", "\\r").replace("\t", "\\t")
-    return '"' + escaped + '"'
+    escaped: list[str] = []
+    for char in value:
+        code = ord(char)
+        if char == chr(92):
+            escaped.append(chr(92) * 2)
+        elif code == 34:
+            escaped.append(chr(92) + chr(34))
+        elif code == 10:
+            escaped.append(chr(92) + 'n')
+        elif code == 13:
+            escaped.append(chr(92) + 'r')
+        elif code == 9:
+            escaped.append(chr(92) + 't')
+        elif code > 0x7F:
+            if code > 0xFF:
+                raise ValueError(f'non-ANSI source character U+{code:04X} in C string')
+            escaped.append(chr(92) + f'{code:03o}')
+        else:
+            escaped.append(char)
+    return chr(34) + ''.join(escaped) + chr(34)
 
 
 def read_catalog(path: Path) -> list[dict[str, str]]:
@@ -87,7 +104,7 @@ def read_catalog(path: Path) -> list[dict[str, str]]:
 
 def render_header(rows: list[dict[str, str]]) -> str:
     body = "\n".join(
-        f"    {{{c_string(row['source'])}, {c_string(encode_t2k(row['translation']))}}},"
+        f"    {{{c_string(row['source'].encode('cp1252').decode('latin-1'))}, {c_string(encode_t2k(row['translation']))}}},"
         for row in rows
     )
     return (
