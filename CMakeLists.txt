@@ -132,6 +132,7 @@ if(NOT WIN32)
     add_test(NAME localisation_catalog COMMAND python3 -I "${CMAKE_SOURCE_DIR}/tests/localisation/test_build_catalog.py")
     add_test(NAME localisation_extended_ldb COMMAND python3 -I "${CMAKE_SOURCE_DIR}/tests/localisation/test_build_extended_language_ldb.py")
     add_test(NAME localisation_match_events COMMAND python3 -I "${CMAKE_SOURCE_DIR}/tests/localisation/test_build_russian_events.py")
+    add_test(NAME localisation_russian_lng COMMAND python3 -I "${CMAKE_SOURCE_DIR}/tests/localisation/test_build_russian_lng.py")
     add_test(NAME localisation_fonts COMMAND python3 -I "${CMAKE_SOURCE_DIR}/tests/fonts/test_install_ibm_plex.py")
     add_executable(dbfolders_test tests/dbfolders/test_dbfolders.c src/recomp_rt/win/dbfolders.c
         src/recomp_rt/host/posix.c)
