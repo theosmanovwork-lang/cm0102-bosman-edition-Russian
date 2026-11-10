@@ -87,3 +87,15 @@ Old saves do not move"	"Вступит в силу после перезапус
 "settings_not_saved"	"Not saved: settings.txt
 cannot be written"	"Не удалось сохранить:
 невозможно записать settings.txt"	"Bosman options note"
+"progress_player_initialisation"	"Player Initialisation"	"Подготовка игроков"	"New-game progress box"
+"progress_player_histories"	"Player histories"	"Загрузка истории игроков"	"New-game progress box"
+"progress_initialising_game_data"	"Initialising game data"	"Подготовка игровых данных"	"New-game progress box"
+"progress_initialising_leagues"	"Initialising Leagues"	"Подготовка лиг"	"New-game progress box"
+"progress_assessing_club_squads"	"Assessing Club Squads"	"Формирование составов клубов"	"New-game progress box"
+"progress_creating_shortlists"	"Creating Shortlists"	"Создание списков кандидатов"	"New-game progress box"
+"setup_enter_name"	"Enter Name"	"Введите имя"	"Manager creation screen heading"
+"setup_select_nationality"	"Select Nationality"	"Выберите гражданство"	"Manager creation screen heading"
+"setup_select_team"	"Select Team"	"Выберите команду"	"Manager creation screen heading"
+"setup_no_memory"	"No Memory"	"Недостаточно памяти"	"New-game setup error screen"
+"setup_insert_cd"	"Insert CD"	"Вставьте CD"	"Legacy startup error; verify whether reachable in Bosman Edition"
+"setup_please_confirm"	"Please Confirm"	"Подтверждение"	"Confirmation dialog"
