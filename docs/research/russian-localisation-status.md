@@ -189,3 +189,10 @@ Added two source-grounded interface strings from the player-comparison and tacti
 - Added ten verified captions from the Player & Staff Search interface: Short List, Player Search, Staff Search, Filters, Search, Scout #1, Scout #2, Basic Wage, Contract Expiry and Value.
 - These are search tabs, controls and result-column headings only; player, staff and club identities remain unchanged.
 - Current overlay catalogue: 370 contextual entries.
+
+
+## Assistant and holiday interface follow-up
+
+- Added nine verified assistant-selection and holiday captions/messages from the original UI inventory and runtime string references.
+- Other holiday preference labels and confirmation prompts were already present in the catalogue and were not duplicated.
+- Current overlay catalogue: 379 contextual entries.
