@@ -83,4 +83,4 @@ Working branch: feature/russian-language-foundation
 
 ## Current status / limitations
 
-This document records findings and the safe implementation order. It does not claim that the language selector, translation data, font assets or runtime support have already been changed. The investigation has not yet verified the proprietary clean game files or the current executable's language-table format.
+Implementation progress is tracked in [russian-localisation-status.md](../research/russian-localisation-status.md). The first Russian overlay stage now has a persisted setting, a dedicated Language tab, an 80-entry UTF-8 catalogue, a T2K-escape generator, a Langlib wrapper and automated catalogue/settings tests. This is not yet the native eleventh item in the original language dropdown. The original language.ldb and .lng binary formats still need a verified extension, and the Cyrillic font path must be tested against the clean executable before shipping.
