@@ -417,5 +417,3 @@ Game"	"Выйти
 "contract_month_to_month"	"< %s - Player Name > expects < %s - weekly wage(e.g.£10,000 p/w)> full-time month to month contract."	"< %s - Player Name > рассчитывает на помесячный контракт с полной занятостью и зарплатой < %s - weekly wage(e.g.£10,000 p/w)>."	"Contract negotiation message"
 "contract_part_time_month"	"< %s - Player Name > expects a < %s - weekly wage(e.g.£10,000 p/w)> part-time month to month contract."	"< %s - Player Name > рассчитывает на помесячный контракт с частичной занятостью и зарплатой < %s - weekly wage(e.g.£10,000 p/w)>."	"Contract negotiation message"
 "contract_compensation_due"	" {}<%s - Club Name(e.g.Falkirk)>{} will be due <%s - Cash(e.g.£2,000,000)> in compensation."	" {}<%s - Club Name(e.g.Falkirk)>{} должна будет выплатить компенсацию в размере <%s - Cash(e.g.£2,000,000)>."	"Contract termination notice"
-"squad_include_seniors"	"Include Seniors"	"Включая взрослых игроков"	"Squad filter popup item"
-"squad_include_reserves"	"Include Reserves"	"Включая резервистов"	"Squad filter popup item"
