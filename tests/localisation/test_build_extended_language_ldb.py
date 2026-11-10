@@ -1,125 +1,107 @@
 import csv
+import importlib.util
 import struct
-import sys
 import tempfile
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-MODULE_DIR = ROOT / "tools" / "localisation"
-sys.path.insert(0, str(MODULE_DIR))
-
-from build_extended_language_ldb import (
-    DEFAULT_LANGUAGE_ID,
-    LANGUAGE_ID_CAPACITY,
-    META_SIZE,
-    ORIGINAL_LANG_COUNT,
-    TEXT_SLOT_SIZE,
-    build_extended_language_ldb,
-    check_language_capacity,
-    encode_game_text,
-)
+MODULE = ROOT / "tools/localisation/build_extended_language_ldb.py"
+SPEC = importlib.util.spec_from_file_location("build_extended_language_ldb", MODULE)
+builder = importlib.util.module_from_spec(SPEC)
+assert SPEC.loader is not None
+SPEC.loader.exec_module(builder)
 
 
-class ExtendedLanguageLdbTests(unittest.TestCase):
-    def make_source(self, path: Path) -> bytes:
+class ExtendedLanguageTests(unittest.TestCase):
+    def source(self, path):
         ids = (0, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-        header = struct.pack("<III10I", 1, 1, ORIGINAL_LANG_COUNT, *ids)
-        record_size = TEXT_SLOT_SIZE + 30 + (ORIGINAL_LANG_COUNT - 1) * (TEXT_SLOT_SIZE + META_SIZE)
-        record = bytearray(record_size)
-        record[:5] = b"Hello"
-        source = header + record
-        path.write_bytes(source)
-        return source
+        header = struct.pack("<III10I", 1, 2, 10, *ids)
+        size = 2048 + 30 + 9 * (2048 + 40)
+        records = []
+        for text, signature in [("Hello <%s - Name>", "%s~"), ("No marker", "")]:
+            rec = bytearray(size)
+            rec[:len(text)] = text.encode("cp1252")
+            key = (signature + "\0").encode("ascii")
+            rec[2048:2048 + len(key)] = key
+            records.append(bytes(rec))
+        data = header + b"".join(records)
+        path.write_bytes(data)
+        return data
 
-    def test_adds_language_13_and_preserves_every_old_byte(self):
+    def tsv(self, path, rows):
+        fields = ["id", "source_en", "format_signature", "text_ru", "grammar_meta_ru"]
+        with path.open("w", encoding="utf-8-sig", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=fields, delimiter="\t")
+            writer.writeheader()
+            writer.writerows(rows)
+
+    def row(self, id, text, source, signature):
+        return {"id": id, "text_ru": text, "source_en": source,
+                "format_signature": signature,
+                "grammar_meta_ru": "[0,-1,-1,-1,-1,-1,-1,-1,-1,-1]" if signature else "[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]"}
+
+    def test_appends_id_13_and_preserves_original_records(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            source, output, translations = root / "language.ldb", root / "extended.ldb", root / "ru.tsv"
-            original = self.make_source(source)
-            with translations.open("w", encoding="utf-8-sig", newline="") as stream:
-                writer = csv.DictWriter(
-                    stream, fieldnames=["id", "text_ru", "grammar_meta_ru"], delimiter="\t"
-                )
-                writer.writeheader()
-                writer.writerow(
-                    {"id": 0, "text_ru": "Привет\n%s", "grammar_meta_ru": "[0,1,2,3,4,5,6,7,8,9]"}
-                )
+            root=Path(tmp); src=root/"source.ldb"; out=root/"out.ldb"; tsv=root/"ru.tsv"
+            original=self.source(src)
+            self.tsv(tsv,[self.row(0,"Привет, \x08","Hello <%s - Name>","%s~")])
+            self.assertEqual(builder.build_extended_language_ldb(src,out,tsv),(2,1))
+            result=out.read_bytes()
+            self.assertEqual(struct.unpack_from("<III",result),(1,2,11))
+            self.assertEqual(struct.unpack_from("<11I",result,12),(0,2,3,4,5,6,7,8,9,10,13))
+            old=2048+30+9*(2048+40); new=old+2048+40
+            self.assertEqual(result[56:56+old],original[52:52+old])
+            self.assertEqual(result[56+old:56+old+2048].split(b"\0",1)[0],
+                             b"#041F##0440##0438##0432##0435##0442#, \x08")
+            self.assertEqual(src.read_bytes(),original)
+            self.assertEqual(len(result),56+2*new)
 
-            entries, supplied = build_extended_language_ldb(source, output, translations)
-            result = output.read_bytes()
-            self.assertEqual((entries, supplied), (1, 1))
-            self.assertEqual(struct.unpack_from("<III", result), (1, 1, 11))
-            self.assertEqual(
-                struct.unpack_from("<11I", result, 12), (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13)
-            )
-            old_record_size = TEXT_SLOT_SIZE + 30 + 9 * (TEXT_SLOT_SIZE + META_SIZE)
-            new_record_size = old_record_size + TEXT_SLOT_SIZE + META_SIZE
-            self.assertEqual(
-                result[56:56 + old_record_size],
-                original[52:52 + old_record_size],
-            )
-            slot = result[56 + old_record_size:56 + old_record_size + TEXT_SLOT_SIZE]
-            self.assertEqual(
-                slot.split(b"\0", 1)[0],
-                b"#041F##0440##0438##0432##0435##0442#\n%s",
-            )
-            self.assertEqual(
-                struct.unpack_from("<10i", result, 56 + old_record_size + TEXT_SLOT_SIZE),
-                tuple(range(10)),
-            )
-            self.assertEqual(source.read_bytes(), original)
-            self.assertEqual(len(result), 56 + new_record_size)
-
-    def test_blank_translation_is_empty_with_minus_one_metadata(self):
+    def test_merges_multiple_batches(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            source, output = root / "source.ldb", root / "extended.ldb"
-            self.make_source(source)
-            build_extended_language_ldb(source, output, None)
-            result = output.read_bytes()
-            old_record_size = TEXT_SLOT_SIZE + 30 + 9 * (TEXT_SLOT_SIZE + META_SIZE)
-            slot_at = 56 + old_record_size
-            self.assertEqual(result[slot_at:slot_at + TEXT_SLOT_SIZE], b"\0" * TEXT_SLOT_SIZE)
-            self.assertEqual(
-                struct.unpack_from("<10i", result, slot_at + TEXT_SLOT_SIZE), (-1,) * 10
-            )
+            root=Path(tmp); src=root/"source.ldb"; out=root/"out.ldb"; a=root/"a.tsv"; b=root/"b.tsv"
+            self.source(src)
+            self.tsv(a,[self.row(0,"Привет, \x08","Hello <%s - Name>","%s~")])
+            self.tsv(b,[self.row(1,"Без маркера","No marker","")])
+            self.assertEqual(builder.build_extended_language_ldb(src,out,[a,b]),(2,2))
 
-    def test_existing_runtime_id_table_capacity_is_19(self):
-        self.assertEqual(LANGUAGE_ID_CAPACITY, 19)
-        check_language_capacity(18, 1)
-        with self.assertRaisesRegex(ValueError, "19 slots"):
-            check_language_capacity(19, 1)
-
-    def test_rejects_output_over_original_source(self):
+    def test_rejects_duplicate_ids_across_batches(self):
         with tempfile.TemporaryDirectory() as tmp:
-            source = Path(tmp) / "language.ldb"
-            original = self.make_source(source)
-            with self.assertRaisesRegex(ValueError, "must differ"):
-                build_extended_language_ldb(source, source, None)
-            self.assertEqual(source.read_bytes(), original)
+            root=Path(tmp); src=root/"source.ldb"; out=root/"out.ldb"; a=root/"a.tsv"; b=root/"b.tsv"
+            self.source(src); row=self.row(0,"Привет, \x08","Hello <%s - Name>","%s~")
+            self.tsv(a,[row]); self.tsv(b,[row])
+            with self.assertRaisesRegex(ValueError,"duplicate translation id"):
+                builder.build_extended_language_ldb(src,out,[a,b])
 
-    def test_rejects_astral_unicode_and_overlong_text(self):
-        with self.assertRaisesRegex(ValueError, "16-bit"):
-            encode_game_text("⚽")
-        with self.assertRaisesRegex(ValueError, "slot limit"):
-            encode_game_text("Ж" * 400)
-
-    def test_rejects_duplicate_and_out_of_range_ids(self):
+    def test_rejects_source_signature_and_argument_mismatches(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            source, output, translations = root / "source.ldb", root / "out.ldb", root / "ru.tsv"
-            self.make_source(source)
-            for rows, message in [
-                ([{"id": 0, "text_ru": "A"}, {"id": 0, "text_ru": "B"}], "duplicate"),
-                ([{"id": 1, "text_ru": "B"}], "outside"),
-            ]:
-                with translations.open("w", encoding="utf-8", newline="") as stream:
-                    writer = csv.DictWriter(stream, fieldnames=["id", "text_ru"], delimiter="\t")
-                    writer.writeheader()
-                    writer.writerows(rows)
-                with self.assertRaisesRegex(ValueError, message):
-                    build_extended_language_ldb(source, output, translations)
+            root=Path(tmp); src=root/"source.ldb"; out=root/"out.ldb"; tsv=root/"ru.tsv"
+            self.source(src)
+            self.tsv(tsv,[self.row(0,"Привет, \x08","Wrong","%s~")])
+            with self.assertRaisesRegex(ValueError,"source text mismatch"):
+                builder.build_extended_language_ldb(src,out,tsv)
+            self.tsv(tsv,[self.row(0,"Привет","Hello <%s - Name>","%s~")])
+            with self.assertRaisesRegex(ValueError,"argument markers"):
+                builder.build_extended_language_ldb(src,out,tsv)
+            self.tsv(tsv,[self.row(0,"Привет, \x08","Hello <%s - Name>","%d~")])
+            with self.assertRaisesRegex(ValueError,"format signature mismatch"):
+                builder.build_extended_language_ldb(src,out,tsv)
+
+    def test_id_capacity_and_no_overwrite(self):
+        builder.check_language_capacity(18,1)
+        with self.assertRaisesRegex(ValueError,"stores 19"):
+            builder.check_language_capacity(19,1)
+        with tempfile.TemporaryDirectory() as tmp:
+            src=Path(tmp)/"source.ldb"; original=self.source(src)
+            with self.assertRaisesRegex(ValueError,"must differ"):
+                builder.build_extended_language_ldb(src,src,None)
+            self.assertEqual(src.read_bytes(),original)
+
+    def test_rejects_non_bmp_and_long_text(self):
+        with self.assertRaisesRegex(ValueError,"16-bit"):
+            builder.encode_game_text("😀")
+        with self.assertRaisesRegex(ValueError,"slot limit"):
+            builder.encode_game_text("Ж"*400)
 
 
 if __name__ == "__main__":
