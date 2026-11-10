@@ -7,7 +7,7 @@ continents	4	Oceania		Океания
 continents	5	South America		Юж.Ам.	
 nation_competitions	0	'B' International	'B' International	Сборная B	
 nation_competitions	1	Under 21 International	U21 International	U21	
-nation_competitions	2	Oceania Nations Cup	OFC Nations Cup	Кубок	
+nation_competitions	2	Oceania Nations Cup	OFC Nations Cup	Кубок ОФК	ОФК
 nation_competitions	3	Confederations Cup	Confederations Cup	Конфед.	
 nation_competitions	4	World Cup Oceania Qualifying Section	World Cup Quals (OCE)	ЧМ Оке.	
 nation_competitions	5	World Cup CONCACAF Qualifying Section	World Cup Quals (CON)	ЧМ КОНК.	
@@ -15,7 +15,7 @@ nation_competitions	6	World Cup Asian Qualifying Section	World Cup Quals (ASI)	�
 nation_competitions	7	World Cup South American Qualifying Section	World Cup Quals (SAM)	ЧМ Ю.Амер.	
 nation_competitions	8	World Cup African Qualifying Section	World Cup Quals (AFR)	ЧМ Афр.	
 nation_competitions	9	World Cup European Qualifying Section	World Cup Quals (EUR)	ЧМ Европа	
-nation_competitions	10	European Championship Qualifying	Euro Ch'ship Quals	Евро	
+nation_competitions	10	European Championship Qualifying	Euro Ch'ship Quals	Отбор Евро	Отб.Евро
 nation_competitions	11	Asian Cup Qualifying	Asian Cup Quals	Отбор АЧ	
 nation_competitions	12	Asian Games Football Tournament	Asian Games	Азиады	
 nation_competitions	13	Asian Cup	Asian Cup	Азия	
@@ -27,7 +27,7 @@ nation_competitions	18	African Cup of Nations	African Nations	Кубок
 nations	0	Afghanistan	Afghanistan	Афган.	Афг.
 nations	1	Albania	Albania	Албания	Алб.
 nations	2	Algeria	Algeria	Алжир	Алж.
-nations	3	American Samoa	American Samoa	Самоа	
+nations	3	American Samoa	American Samoa	Амер. Самоа	А.С.
 nations	4	Andorra	Andorra	Андорра	Анд.
 nations	5	Angola	Angola	Ангола	Анг.
 nations	6	Anguilla	Anguilla	Ангилья	
@@ -101,7 +101,7 @@ nations	76	Greece	Greece	Греция	Греч.
 nations	77	Grenada	Grenada	Гренада	
 nations	78	Guam	Guam	Гуам	
 nations	80	Guinea	Guinea	Гвинея	
-nations	81	Guinea-Bissau	Guinea-Bissau	Гвинея	
+nations	81	Guinea-Bissau	Guinea-Bissau	Гвинея-Бисау	Гв.-Бис.
 nations	82	Guyana	Guyana	Гайана	
 nations	83	Haiti	Haiti	Гаити	
 nations	84	Holland	Holland	Нидерланды	Нид.
