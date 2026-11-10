@@ -96,7 +96,7 @@ This section supersedes any earlier scope, coverage or next-step statements abov
 - **Never translate or transliterate database identities:** player/staff names, clubs, cities, stadiums, countries/nations, or named competitions/tournaments remain exactly as supplied by the active database.
 - News prose and match commentary remain English and are not localisation targets.
 - The branch no longer contains the former database-name, news or match-event TSV catalogues, their builders, or their dedicated tests. The release script stages only the interface catalogue(s). The runtime uses the original English name/commentary resources.
-- Current catalogue sizes are 343 contextual overlay entries in `locales/ru-RU.tsv` and 88 native language-table entries in `locales/ru-RU-native.tsv`. These are an initial subset, not complete interface coverage.
+- Current catalogue sizes are 350 contextual overlay entries in `locales/ru-RU.tsv` and 88 native language-table entries in `locales/ru-RU-native.tsv`. These are an initial subset, not complete interface coverage.
 - Earlier sections describing 27/135 translations, Russian name/news/event resources, or adding `rus.lng` / `events_rus.cfg` are historical notes and are not the current implementation plan.
 
 ## Interface catalogue expansion (2026-11-10)
@@ -144,3 +144,8 @@ Added 10 more verified strings for network navigation, connection/progress messa
 ## Transfer and profile controls pass (2026-11-10)
 
 Added 13 source-grounded labels for the player transfer-status and discipline dialogs, asking-price control and its two fine levels, player profile tabs, the contract column, club Stats and history View menus, and list sorting/action menus. The discipline options are interface choices only; no generated disciplinary news or match text was translated. The overlay catalogue now contains 343 entries. Training schedule field labels and complete player/staff search criteria were not included because the checked-in research describes those screens at function level without a verified literal-string inventory.
+
+
+## Match and manager-status UI pass (2026-11-10)
+
+Added 7 further interface labels from the match-screen and manager-status inventories: the tactics captain marker and match navigation tabs (overview, statistics, action zones, report, player ratings and latest scores). The manager status values and single-player exit confirmation already had existing source entries in the catalogue and were not duplicated. 'Match Report' here is only the screen-tab caption; report prose and match commentary remain untranslated. Catalogue size: 350 overlay entries.
